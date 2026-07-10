@@ -3,9 +3,13 @@
 // 발음소리: 브라우저 음성합성(speechSynthesis)  ·  예문: Tatoeba API(캐시)
 'use strict';
 
-const APP_VER = 'v1';
+const APP_VER = 'v2';
 const HANGUL = /[가-힣]/;
-const EX_API = 'https://seungho-dict-api.junyoung-cha83.workers.dev/ex';   // 예문 프록시(무료)
+const EX_API = 'https://seungho-dict-api.junyoung-cha83.workers.dev/ex';   // 예문 프록시(무료·오프라인 미수록 단어용)
+let accent = (localStorage.getItem('sd:acc') === 'uk') ? 'uk' : 'us';       // 발음: 미국/영국
+const ipaName = () => 'ipa_' + accent;
+const speakLang = () => (accent === 'uk' ? 'en-GB' : 'en-US');
+let lastQuery = '';
 
 // ── 데이터 지연 로딩(필요할 때 한 번만) ──
 const _data = {};
@@ -22,8 +26,10 @@ async function loadData(name) {
 function speak(text) {
   try {
     const u = new SpeechSynthesisUtterance(text);
-    u.lang = 'en-US'; u.rate = 0.92;
-    const v = speechSynthesis.getVoices().find(v => /en(-|_)?US/i.test(v.lang)) || speechSynthesis.getVoices().find(v => /^en/i.test(v.lang));
+    u.lang = speakLang(); u.rate = 0.92;
+    const want = speakLang().toLowerCase();
+    const vs = speechSynthesis.getVoices();
+    const v = vs.find(v => v.lang && v.lang.replace('_', '-').toLowerCase() === want) || vs.find(v => /^en/i.test(v.lang));
     if (v) u.voice = v;
     speechSynthesis.cancel(); speechSynthesis.speak(u);
   } catch (e) { /* 미지원 */ }
@@ -32,7 +38,10 @@ try { speechSynthesis.getVoices(); speechSynthesis.onvoiceschanged = () => {}; }
 
 // ── 예문 (Tatoeba, localStorage 캐시) ──
 async function fetchExamples(word) {
-  const key = 'sd:ex:' + word.toLowerCase();
+  const w = word.toLowerCase();
+  const bundled = await loadData('examples');           // 내장 예문(오프라인) 우선
+  if (bundled && bundled[w] && bundled[w].length) return bundled[w];
+  const key = 'sd:ex:' + w;
   try { const c = localStorage.getItem(key); if (c) return JSON.parse(c); } catch (e) {}
   try {
     const r = await fetch(`${EX_API}?q=${encodeURIComponent(word)}`);
@@ -76,7 +85,7 @@ async function lookup(q) {
   } else {
     // 영어 → 한글
     const lc = q.toLowerCase();
-    const [enko, ipa] = await Promise.all([loadData('enko'), loadData('ipa')]);
+    const [enko, ipa] = await Promise.all([loadData('enko'), loadData(ipaName())]);
     let kor = enko[lc];
     let head = lc;
     if (!kor) {                                   // 간단 표제어 보정(복수/과거/진행)
@@ -134,7 +143,7 @@ async function render(res) {
     // 한글 → 영어
     const engs = res.eng ? res.eng.split('; ') : [];
     const head = engs.length ? firstWord(engs[0]) : '';
-    const ipa = head ? (await loadData('ipa'))[head.toLowerCase()] || '' : '';
+    const ipa = head ? (await loadData(ipaName()))[head.toLowerCase()] || '' : '';
     box.innerHTML = `
       <article class="card">
         <div class="head">
@@ -163,6 +172,7 @@ function setQuery(v) { $q().value = v; }
 async function doSearch() {
   const q = $q().value.trim();
   if (!q) return;
+  lastQuery = q;
   const res = await lookup(q);
   pushRecent(q);
   await render(res);
@@ -172,9 +182,23 @@ async function doSearch() {
 document.getElementById('go').onclick = doSearch;
 $q().addEventListener('keydown', e => { if (e.key === 'Enter') { e.preventDefault(); doSearch(); } });
 document.getElementById('ver').textContent = APP_VER;
+
+// 발음(US/UK) 토글
+function updateAccentUI() {
+  document.querySelectorAll('#acc button').forEach(b => b.classList.toggle('on', b.dataset.a === accent));
+}
+document.querySelectorAll('#acc button').forEach(b => b.onclick = () => {
+  if (accent === b.dataset.a) return;
+  accent = b.dataset.a; try { localStorage.setItem('sd:acc', accent); } catch (e) {}
+  updateAccentUI();
+  loadData(ipaName());
+  if (lastQuery) doSearch();   // 현재 단어 발음/기호 갱신
+});
+updateAccentUI();
+
 renderRecent();
 // 데이터 미리 살짝 예열(첫 검색 체감속도)
-loadData('ipa');
+loadData(ipaName()); loadData('examples');
 // ?q= 로 들어오면 자동 검색(딥링크)
 const _q0 = new URLSearchParams(location.search).get('q');
 if (_q0) { setQuery(_q0); doSearch(); }
