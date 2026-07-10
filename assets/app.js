@@ -3,7 +3,7 @@
 // 발음소리: 브라우저 음성합성(speechSynthesis)  ·  예문: Tatoeba API(캐시)
 'use strict';
 
-const APP_VER = 'v5';
+const APP_VER = 'v6';
 const HANGUL = /[가-힣]/;
 const API = 'https://seungho-dict-api.junyoung-cha83.workers.dev';
 const EX_API = API + '/ex';   // 예문 프록시(무료)
@@ -61,13 +61,21 @@ function pushRecent(q) {
   let a = recentList().filter(x => x !== q); a.unshift(q); a = a.slice(0, 12);
   try { localStorage.setItem('sd:recent', JSON.stringify(a)); } catch (e) {}
 }
+function removeRecent(q) {
+  const a = recentList().filter(x => x !== q);
+  try { localStorage.setItem('sd:recent', JSON.stringify(a)); } catch (e) {}
+  renderRecent();
+}
 function renderRecent() {
   const box = document.getElementById('recent'); if (!box) return;
   const a = recentList();
   box.innerHTML = a.length
-    ? `<div class="recent-title">최근 검색</div><div class="chips">${a.map(w => `<button class="chip" data-w="${escapeAttr(w)}">${escapeHtml(w)}</button>`).join('')}</div>`
+    ? `<div class="recent-title">최근 검색</div><div class="chips">${a.map(w =>
+        `<span class="chip-wrap"><button class="chip-x" data-x="${escapeAttr(w)}" title="삭제" aria-label="삭제">×</button><button class="chip" data-w="${escapeAttr(w)}">${escapeHtml(w)}</button></span>`
+      ).join('')}</div>`
     : '';
   box.querySelectorAll('.chip').forEach(b => b.onclick = () => { setQuery(b.dataset.w); doSearch(); });
+  box.querySelectorAll('.chip-x').forEach(b => b.onclick = (e) => { e.stopPropagation(); removeRecent(b.dataset.x); });
 }
 
 function escapeHtml(s) { return String(s == null ? '' : s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c])); }

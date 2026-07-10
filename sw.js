@@ -1,5 +1,5 @@
 // 승호의사전 오프라인 캐시. 캐시명 바꾸면 옛 캐시 자동 폐기.
-const CACHE = 'seungho-dict-v5';
+const CACHE = 'seungho-dict-v6';
 const ASSETS = [
   './', './index.html', './assets/app.css', './assets/app.js',
   './manifest.webmanifest', './assets/icon.svg',

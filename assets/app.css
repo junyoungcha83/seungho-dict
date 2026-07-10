@@ -56,3 +56,13 @@ body { font-family: 'Apple SD Gothic Neo','Noto Sans KR','Malgun Gothic',system-
 .acc button { border: none; background: transparent; color: #fff; font-size: .78rem; font-weight: 800; padding: 5px 12px; border-radius: 999px; cursor: pointer; }
 .acc button.on { background: #fff; color: var(--blue); }
 .autonote { margin-top: 8px; font-size: .8rem; color: #92600b; background: #fef3c7; border-radius: 8px; padding: 5px 10px; display: inline-block; }
+
+/* 최근검색 칩 삭제(×) */
+.chips { display: flex; flex-wrap: wrap; gap: 12px 10px; }
+.chip-wrap { position: relative; display: inline-block; }
+.chip-wrap .chip { padding-left: 16px; }
+.chip-x { position: absolute; top: -7px; left: -7px; width: 20px; height: 20px; border-radius: 50%;
+  border: none; background: #ef4444; color: #fff; font-size: 13px; line-height: 1; font-weight: 800;
+  display: flex; align-items: center; justify-content: center; cursor: pointer; padding: 0;
+  box-shadow: 0 1px 3px rgba(0,0,0,.25); z-index: 2; }
+.chip-x:active { transform: scale(.85); }
