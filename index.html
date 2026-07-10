@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>승호의사전</title>
+<link rel="stylesheet" href="assets/app.css" />
+<link rel="manifest" href="manifest.webmanifest" />
+<meta name="theme-color" content="#1d4ed8" />
+<link rel="icon" type="image/svg+xml" href="assets/icon.svg" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="default" />
+<meta name="apple-mobile-web-app-title" content="승호의사전" />
+<link rel="apple-touch-icon" href="assets/icon.svg" />
+</head>
+<body>
+<header class="app-header">
+  <h1>📖 승호의사전</h1>
+  <span class="ver" id="ver"></span>
+</header>
+
+<div class="search-wrap">
+  <input id="q" type="search" enterkeyhint="search" autocomplete="off" autocapitalize="off"
+         placeholder="한글 또는 영어 단어 검색" aria-label="검색" />
+  <button id="go" aria-label="검색">🔍</button>
+</div>
+
+<main id="result" class="result">
+  <div class="empty" id="empty">
+    <p>한글을 입력하면 <b>영어 뜻</b>, 영어를 입력하면 <b>한글 뜻</b>을 보여줍니다.</p>
+    <p class="sub">발음기호·스피커 발음·예문·숙어까지 무료로, 오프라인에서도.</p>
+    <div class="recent" id="recent"></div>
+  </div>
+</main>
+
+<script src="assets/app.js"></script>
+<script>
+  if ('serviceWorker' in navigator && location.protocol.startsWith('http')) {
+    let reloaded = false;
+    navigator.serviceWorker.addEventListener('controllerchange', () => { if (reloaded) return; reloaded = true; location.reload(); });
+    addEventListener('load', () => navigator.serviceWorker.register('sw.js').catch(() => {}));
+  }
+</script>
+</body>
+</html>

@@ -1,0 +1,3 @@
+# 빌드 입력 원본(대용량) — 필요시 build-data.mjs 주석의 URL에서 재다운로드
+scripts/kengdic.tsv
+scripts/ipa_en_us.txt
