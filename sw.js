@@ -1,10 +1,10 @@
 // 승호의사전 오프라인 캐시. 캐시명 바꾸면 옛 캐시 자동 폐기.
-const CACHE = 'seungho-dict-v2';
+const CACHE = 'seungho-dict-v3';
 const ASSETS = [
   './', './index.html', './assets/app.css', './assets/app.js',
   './manifest.webmanifest', './assets/icon.svg',
   './data/enko.json', './data/koen.json', './data/idioms.json',
-  './data/ipa_us.json', './data/ipa_uk.json', './data/examples.json',
+  './data/ipa.json', './data/ipa_us.json', './data/ipa_uk.json', './data/examples.json',
 ];
 self.addEventListener('install', (e) => {
   e.waitUntil(caches.open(CACHE).then(c => c.addAll(ASSETS)).catch(() => {}));

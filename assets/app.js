@@ -3,9 +3,11 @@
 // 발음소리: 브라우저 음성합성(speechSynthesis)  ·  예문: Tatoeba API(캐시)
 'use strict';
 
-const APP_VER = 'v2';
+const APP_VER = 'v3';
 const HANGUL = /[가-힣]/;
-const EX_API = 'https://seungho-dict-api.junyoung-cha83.workers.dev/ex';   // 예문 프록시(무료·오프라인 미수록 단어용)
+const API = 'https://seungho-dict-api.junyoung-cha83.workers.dev';
+const EX_API = API + '/ex';   // 예문 프록시(무료)
+const TR_API = API + '/tr';   // 사전에 없는 단어 폴백 번역(무료) → 캐시로 계속 축적
 let accent = (localStorage.getItem('sd:acc') === 'uk') ? 'uk' : 'us';       // 발음: 미국/영국
 const ipaName = () => 'ipa_' + accent;
 const speakLang = () => (accent === 'uk' ? 'en-GB' : 'en-US');
@@ -74,24 +76,42 @@ function escapeAttr(s) { return escapeHtml(s).replace(/`/g, '&#96;'); }
 // ── 조회 로직 ──
 function firstWord(s) { return String(s || '').split(/[;,]/)[0].trim().split(/\s+/)[0]; }
 
+// 사전에 없는 단어 → 무료 온라인 번역 폴백 + 기기 캐시(영구 축적)
+async function onlineTranslate(word, dir) {
+  const key = 'sd:fb:' + dir + ':' + word.toLowerCase();
+  try { const c = localStorage.getItem(key); if (c !== null) return c; } catch (e) {}
+  try {
+    const r = await fetch(`${TR_API}?q=${encodeURIComponent(word)}&dir=${dir}`);
+    const j = await r.json();
+    let t = (j.text || '').trim();
+    if (/MYMEMORY|WARNING|USED ALL/i.test(t)) t = '';
+    if (t && t.toLowerCase() === word.toLowerCase()) t = '';   // 번역 안 됨
+    try { localStorage.setItem(key, t); } catch (e) {}
+    return t;
+  } catch (e) { return ''; }
+}
+
 async function lookup(q) {
   q = q.trim();
   if (!q) return null;
   if (HANGUL.test(q)) {
     // 한글 → 영어
     const koen = await loadData('koen');
-    const eng = koen[q] || koen[q.replace(/\s+/g, '')] || null;
-    return { dir: 'ko', query: q, eng };
+    let eng = koen[q] || koen[q.replace(/\s+/g, '')] || null;
+    let auto = false;
+    if (!eng) { const t = await onlineTranslate(q, 'koen'); if (t) { eng = t.toLowerCase(); auto = true; } }
+    return { dir: 'ko', query: q, eng, auto };
   } else {
     // 영어 → 한글
     const lc = q.toLowerCase();
     const [enko, ipa] = await Promise.all([loadData('enko'), loadData(ipaName())]);
     let kor = enko[lc];
-    let head = lc;
+    let head = lc, auto = false;
     if (!kor) {                                   // 간단 표제어 보정(복수/과거/진행)
       for (const cand of lemmas(lc)) { if (enko[cand]) { kor = enko[cand]; head = cand; break; } }
     }
-    return { dir: 'en', query: q, head, kor, ipa: ipa[lc] || ipa[head] || '' };
+    if (!kor) { const t = await onlineTranslate(lc, 'enko'); if (t) { kor = t; auto = true; } }
+    return { dir: 'en', query: q, head, kor, auto, ipa: ipa[lc] || ipa[head] || '' };
   }
 }
 function lemmas(w) {
@@ -120,6 +140,7 @@ async function render(res) {
           <div class="phon">${res.ipa ? escapeHtml(res.ipa) : ''} ${speakerBtn(head)}</div>
         </div>
         <div class="mean">${res.kor ? escapeHtml(res.kor).split('; ').map(m => `<span class="tag">${escapeHtml(m)}</span>`).join('') : '<span class="nf">뜻을 찾지 못했어요</span>'}</div>
+        ${res.auto ? '<div class="autonote">🌐 자동 번역 (사전 미수록 단어)</div>' : ''}
         <section class="sec"><h3>예문</h3><div id="ex" class="ex"><span class="load">불러오는 중…</span></div></section>
         <section class="sec"><h3>관련 숙어·표현</h3><div id="idm" class="idm"></div></section>
       </article>`;
@@ -150,6 +171,7 @@ async function render(res) {
           <div class="word">${escapeHtml(res.query)}</div>
         </div>
         <div class="mean">${engs.length ? engs.map(m => `<span class="tag en">${escapeHtml(m)}</span>`).join('') : '<span class="nf">단어를 찾지 못했어요</span>'}</div>
+        ${res.auto ? '<div class="autonote">🌐 자동 번역 (사전 미수록 단어)</div>' : ''}
         ${head ? `<div class="phon big">${escapeHtml(head)} ${ipa ? escapeHtml(ipa) : ''} ${speakerBtn(head)}</div>` : ''}
         ${head ? `<section class="sec"><h3>예문</h3><div id="ex" class="ex"><span class="load">불러오는 중…</span></div></section>` : ''}
       </article>`;

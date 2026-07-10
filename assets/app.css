@@ -55,3 +55,4 @@ body { font-family: 'Apple SD Gothic Neo','Noto Sans KR','Malgun Gothic',system-
 .acc { align-self: center; margin-left: auto; display: flex; background: rgba(255,255,255,.22); border-radius: 999px; padding: 3px; }
 .acc button { border: none; background: transparent; color: #fff; font-size: .78rem; font-weight: 800; padding: 5px 12px; border-radius: 999px; cursor: pointer; }
 .acc button.on { background: #fff; color: var(--blue); }
+.autonote { margin-top: 8px; font-size: .8rem; color: #92600b; background: #fef3c7; border-radius: 8px; padding: 5px 10px; display: inline-block; }

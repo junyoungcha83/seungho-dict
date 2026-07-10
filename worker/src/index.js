@@ -36,6 +36,22 @@ export default {
         return new Response(JSON.stringify({ examples: [], error: 'upstream' }), { status: 200, headers: { ...c, 'Content-Type':'application/json' } });
       }
     }
+    if (url.pathname === '/tr') {
+      // 사전에 없는 단어 폴백 번역(MyMemory, 무료). dir=enko|koen
+      const q = (url.searchParams.get('q') || '').trim();
+      const dir = url.searchParams.get('dir') === 'koen' ? 'koen' : 'enko';
+      if (!q) return new Response(JSON.stringify({ text: '' }), { headers: { ...c, 'Content-Type': 'application/json' } });
+      const sl = dir === 'koen' ? 'ko' : 'en', tl = dir === 'koen' ? 'en' : 'ko';
+      try {
+        const r = await fetch(`https://translate.googleapis.com/translate_a/single?client=gtx&sl=${sl}&tl=${tl}&dt=t&q=${encodeURIComponent(q)}`);
+        const j = await r.json();
+        const text = ((j[0] || []).map(x => x[0]).join('') || '').trim();
+        return new Response(JSON.stringify({ text }), {
+          headers: { ...c, 'Content-Type': 'application/json; charset=utf-8', 'Cache-Control': 'public, max-age=2592000' } });
+      } catch (e) {
+        return new Response(JSON.stringify({ text: '', error: 'upstream' }), { headers: { ...c, 'Content-Type': 'application/json' } });
+      }
+    }
     return new Response('seungho-dict-api', { headers: c });
   }
 };
