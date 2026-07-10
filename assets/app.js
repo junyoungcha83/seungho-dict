@@ -3,7 +3,7 @@
 // 발음소리: 브라우저 음성합성(speechSynthesis)  ·  예문: Tatoeba API(캐시)
 'use strict';
 
-const APP_VER = 'v6';
+const APP_VER = 'v7';
 const HANGUL = /[가-힣]/;
 const API = 'https://seungho-dict-api.junyoung-cha83.workers.dev';
 const EX_API = API + '/ex';   // 예문 프록시(무료)
@@ -78,6 +78,33 @@ function renderRecent() {
   box.querySelectorAll('.chip-x').forEach(b => b.onclick = (e) => { e.stopPropagation(); removeRecent(b.dataset.x); });
 }
 
+// ── 즐겨찾기 ──
+function favList() { try { return JSON.parse(localStorage.getItem('sd:fav') || '[]'); } catch (e) { return []; } }
+function isFav(q) { return favList().includes(q); }
+function saveFav(a) { try { localStorage.setItem('sd:fav', JSON.stringify(a)); } catch (e) {} }
+function toggleFav(q) { const a = favList(); const i = a.indexOf(q); if (i >= 0) a.splice(i, 1); else a.unshift(q); saveFav(a.slice(0, 100)); }
+function removeFav(q) { saveFav(favList().filter(x => x !== q)); renderFavs(); }
+function renderFavs() {
+  const box = document.getElementById('fav'); if (!box) return;
+  const a = favList();
+  box.innerHTML = a.length
+    ? `<div class="recent-title">⭐ 즐겨찾기</div><div class="chips">${a.map(w =>
+        `<span class="chip-wrap"><button class="chip-x" data-x="${escapeAttr(w)}" title="삭제" aria-label="삭제">×</button><button class="chip fav-chip" data-w="${escapeAttr(w)}">${escapeHtml(w)}</button></span>`
+      ).join('')}</div>`
+    : '';
+  box.querySelectorAll('.chip').forEach(b => b.onclick = () => { setQuery(b.dataset.w); doSearch(); });
+  box.querySelectorAll('.chip-x').forEach(b => b.onclick = (e) => { e.stopPropagation(); removeFav(b.dataset.x); });
+}
+function favBtn(q) { return `<button class="favbtn ${isFav(q) ? 'on' : ''}" data-fav="${escapeAttr(q)}" title="즐겨찾기" aria-label="즐겨찾기">${isFav(q) ? '★' : '☆'}</button>`; }
+function wireFav(root) {
+  if (!root) return;
+  root.querySelectorAll('.favbtn').forEach(b => b.onclick = () => {
+    const q = b.dataset.fav; toggleFav(q);
+    const on = isFav(q); b.classList.toggle('on', on); b.textContent = on ? '★' : '☆';
+    renderFavs();
+  });
+}
+
 function escapeHtml(s) { return String(s == null ? '' : s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c])); }
 function escapeAttr(s) { return escapeHtml(s).replace(/`/g, '&#96;'); }
 
@@ -145,14 +172,14 @@ async function render(res) {
       <article class="card">
         <div class="head">
           <div class="word">${escapeHtml(res.query)}</div>
-          <div class="phon">${res.ipa ? escapeHtml(res.ipa) : ''} ${speakerBtn(head)}</div>
+          <div class="phon">${res.ipa ? escapeHtml(res.ipa) : ''} ${speakerBtn(head)} ${favBtn(res.query)}</div>
         </div>
         <div class="mean">${res.kor ? escapeHtml(res.kor).split('; ').map(m => `<span class="tag">${escapeHtml(m)}</span>`).join('') : '<span class="nf">뜻을 찾지 못했어요</span>'}</div>
         ${res.auto ? '<div class="autonote">🌐 자동 번역 (사전 미수록 단어)</div>' : ''}
         <section class="sec"><h3>예문</h3><div id="ex" class="ex"><span class="load">불러오는 중…</span></div></section>
         <section class="sec"><h3>관련 숙어·표현</h3><div id="idm" class="idm"></div></section>
       </article>`;
-    wireSpeakers(box);
+    wireSpeakers(box); wireFav(box);
     // 예문
     const ex = await fetchExamples(head);
     const exEl = document.getElementById('ex');
@@ -177,13 +204,14 @@ async function render(res) {
       <article class="card">
         <div class="head">
           <div class="word">${escapeHtml(res.query)}</div>
+          <div class="phon">${favBtn(res.query)}</div>
         </div>
         <div class="mean">${engs.length ? engs.map(m => `<span class="tag en">${escapeHtml(m)}</span>`).join('') : '<span class="nf">단어를 찾지 못했어요</span>'}</div>
         ${res.auto ? '<div class="autonote">🌐 자동 번역 (사전 미수록 단어)</div>' : ''}
         ${head ? `<div class="phon big">${escapeHtml(head)} ${ipa ? escapeHtml(ipa) : ''} ${speakerBtn(head)}</div>` : ''}
         ${head ? `<section class="sec"><h3>예문</h3><div id="ex" class="ex"><span class="load">불러오는 중…</span></div></section>` : ''}
       </article>`;
-    wireSpeakers(box);
+    wireSpeakers(box); wireFav(box);
     if (head) {
       const ex = await fetchExamples(head);
       const exEl = document.getElementById('ex');
@@ -226,6 +254,7 @@ document.querySelectorAll('#acc button').forEach(b => b.onclick = () => {
 });
 updateAccentUI();
 
+renderFavs();
 renderRecent();
 // 데이터 미리 살짝 예열(첫 검색 체감속도)
 loadData(ipaName()); loadData('examples');
