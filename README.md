@@ -9,6 +9,6 @@
 
 ## 데이터 재빌드
 ```
-# 원본 내려받아 scripts/ 에 두고
-node scripts/build-data.mjs
+# 원본 내려받아 tools/ 에 두고
+node tools/build-data.mjs
 ```
