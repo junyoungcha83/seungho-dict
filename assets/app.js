@@ -12,6 +12,8 @@ let accent = (localStorage.getItem('sd:acc') === 'uk') ? 'uk' : 'us';       // �
 const ipaName = () => 'ipa_' + accent;
 const speakLang = () => (accent === 'uk' ? 'en-GB' : 'en-US');
 let lastQuery = '';
+// 첫 화면(빈 상태) 마크업 원본 — render() 가 #result 를 덮어쓰므로 뒤로가기 복원용으로 보관
+const HOME_HTML = document.getElementById('result').innerHTML;
 
 // ── 데이터 지연 로딩(필요할 때 한 번만) ──
 const _data = {};
@@ -227,10 +229,14 @@ function wireSpeakers(root) { if (!root) return; root.querySelectorAll('.spk').f
 // ── 검색 실행 ──
 const $q = () => document.getElementById('q');
 function setQuery(v) { $q().value = v; }
-async function doSearch() {
+async function doSearch(push = true) {
   const q = $q().value.trim();
   if (!q) return;
   lastQuery = q;
+  // 검색을 히스토리에 쌓아야 뒤로가기가 앱을 나가지 않고 첫 화면으로 돌아온다
+  if (push) {
+    try { history.pushState({ q }, '', '?q=' + encodeURIComponent(q)); } catch (e) {}
+  }
   const res = await lookup(q);
   pushRecent(q);
   if (window.SDStats) SDStats.log();   // 주간 통계용 검색 기록
@@ -238,7 +244,21 @@ async function doSearch() {
   window.scrollTo(0, 0);
 }
 
-document.getElementById('go').onclick = doSearch;
+// 첫 화면으로 되돌리기
+function goHome() {
+  document.getElementById('result').innerHTML = HOME_HTML;
+  renderFavs(); renderRecent();
+  lastQuery = '';
+  setQuery('');
+  window.scrollTo(0, 0);
+}
+
+addEventListener('popstate', (e) => {
+  const q = (e.state && e.state.q) || new URLSearchParams(location.search).get('q');
+  if (q) { setQuery(q); doSearch(false); } else goHome();
+});
+
+document.getElementById('go').onclick = () => doSearch();
 $q().addEventListener('keydown', e => { if (e.key === 'Enter') { e.preventDefault(); doSearch(); } });
 document.getElementById('ver').textContent = APP_VER;
 
@@ -251,7 +271,7 @@ document.querySelectorAll('#acc button').forEach(b => b.onclick = () => {
   accent = b.dataset.a; try { localStorage.setItem('sd:acc', accent); } catch (e) {}
   updateAccentUI();
   loadData(ipaName());
-  if (lastQuery) doSearch();   // 현재 단어 발음/기호 갱신
+  if (lastQuery) doSearch(false);   // 같은 단어 재렌더 — 히스토리는 그대로
 });
 updateAccentUI();
 
@@ -261,4 +281,7 @@ renderRecent();
 loadData(ipaName()); loadData('examples');
 // ?q= 로 들어오면 자동 검색(딥링크)
 const _q0 = new URLSearchParams(location.search).get('q');
-if (_q0) { setQuery(_q0); doSearch(); }
+if (_q0) {
+  try { history.replaceState({ q: _q0 }, '', location.search); } catch (e) {}
+  setQuery(_q0); doSearch(false);
+}
