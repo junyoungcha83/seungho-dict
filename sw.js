@@ -1,13 +1,19 @@
 // 승호의사전 오프라인 캐시. 캐시명 바꾸면 옛 캐시 자동 폐기.
-const CACHE = 'seungho-dict-v9';
+const CACHE = 'seungho-dict-v10';
 const ASSETS = [
   './', './index.html', './assets/app.css', './assets/app.js', './assets/stats.js', './assets/dict-bg.svg',
+  './assets/splash.js', './assets/splash.jpg', './assets/gaegu-title.woff2',
   './manifest.webmanifest', './assets/icon.svg',
   './data/enko.json', './data/koen.json', './data/idioms.json',
   './data/ipa.json', './data/ipa_us.json', './data/ipa_uk.json', './data/examples.json',
 ];
+// 한 파일이 없어도(예: 아직 안 넣은 splash.jpg) 나머지 캐시는 살아 있어야 하므로 항목별로 담는다.
 self.addEventListener('install', (e) => {
-  e.waitUntil(caches.open(CACHE).then(c => c.addAll(ASSETS)).catch(() => {}));
+  e.waitUntil(
+    caches.open(CACHE)
+      .then(c => Promise.all(ASSETS.map(u => c.add(u).catch(() => {}))))
+      .catch(() => {})
+  );
   self.skipWaiting();
 });
 self.addEventListener('activate', (e) => {

@@ -20,6 +20,14 @@
   };
   const write = (o) => { try { localStorage.setItem(KEY, JSON.stringify(o)); } catch (e) {} };
 
+  // ISO 주차 — 그 주의 목요일이 속한 해의 몇 번째 주인지로 센다(연말연시가 어긋나지 않게)
+  function isoWeek(d) {
+    const x = new Date(d.getFullYear(), d.getMonth(), d.getDate());
+    x.setDate(x.getDate() + 3 - ((x.getDay() + 6) % 7));     // 그 주의 목요일로 이동
+    const jan4 = new Date(x.getFullYear(), 0, 4);            // 1월 4일은 항상 1주차
+    return 1 + Math.round(((x - jan4) / 86400000 - 3 + ((jan4.getDay() + 6) % 7)) / 7);
+  }
+
   // 월요일이 첫날인 주의 시작일
   function weekStart(d) {
     const x = new Date(d);
@@ -100,6 +108,7 @@
 
     const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
     const md = (d) => `${d.getMonth() + 1}/${d.getDate()}`;
+    const wk = (d) => `ww${pad(isoWeek(d))}`;                // 가로축 라벨: ww34 형식
 
     host.innerHTML =
       `<svg width="${w}" height="${h}" viewBox="0 0 ${w} ${h}" role="img"
@@ -120,7 +129,7 @@
           const label = d.avg.toFixed(1);
           const lx = Math.min(Math.max(cx, ml + 12), w - mr - 12);
           return `<g>
-            <title>${esc(md(d.start))} 주 · ${d.total}건 · 하루 평균 ${label}건</title>
+            <title>${esc(wk(d.start))} (${esc(md(d.start))} 주) · ${d.total}건 · 하루 평균 ${label}건</title>
             <circle cx="${cx.toFixed(1)}" cy="${cy.toFixed(1)}" r="4.5"
                     fill="${LINE}" stroke="#fff" stroke-width="2"/>
             <text x="${lx.toFixed(1)}" y="${(cy - 10).toFixed(1)}" text-anchor="middle"
@@ -128,7 +137,7 @@
                   stroke="#fff" stroke-width="3" paint-order="stroke"
                   stroke-linejoin="round">${label}</text>
             <text x="${cx.toFixed(1)}" y="${(mt + ih + 13).toFixed(1)}" text-anchor="middle"
-                  font-size="9" fill="${MUTED}">${md(d.start)}</text>
+                  font-size="9" fill="${MUTED}">${wk(d.start)}</text>
           </g>`;
         }).join('')}
       </svg>`;

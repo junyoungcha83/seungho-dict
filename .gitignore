@@ -1,3 +1,8 @@
+.DS_Store
+
 # 빌드 입력 원본(대용량) — 필요시 build-data.mjs 주석의 URL에서 재다운로드
 tools/kengdic.tsv
 tools/ipa_en_us.txt
+
+# 첫 화면 사진 원본(2.7MB) — 배포에는 sips 로 만든 assets/splash.jpg(526KB)만 쓴다
+assets/splash.png
