@@ -233,6 +233,7 @@ async function doSearch() {
   lastQuery = q;
   const res = await lookup(q);
   pushRecent(q);
+  if (window.SDStats) SDStats.log();   // 주간 통계용 검색 기록
   await render(res);
   window.scrollTo(0, 0);
 }

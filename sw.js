@@ -1,7 +1,7 @@
 // 승호의사전 오프라인 캐시. 캐시명 바꾸면 옛 캐시 자동 폐기.
-const CACHE = 'seungho-dict-v7';
+const CACHE = 'seungho-dict-v8';
 const ASSETS = [
-  './', './index.html', './assets/app.css', './assets/app.js',
+  './', './index.html', './assets/app.css', './assets/app.js', './assets/stats.js', './assets/dict-bg.svg',
   './manifest.webmanifest', './assets/icon.svg',
   './data/enko.json', './data/koen.json', './data/idioms.json',
   './data/ipa.json', './data/ipa_us.json', './data/ipa_uk.json', './data/examples.json',

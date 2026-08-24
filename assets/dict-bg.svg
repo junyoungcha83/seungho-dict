@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" width="800" height="420"
+     preserveAspectRatio="xMidYMax slice">
+  <!-- 펼친 영어사전 워터마크. 통계를 얹을 배경이라 아주 연하게 그린다. -->
+  <defs>
+    <linearGradient id="pg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#eef2f7"/>
+    </linearGradient>
+    <linearGradient id="gutter" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#cbd5e1" stop-opacity="0"/>
+      <stop offset=".5" stop-color="#94a3b8" stop-opacity=".55"/>
+      <stop offset="1" stop-color="#cbd5e1" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="fade" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="1"/>
+      <stop offset=".45" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <g stroke-linecap="round">
+    <!-- 책 두께 -->
+    <path d="M60 372 Q400 344 740 372 L740 392 Q400 364 60 392 Z" fill="#dbe3ec"/>
+    <!-- 왼쪽 면 -->
+    <path d="M64 128 Q236 108 396 150 L396 366 Q236 324 64 348 Z" fill="url(#pg)" stroke="#d3dce6" stroke-width="2"/>
+    <!-- 오른쪽 면 -->
+    <path d="M736 128 Q564 108 404 150 L404 366 Q564 324 736 348 Z" fill="url(#pg)" stroke="#d3dce6" stroke-width="2"/>
+    <!-- 접힌 골 -->
+    <rect x="392" y="140" width="16" height="226" fill="url(#gutter)"/>
+
+    <!-- 왼쪽 본문 줄 -->
+    <g stroke="#b6c2d1" stroke-width="5" opacity=".55">
+      <path d="M92 186 H236"/><path d="M92 206 H356"/><path d="M92 226 H318"/>
+      <path d="M92 246 H352"/><path d="M92 266 H268"/><path d="M92 286 H344"/>
+      <path d="M92 306 H300"/>
+    </g>
+    <!-- 왼쪽 표제어 -->
+    <g stroke="#8ea3bb" stroke-width="9" opacity=".75">
+      <path d="M92 162 H180"/>
+    </g>
+
+    <!-- 오른쪽 본문 줄 -->
+    <g stroke="#b6c2d1" stroke-width="5" opacity=".55">
+      <path d="M452 186 H700"/><path d="M452 206 H636"/><path d="M452 226 H690"/>
+      <path d="M452 246 H604"/><path d="M452 266 H676"/><path d="M452 286 H628"/>
+      <path d="M452 306 H688"/>
+    </g>
+    <g stroke="#8ea3bb" stroke-width="9" opacity=".75">
+      <path d="M452 162 H556"/>
+    </g>
+
+    <!-- 책갈피 리본 -->
+    <path d="M624 128 L624 236 L648 214 L672 236 L672 122" fill="#c7d2e4" opacity=".8" stroke="none"/>
+  </g>
+
+  <!-- 위쪽은 하얗게 흐려서 본문 글씨와 안 겹치게 -->
+  <rect x="0" y="0" width="800" height="420" fill="url(#fade)"/>
+</svg>
