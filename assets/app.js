@@ -3,7 +3,7 @@
 // 발음소리: 브라우저 음성합성(speechSynthesis)  ·  예문: Tatoeba API(캐시)
 'use strict';
 
-const APP_VER = 'v11';
+const APP_VER = 'v12';
 const HANGUL = /[가-힣]/;
 const API = 'https://seungho-dict-api.junyoung-cha83.workers.dev';
 const EX_API = API + '/ex';   // 예문 프록시(무료)
@@ -498,57 +498,27 @@ function setTab(tab) {
     b.setAttribute('aria-selected', on ? 'true' : 'false');
   });
   if (tab === 'fav') { renderFavs(); renderRecent(); }
-  if (tab === 'ex') renderExSuggest();
   if (tab === 'stats' && window.SDStats) SDStats.render();
   window.scrollTo(0, 0);
 }
 
-// ── 예문검색 ──────────────────────────────────
-// 예문은 많이 받아 두고 '쉬운 것' 부터 골라 5개 이상 보여 준다. 쉬움의 기준은
-// 초등 필수 낱말로만 이뤄졌는지 + 문장이 짧은지 (word.js 의 easiness).
-async function doExSearch() {
-  const w = document.getElementById('qEx').value.trim();
-  if (!w) return;
-  const box = document.getElementById('exResult');
-  box.innerHTML = '<div class="empty"><span class="load">찾는 중…</span></div>';
-  const [ex, lv, core] = await Promise.all([fetchExamples(w), levelSets(), loadData('core')]);
-  if (!ex) { box.innerHTML = '<div class="empty"><p class="nf">오프라인이라 예문을 불러오지 못했어요.</p></div>'; return; }
-  // 손으로 다듬은 낱말이면 그 예문을 앞자리에 놓는다 — 해석이 붙어 있고 문장도 쉽다
-  const mine = [];
-  const ent = core[w.toLowerCase()];
-  if (ent) for (const s of ent.p) for (const [en, ko] of s.e) mine.push({ en, ko });
-  const picked = SDWord.pickExamples(mine.concat(ex), lv, 8);
-  if (!picked.length) { box.innerHTML = `<div class="empty"><p class="nf">‘${escapeHtml(w)}’ 예문을 찾지 못했어요.</p></div>`; return; }
-  box.innerHTML = `<article class="card">
-    <div class="head"><div class="word">${escapeHtml(w)}${levelBadge(w.toLowerCase(), lv)}</div>${speakerBtn(w)}</div>
-    <section class="sec"><h3>예문 ${picked.length}개 — 쉬운 순</h3>${exList(picked)}
-      ${picked.length < 5 ? '<p class="src">이 낱말은 쉬운 예문이 많지 않아요.</p>' : ''}
-    </section>
-    <section class="sec"><h3>이 낱말 더 알아보기</h3>
-      <button class="wlink big" data-w="${escapeAttr(w)}">‘${escapeHtml(w)}’ 단어검색으로 보기 →</button></section>
-  </article>`;
-  wireSpeakers(box); wireWordLinks(box);
-  if (window.SDStats) SDStats.log();     // 예문검색도 검색 건수에 넣는다
-}
-
-// 예문검색 첫 화면에 초등 필수 낱말을 몇 개 띄워 둔다. 무엇을 쳐야 할지 모르는 아이에게
+// 첫 화면에 초등 필수 낱말을 몇 개 띄워 둔다. 무엇을 쳐야 할지 모르는 아이에게
 // 고를 거리를 주려는 것 — 손으로 다듬어 둔 낱말(core) 중에서만 고른다.
-async function renderExSuggest() {
-  const box = document.getElementById('exSuggest'); if (!box) return;
+async function renderWordSuggest() {
+  const box = document.getElementById('wordSuggest'); if (!box) return;
   const [core, lv] = await Promise.all([loadData('core'), levelSets()]);
   const words = Object.keys(core).filter(w => lv.lv1.has(w));
+  if (!words.length) return;
   const pick = SDWord.shuffle(words.slice()).slice(0, 12);
   box.innerHTML = `<div class="recent-title">초등 필수 낱말로 시작해 볼까요?</div>
     <div class="chips">${pick.map(w => `<button class="chip" data-w="${escapeAttr(w)}">${escapeHtml(w)}</button>`).join('')}</div>`;
-  box.querySelectorAll('.chip').forEach(b => b.onclick = () => {
-    document.getElementById('qEx').value = b.dataset.w; doExSearch();
-  });
+  box.querySelectorAll('.chip').forEach(b => b.onclick = () => { setQuery(b.dataset.w); doSearch(); });
 }
 
 // 첫 화면으로 되돌리기
 function goHome() {
   document.getElementById('result').innerHTML = HOME_HTML;
-  renderFavs(); renderRecent();
+  renderFavs(); renderRecent(); renderWordSuggest();
   lastQuery = '';
   setQuery('');
   window.scrollTo(0, 0);
@@ -563,12 +533,8 @@ document.getElementById('go').onclick = () => doSearch();
 $q().addEventListener('keydown', e => { if (e.key === 'Enter') { e.preventDefault(); doSearch(); } });
 document.getElementById('ver').textContent = APP_VER;
 
-// 탭 · 예문검색 배선
+// 탭 배선
 document.querySelectorAll('.tab-btn').forEach(b => b.onclick = () => setTab(b.dataset.tab));
-document.getElementById('goEx').onclick = () => doExSearch();
-document.getElementById('qEx').addEventListener('keydown', e => {
-  if (e.key === 'Enter') { e.preventDefault(); doExSearch(); }
-});
 
 // 발음(US/UK) 토글
 function updateAccentUI() {
@@ -585,6 +551,7 @@ updateAccentUI();
 
 renderFavs();
 renderRecent();
+renderWordSuggest();
 // 데이터 미리 살짝 예열(첫 검색 체감속도).
 // core·inflect·wordinfo·level 은 다 합쳐도 작고, 첫 검색에서 바로 필요하다.
 loadData(ipaName()); loadData('examples');

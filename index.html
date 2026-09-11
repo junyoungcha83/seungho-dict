@@ -36,7 +36,6 @@
 </header>
 <nav class="tabbar" id="tabbar" role="tablist" aria-label="화면 선택">
   <button class="tab-btn active" data-tab="word"  role="tab" aria-selected="true"><span>🔤</span>단어검색</button>
-  <button class="tab-btn"        data-tab="ex"    role="tab" aria-selected="false"><span>💬</span>예문검색</button>
   <button class="tab-btn"        data-tab="fav"   role="tab" aria-selected="false"><span>⭐</span>즐겨찾기</button>
   <button class="tab-btn"        data-tab="stats" role="tab" aria-selected="false"><span>📊</span>통계</button>
 </nav>
@@ -52,28 +51,13 @@
   <main id="result" class="result">
     <div class="empty" id="empty">
       <p>한글을 입력하면 <b>영어 뜻</b>, 영어를 입력하면 <b>한글 뜻</b>을 보여줍니다.</p>
-      <p class="sub">발음기호·스피커 발음·예문·숙어까지 무료로, 오프라인에서도.</p>
+      <p class="sub">품사별 뜻·예문, 활용형, 구동사, 퀴즈까지 무료로, 오프라인에서도.</p>
     </div>
+    <div class="recent" id="wordSuggest"></div>
   </main>
 </section>
 
-<!-- ── 탭 2: 예문검색 ── -->
-<section class="panel hidden" id="panelEx" data-tab="ex">
-  <div class="search-wrap">
-    <input id="qEx" type="search" enterkeyhint="search" autocomplete="off" autocapitalize="off"
-           placeholder="영어 단어로 예문 찾기" aria-label="예문 검색" />
-    <button id="goEx" aria-label="예문 검색">🔍</button>
-  </div>
-  <main id="exResult" class="result">
-    <div class="empty">
-      <p>영어 단어를 넣으면 그 단어가 들어간 <b>예문</b>을 보여줍니다.</p>
-      <p class="sub">쉬운 문장부터 5개 이상 · 🔊를 누르면 소리로 읽어 줍니다.</p>
-    </div>
-    <div class="recent" id="exSuggest"></div>
-  </main>
-</section>
-
-<!-- ── 탭 3: 즐겨찾기 (최근 검색 포함) ── -->
+<!-- ── 탭 2: 즐겨찾기 (최근 검색 포함) ── -->
 <section class="panel hidden" id="panelFav" data-tab="fav">
   <main class="result">
     <div class="fav" id="fav"></div>
@@ -85,7 +69,7 @@
   </main>
 </section>
 
-<!-- ── 탭 4: 통계 ── -->
+<!-- ── 탭 3: 통계 ── -->
 <section class="panel hidden" id="panelStats" data-tab="stats">
   <main class="result">
     <div class="stats-head">
