@@ -37,7 +37,7 @@
 <nav class="tabbar" id="tabbar" role="tablist" aria-label="화면 선택">
   <button class="tab-btn active" data-tab="word"  role="tab" aria-selected="true"><span>🔤</span>단어검색</button>
   <button class="tab-btn"        data-tab="ess"   role="tab" aria-selected="false"><span>📚</span>필수영단어</button>
-  <button class="tab-btn"        data-tab="fav"   role="tab" aria-selected="false"><span>⭐</span>즐겨찾기</button>
+  <button class="tab-btn"        data-tab="fav"   role="tab" aria-selected="false"><span>⭐</span>이전단어</button>
   <button class="tab-btn"        data-tab="stats" role="tab" aria-selected="false"><span>📊</span>통계</button>
 </nav>
 </div>
@@ -63,7 +63,7 @@
   <main id="essResult" class="result"></main>
 </section>
 
-<!-- ── 탭 3: 즐겨찾기 (최근 검색 포함) ── -->
+<!-- ── 탭 3: 이전단어 (즐겨찾기 + 최근 검색) ── -->
 <section class="panel hidden" id="panelFav" data-tab="fav">
   <main class="result">
     <div class="fav" id="fav"></div>
