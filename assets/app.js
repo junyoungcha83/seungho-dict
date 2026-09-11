@@ -3,11 +3,12 @@
 // 발음소리: 브라우저 음성합성(speechSynthesis)  ·  예문: Tatoeba API(캐시)
 'use strict';
 
-const APP_VER = 'v7';
+const APP_VER = 'v8';
 const HANGUL = /[가-힣]/;
 const API = 'https://seungho-dict-api.junyoung-cha83.workers.dev';
 const EX_API = API + '/ex';   // 예문 프록시(무료)
 const TR_API = API + '/tr';   // 사전에 없는 단어 폴백 번역(무료) → 캐시로 계속 축적
+const KR_API = API + '/kr';   // 국립국어원 한국어기초사전 — 한국어 표제어의 뜻풀이 + 영어 대역
 let accent = (localStorage.getItem('sd:acc') === 'uk') ? 'uk' : 'us';       // 발음: 미국/영국
 const ipaName = () => 'ipa_' + accent;
 const speakLang = () => (accent === 'uk' ? 'en-GB' : 'en-US');
@@ -128,16 +129,53 @@ async function onlineTranslate(word, dir) {
   } catch (e) { return ''; }
 }
 
+// ── 국립국어원 뜻풀이 (한국어 표제어) ──
+// 워커가 인증키를 붙여 중계한다. 결과는 기기에 영구 캐시해 같은 말을 다시 묻지 않는다
+// (하루 5만 건 한도가 있고, 뜻풀이는 잘 바뀌지 않는다).
+async function krdictSenses(word) {
+  const key = 'sd:kr:' + word;
+  try { const c = localStorage.getItem(key); if (c !== null) return JSON.parse(c); } catch (e) {}
+  try {
+    const r = await fetch(`${KR_API}?q=${encodeURIComponent(word)}`);
+    const j = await r.json();
+    // 키가 없거나 서버가 실패한 경우의 '빈 결과' 를 캐시하면, 나중에 키를 넣어도
+    // 그 단어는 영영 뜻풀이가 안 뜬다. 제대로 답을 받았을 때만 저장한다.
+    if (j.error) return [];
+    const items = Array.isArray(j.items) ? j.items : [];
+    // 표제어가 정확히 같은 것만 쓴다. 비슷한 말을 대신 보여 주면('사과' → '사과나무')
+    // 엉뚱한 뜻을 읽게 된다. 없으면 뜻풀이 칸을 아예 안 띄우는 편이 낫다.
+    // 동음이의어는 item 이 따로 오므로(사과=과일/사죄) 여러 개가 잡히는 게 정상이다.
+    const flat = s => String(s || '').replace(/\s+/g, '');
+    const use = items.filter(i => i.word === word || flat(i.word) === flat(word));
+    const out = [];
+    for (const it of use) {
+      for (const s of (it.senses || [])) {
+        out.push({ word: it.word, pos: it.pos || '', def: s.def || '', en: s.en || '', enDef: s.enDef || '' });
+        if (out.length >= 6) break;
+      }
+      if (out.length >= 6) break;
+    }
+    try { localStorage.setItem(key, JSON.stringify(out)); } catch (e) {}
+    return out;
+  } catch (e) { return []; }    // 오프라인·키 없음 → 조용히 건너뛴다
+}
+
 async function lookup(q) {
   q = q.trim();
   if (!q) return null;
   if (HANGUL.test(q)) {
-    // 한글 → 영어
+    // 한글 → 영어. 내장 사전(단어 대 단어)에 더해 국립국어원에서 뜻풀이를 받아 온다.
     const koen = await loadData('koen');
     let eng = koen[q] || koen[q.replace(/\s+/g, '')] || null;
     let auto = false;
+    const senses = await krdictSenses(q);
+    // 내장 사전에 없으면 국립국어원의 영어 대역을 대신 쓴다(비공식 번역 폴백보다 정확하다)
+    if (!eng && senses.length) {
+      const words = [...new Set(senses.map(s => s.en).filter(Boolean))];
+      if (words.length) eng = words.join('; ');
+    }
     if (!eng) { const t = await onlineTranslate(q, 'koen'); if (t) { eng = t.toLowerCase(); auto = true; } }
-    return { dir: 'ko', query: q, eng, auto };
+    return { dir: 'ko', query: q, eng, auto, senses };
   } else {
     // 영어 → 한글
     const lc = q.toLowerCase();
@@ -210,6 +248,12 @@ async function render(res) {
         </div>
         <div class="mean">${engs.length ? engs.map(m => `<span class="tag en">${escapeHtml(m)}</span>`).join('') : '<span class="nf">단어를 찾지 못했어요</span>'}</div>
         ${res.auto ? '<div class="autonote">🌐 자동 번역 (사전 미수록 단어)</div>' : ''}
+        ${(res.senses || []).length ? `<section class="sec"><h3>뜻풀이</h3><div class="defs">${
+          res.senses.map((s, i) => `<div class="defi">
+            <div class="ko">${res.senses.length > 1 ? `<b class="dno">${i + 1}</b> ` : ''}${escapeHtml(s.def)}</div>
+            ${s.en ? `<div class="en">${escapeHtml(s.en)}${s.enDef ? ` — ${escapeHtml(s.enDef)}` : ''}</div>` : ''}
+          </div>`).join('')
+        }</div><p class="src">출처: 국립국어원 한국어기초사전 (CC BY-SA)</p></section>` : ''}
         ${head ? `<div class="phon big">${escapeHtml(head)} ${ipa ? escapeHtml(ipa) : ''} ${speakerBtn(head)}</div>` : ''}
         ${head ? `<section class="sec"><h3>예문</h3><div id="ex" class="ex"><span class="load">불러오는 중…</span></div></section>` : ''}
       </article>`;

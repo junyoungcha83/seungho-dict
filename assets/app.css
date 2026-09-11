@@ -51,6 +51,14 @@ body { font-family: 'Apple SD Gothic Neo','Noto Sans KR','Malgun Gothic',system-
 .idm .ko { color: var(--sub); font-size: .92rem; }
 .load { color: var(--sub); font-size: .9rem; }
 
+/* 뜻풀이 (국립국어원) — 단어 대 단어 태그만으로는 모자란 뜻을 풀어 준다 */
+.defs .defi { padding: 9px 0; border-bottom: 1px dashed var(--line); }
+.defs .defi:last-child { border-bottom: none; }
+.defs .defi .ko { font-size: 1rem; line-height: 1.55; }
+.defs .defi .dno { color: var(--blue); font-weight: 800; margin-right: 2px; }
+.defs .defi .en { margin-top: 3px; font-size: .9rem; color: var(--sub); line-height: 1.5; }
+.src { margin: 8px 0 0; font-size: .72rem; color: var(--sub); text-align: right; }
+
 /* 발음(US/UK) 토글 */
 .acc { align-self: center; margin-left: auto; display: flex; background: rgba(255,255,255,.22); border-radius: 999px; padding: 3px; }
 .acc button { border: none; background: transparent; color: #fff; font-size: .78rem; font-weight: 800; padding: 5px 12px; border-radius: 999px; cursor: pointer; }
