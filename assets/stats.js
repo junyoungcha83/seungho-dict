@@ -143,20 +143,13 @@
       </svg>`;
   }
 
-  // 검색 결과가 떠 있으면 통계를 감춘다 — 첫 화면(빈 상태)에서만 보인다.
-  function syncVisible() {
-    const empty = !!document.getElementById('empty');
-    document.body.classList.toggle('is-empty', empty);
-    if (empty) render();
-  }
-
+  // 통계는 이제 제 탭을 갖는다. 탭을 열 때 app.js 가 render() 를 부른다.
+  // (예전에는 첫 화면 아래 1/3 에 붙어 있어 결과가 뜨면 감춰야 했다.)
   function init() {
     const host = document.getElementById('statsChart');
-    const result = document.getElementById('result');
-    if (result) new MutationObserver(syncVisible).observe(result, { childList: true, subtree: true });
     if (host && window.ResizeObserver) new ResizeObserver(render).observe(host);
     addEventListener('resize', render);
-    syncVisible();
+    render();
   }
 
   if (document.readyState === 'loading') addEventListener('DOMContentLoaded', init);

@@ -3,7 +3,7 @@
 // 발음소리: 브라우저 음성합성(speechSynthesis)  ·  예문: Tatoeba API(캐시)
 'use strict';
 
-const APP_VER = 'v8';
+const APP_VER = 'v9';
 const HANGUL = /[가-힣]/;
 const API = 'https://seungho-dict-api.junyoung-cha83.workers.dev';
 const EX_API = API + '/ex';   // 예문 프록시(무료)
@@ -77,7 +77,7 @@ function renderRecent() {
         `<span class="chip-wrap"><button class="chip-x" data-x="${escapeAttr(w)}" title="삭제" aria-label="삭제">×</button><button class="chip" data-w="${escapeAttr(w)}">${escapeHtml(w)}</button></span>`
       ).join('')}</div>`
     : '';
-  box.querySelectorAll('.chip').forEach(b => b.onclick = () => { setQuery(b.dataset.w); doSearch(); });
+  box.querySelectorAll('.chip').forEach(b => b.onclick = () => { setQuery(b.dataset.w); setTab('word'); doSearch(); });
   box.querySelectorAll('.chip-x').forEach(b => b.onclick = (e) => { e.stopPropagation(); removeRecent(b.dataset.x); });
 }
 
@@ -95,8 +95,11 @@ function renderFavs() {
         `<span class="chip-wrap"><button class="chip-x" data-x="${escapeAttr(w)}" title="삭제" aria-label="삭제">×</button><button class="chip fav-chip" data-w="${escapeAttr(w)}">${escapeHtml(w)}</button></span>`
       ).join('')}</div>`
     : '';
-  box.querySelectorAll('.chip').forEach(b => b.onclick = () => { setQuery(b.dataset.w); doSearch(); });
+  box.querySelectorAll('.chip').forEach(b => b.onclick = () => { setQuery(b.dataset.w); setTab('word'); doSearch(); });
   box.querySelectorAll('.chip-x').forEach(b => b.onclick = (e) => { e.stopPropagation(); removeFav(b.dataset.x); });
+  // 즐겨찾기도 최근검색도 없을 때만 안내를 띄운다
+  const hint = document.getElementById('favEmpty');
+  if (hint) hint.classList.toggle('hidden', !!(a.length || recentList().length));
 }
 function favBtn(q) { return `<button class="favbtn ${isFav(q) ? 'on' : ''}" data-fav="${escapeAttr(q)}" title="즐겨찾기" aria-label="즐겨찾기">${isFav(q) ? '★' : '☆'}</button>`; }
 function wireFav(root) {
@@ -288,6 +291,42 @@ async function doSearch(push = true) {
   window.scrollTo(0, 0);
 }
 
+// ── 탭 ────────────────────────────────────────
+// 즐겨찾기·통계는 볼 때마다 새로 그린다. 다른 탭에서 별표를 누르거나 검색을 해도
+// 돌아오면 최신이 보이게 하려는 것.
+let curTab = 'word';
+function setTab(tab) {
+  curTab = tab;
+  document.querySelectorAll('.panel').forEach(p => p.classList.toggle('hidden', p.dataset.tab !== tab));
+  document.querySelectorAll('.tab-btn').forEach(b => {
+    const on = b.dataset.tab === tab;
+    b.classList.toggle('active', on);
+    b.setAttribute('aria-selected', on ? 'true' : 'false');
+  });
+  if (tab === 'fav') { renderFavs(); renderRecent(); }
+  if (tab === 'stats' && window.SDStats) SDStats.render();
+  window.scrollTo(0, 0);
+}
+
+// ── 예문검색 ──────────────────────────────────
+async function doExSearch() {
+  const w = document.getElementById('qEx').value.trim();
+  if (!w) return;
+  const box = document.getElementById('exResult');
+  box.innerHTML = '<div class="empty"><span class="load">찾는 중…</span></div>';
+  const ex = await fetchExamples(w);
+  if (!ex) { box.innerHTML = '<div class="empty"><p class="nf">오프라인이라 예문을 불러오지 못했어요.</p></div>'; return; }
+  if (!ex.length) { box.innerHTML = `<div class="empty"><p class="nf">‘${escapeHtml(w)}’ 예문을 찾지 못했어요.</p></div>`; return; }
+  box.innerHTML = `<article class="card">
+    <div class="head"><div class="word">${escapeHtml(w)}</div>${speakerBtn(w)}</div>
+    <section class="sec"><h3>예문 ${ex.length}개</h3><div class="ex">${
+      ex.map(e => `<div class="exi"><div class="en">${escapeHtml(e.en)} ${speakerBtn(e.en)}</div>${
+        e.ko ? `<div class="ko">${escapeHtml(e.ko)}</div>` : ''}</div>`).join('')
+    }</div></section></article>`;
+  wireSpeakers(box);
+  if (window.SDStats) SDStats.log();     // 예문검색도 검색 건수에 넣는다
+}
+
 // 첫 화면으로 되돌리기
 function goHome() {
   document.getElementById('result').innerHTML = HOME_HTML;
@@ -305,6 +344,13 @@ addEventListener('popstate', (e) => {
 document.getElementById('go').onclick = () => doSearch();
 $q().addEventListener('keydown', e => { if (e.key === 'Enter') { e.preventDefault(); doSearch(); } });
 document.getElementById('ver').textContent = APP_VER;
+
+// 탭 · 예문검색 배선
+document.querySelectorAll('.tab-btn').forEach(b => b.onclick = () => setTab(b.dataset.tab));
+document.getElementById('goEx').onclick = () => doExSearch();
+document.getElementById('qEx').addEventListener('keydown', e => {
+  if (e.key === 'Enter') { e.preventDefault(); doExSearch(); }
+});
 
 // 발음(US/UK) 토글
 function updateAccentUI() {
