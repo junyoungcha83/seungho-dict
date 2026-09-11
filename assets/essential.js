@@ -9,7 +9,7 @@ const STEP = 120;            // 한 번에 그리는 낱말 수. 1,800개를 한
 
 // 차례는 ABC 순이 기본이다. '자주 쓰는 순' 으로 두면 the·of·to 같은 기능어가 앞을 다
 // 차지해서, 외울 낱말을 찾으러 온 아이에게는 첫 화면이 쓸모없어 보인다.
-const ui = { lv: 1, sort: 'abc', onlyNew: false, shown: STEP };
+const ui = { lv: 1, sort: 'abc', letter: '', onlyNew: false, shown: STEP };
 
 function known() { try { return new Set(JSON.parse(localStorage.getItem(KEY) || '[]')); } catch (e) { return new Set(); } }
 function saveKnown(s) { try { localStorage.setItem(KEY, JSON.stringify([...s])); } catch (e) {} }
@@ -43,6 +43,12 @@ async function render() {
   const total = all.length;
   const done = all.filter(w => kn.has(w)).length;
   const pct = total ? Math.round(done / total * 100) : 0;
+
+  // A~Z 바로가기. 낱말이 하나도 없는 글자는 눌러도 빈 화면만 나오므로 잠가 둔다.
+  // 세는 것은 '아직 못 외운 것만' 을 거른 뒤라서, 다 외운 글자도 잠긴다.
+  const byLetter = new Map();
+  for (const w of list) byLetter.set(w[0], (byLetter.get(w[0]) || 0) + 1);
+  if (ui.letter) list = list.filter(w => w[0] === ui.letter);
   const page = list.slice(0, ui.shown);
 
   box.innerHTML = `
@@ -60,6 +66,14 @@ async function render() {
         </div>
         <label class="ess-chk"><input type="checkbox" id="essOnlyNew" ${ui.onlyNew ? 'checked' : ''}> 아직 못 외운 것만</label>
       </div>
+      ${ui.sort === 'abc' ? `<div class="ess-az" id="essAz">
+        <button data-v="" class="${ui.letter ? '' : 'on'}">전체</button>
+        ${'abcdefghijklmnopqrstuvwxyz'.split('').map(c => {
+          const n = byLetter.get(c) || 0;
+          return `<button data-v="${c}" class="${ui.letter === c ? 'on' : ''}" ${n ? '' : 'disabled'}
+            title="${n}개">${c.toUpperCase()}</button>`;
+        }).join('')}
+      </div>` : ''}
     </div>
     ${page.length ? `<ol class="ess-list" start="1">${page.map(w => {
       const on = kn.has(w);
@@ -68,18 +82,25 @@ async function render() {
         <button class="ess-word" data-w="${escapeAttr(w)}">${escapeHtml(w)}</button>
         <span class="ess-ko">${escapeHtml(meaning(w, core, gloss, enko)) || '<span class="nf">뜻은 눌러서 확인</span>'}</span>
       </li>`;
-    }).join('')}</ol>` : '<div class="empty"><p>이 단계는 다 외웠어요! 🎉</p></div>'}
+    }).join('')}</ol>` : `<div class="empty"><p>${ui.letter
+        ? escapeHtml(ui.letter.toUpperCase()) + ' 로 시작하는 낱말은 다 외웠어요! 🎉'
+        : '이 단계는 다 외웠어요! 🎉'}</p></div>`}
     ${list.length > ui.shown ? `<button class="ess-more" id="essMore">${list.length - ui.shown}개 더 보기</button>` : ''}
     <p class="src">출처: ${escapeHtml(lvj.src || '')}<br>${escapeHtml(lvj.mark || '')}</p>`;
 
+  // 단계·차례·거르개를 바꾸면 고른 글자는 뜻을 잃는다(a 를 보던 중 중등으로 옮기는 식).
+  // 그때마다 '전체' 로 되돌린다.
   box.querySelectorAll('#essLv button').forEach(b => b.onclick = () => {
-    ui.lv = Number(b.dataset.v); ui.shown = STEP; render();
+    ui.lv = Number(b.dataset.v); ui.letter = ''; ui.shown = STEP; render();
   });
   box.querySelectorAll('#essSort button').forEach(b => b.onclick = () => {
-    ui.sort = b.dataset.v; ui.shown = STEP; render();
+    ui.sort = b.dataset.v; ui.letter = ''; ui.shown = STEP; render();
+  });
+  box.querySelectorAll('#essAz button').forEach(b => b.onclick = () => {
+    ui.letter = b.dataset.v; ui.shown = STEP; render();
   });
   const chk = box.querySelector('#essOnlyNew');
-  if (chk) chk.onchange = () => { ui.onlyNew = chk.checked; ui.shown = STEP; render(); };
+  if (chk) chk.onchange = () => { ui.onlyNew = chk.checked; ui.letter = ''; ui.shown = STEP; render(); };
   const more = box.querySelector('#essMore');
   if (more) more.onclick = () => { ui.shown += STEP; render(); };
 

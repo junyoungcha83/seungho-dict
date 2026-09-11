@@ -311,3 +311,16 @@ ol.ess-list { list-style: none; margin: 12px 0 0; padding: 0;
   color: var(--blue); font-weight: 800; font-size: .95rem; padding: 13px; border-radius: 12px;
   cursor: pointer; }
 .ess-more:active { background: #eef2ff; }
+
+/* A~Z 바로가기 — ABC 순으로 볼 때만 나온다.
+   폰 화면에 26칸을 넣어야 하므로 그리드로 균등하게 나눈다. 손가락으로 누르는
+   단추라 한 칸을 32px 아래로 줄이지 않는다. */
+.ess-az { display: grid; grid-template-columns: repeat(auto-fill, minmax(34px, 1fr));
+  gap: 5px; margin-top: 12px; padding-top: 12px; border-top: 1px solid var(--line); }
+.ess-az button { border: 1px solid var(--line); background: #fff; border-radius: 9px;
+  padding: 8px 2px; font-size: .85rem; font-weight: 700; color: var(--ink); cursor: pointer;
+  min-height: 34px; }
+.ess-az button:first-child { grid-column: span 2; font-size: .8rem; }  /* '전체' 는 두 칸 */
+.ess-az button.on { background: var(--blue); border-color: var(--blue); color: #fff; }
+.ess-az button:disabled { color: #cbd5e1; background: #f8fafc; cursor: default; }
+.ess-az button:not(:disabled):active { background: #eef2ff; }
