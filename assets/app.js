@@ -3,7 +3,7 @@
 // 발음소리: 브라우저 음성합성(speechSynthesis)  ·  예문: Tatoeba API(캐시)
 'use strict';
 
-const APP_VER = 'v12';
+const APP_VER = 'v13';
 const HANGUL = /[가-힣]/;
 const API = 'https://seungho-dict-api.junyoung-cha83.workers.dev';
 const EX_API = API + '/ex';   // 예문 프록시(무료)
@@ -478,11 +478,40 @@ async function doSearch(push = true) {
   if (push) {
     try { history.pushState({ q }, '', '?q=' + encodeURIComponent(q)); } catch (e) {}
   }
+  // 찾고 나면 키보드를 내려 준다. 결과를 보려면 어차피 자리가 필요하고, 무엇보다
+  // 폰에서 키보드를 손으로 내리다가 뒤로가기가 걸리는 일(아래 참고)을 애초에 줄인다.
+  try { $q().blur(); } catch (e) {}
   const res = await lookup(q);
   pushRecent(q);
   if (window.SDStats) SDStats.log();   // 주간 통계용 검색 기록
   await render(res);
   window.scrollTo(0, 0);
+}
+
+// ── 폰 키보드와 뒤로가기 ──────────────────────
+// 안드로이드는 키보드를 내리는 '∨' 단추가 곧 뒤로가기 단추다. 그래서 낱말을 찾아 놓고
+// 키보드만 치우려고 눌러도 앱에는 뒤로가기가 와서, 애써 띄운 풀이가 첫 화면으로
+// 사라져 버렸다. 키보드가 떠 있는 동안 온 뒤로가기는 '키보드만 내려 달라' 는 뜻으로
+// 읽고, 물러난 히스토리를 도로 밀어 넣어 보던 화면을 지킨다.
+// 삼키는 것은 키보드가 올라온 뒤 '딱 한 번' 이다. 안드로이드에서 키보드를 내려도
+// 입력칸의 커서는 그대로 남는 일이 많아, '커서가 있으면 삼킨다' 로만 두면 그 뒤의
+// 진짜 뒤로가기까지 영영 먹어 버린다. 그래서 표를 한 장 쥐여 주고, 쓰면 회수한다.
+// 표는 입력칸을 누르거나 키보드가 올라올 때마다 다시 채워진다.
+let kbTicket = false;
+let kbTimer = 0;
+// 소프트 키보드가 있는 기기(손가락으로 쓰는 화면)에서만 쓴다. 마우스로 쓰는 컴퓨터는
+// 입력칸을 눌러도 키보드가 뜨지 않으니 뒤로가기를 건드릴 까닭이 없다.
+const SOFT_KB = matchMedia('(pointer: coarse)').matches;
+function armKb() { if (SOFT_KB) { clearTimeout(kbTimer); kbTicket = true; } }
+// 커서가 빠져나가면 키보드도 곧 사라진다 — 표를 곧바로 버리지 않고 잠깐 남겨 둔다.
+// 키보드를 내릴 때 커서까지 함께 빠지는 기기가 있는데, 그런 기기는 blur 가 뒤로가기보다
+// 먼저 온다. 반대로 그냥 딴 데를 눌러 커서가 빠진 것이라면 이 사이에 표가 없어진다.
+function disarmKbSoon() { clearTimeout(kbTimer); kbTimer = setTimeout(() => { kbTicket = false; }, 500); }
+if (window.visualViewport) {
+  const vv = window.visualViewport;
+  vv.addEventListener('resize', () => {
+    if ((window.innerHeight - vv.height) > 150) armKb();
+  });
 }
 
 // ── 탭 ────────────────────────────────────────
@@ -525,12 +554,25 @@ function goHome() {
 }
 
 addEventListener('popstate', (e) => {
+  if (kbTicket) {
+    // 키보드만 내리고 화면은 그대로 둔다. 표를 썼으니 다음 뒤로가기는 그냥 통과시킨다.
+    kbTicket = false;
+    try { $q().blur(); } catch (err) {}
+    try {
+      if (lastQuery) history.pushState({ q: lastQuery }, '', '?q=' + encodeURIComponent(lastQuery));
+      else history.pushState(null, '', location.pathname);
+    } catch (err) {}
+    return;
+  }
   const q = (e.state && e.state.q) || new URLSearchParams(location.search).get('q');
   if (q) { setQuery(q); doSearch(false); } else goHome();
 });
 
 document.getElementById('go').onclick = () => doSearch();
 $q().addEventListener('keydown', e => { if (e.key === 'Enter') { e.preventDefault(); doSearch(); } });
+// 입력칸을 누르면 키보드가 올라온다 — 그때마다 '뒤로가기 한 번 삼키기' 표를 채워 둔다
+$q().addEventListener('focus', armKb);
+$q().addEventListener('blur', disarmKbSoon);
 document.getElementById('ver').textContent = APP_VER;
 
 // 탭 배선
