@@ -263,3 +263,51 @@ ol.exn .ko { color: var(--sub); font-size: .92rem; margin-top: 2px; }
 .qagain { width: 100%; border: none; background: var(--blue); color: #fff; font-weight: 800;
   font-size: .95rem; padding: 12px; border-radius: 12px; cursor: pointer; }
 .qagain:active { opacity: .85; }
+
+/* ══ 필수영단어 탭 ══════════════════════════════════════════
+   교육부 기본 어휘 목록을 죽 늘어놓고, 외운 것에 체크해 나가는 화면. */
+.ess-top { background: var(--card); border: 1px solid var(--line); border-radius: 16px;
+  padding: 14px; margin-top: 12px; }
+
+/* 초등 / 중등 이상 · 정렬 고르개 */
+.seg { display: flex; background: #eef2f7; border-radius: 12px; padding: 4px; gap: 4px; }
+.seg button { flex: 1 1 0; min-width: 0; border: none; background: transparent; cursor: pointer;
+  padding: 9px 6px; border-radius: 9px; font-size: .88rem; font-weight: 700; color: var(--sub);
+  white-space: nowrap; }
+.seg button.on { background: #fff; color: var(--blue); box-shadow: 0 1px 3px rgba(15,23,42,.12); }
+.seg.sm button { padding: 7px 6px; font-size: .78rem; }
+
+/* 얼마나 외웠나 */
+.ess-bar { height: 10px; border-radius: 999px; background: #e6ebf2; overflow: hidden; margin: 12px 0 6px; }
+.ess-bar i { display: block; height: 100%; border-radius: 999px;
+  background: linear-gradient(90deg, #60a5fa, var(--blue)); transition: width .25s ease; }
+.ess-cnt { font-size: .9rem; color: var(--sub); }
+.ess-cnt b { font-size: 1.15rem; color: var(--blue); }
+.ess-opt { display: flex; align-items: center; gap: 10px; margin-top: 12px; flex-wrap: wrap; }
+.ess-opt .seg { flex: 1 1 200px; }
+.ess-chk { font-size: .82rem; color: var(--sub); display: flex; align-items: center; gap: 5px;
+  white-space: nowrap; cursor: pointer; }
+.ess-chk input { width: 17px; height: 17px; accent-color: var(--blue); }
+
+/* 낱말 줄 — 체크 · 낱말 · 뜻 */
+ol.ess-list { list-style: none; margin: 12px 0 0; padding: 0;
+  background: var(--card); border: 1px solid var(--line); border-radius: 16px; overflow: hidden; }
+.essi { display: flex; align-items: center; gap: 10px; padding: 11px 13px;
+  border-bottom: 1px solid var(--line); }
+.essi:last-child { border-bottom: none; }
+.essi.done { background: #f6fbf7; }
+.ess-check { flex: none; width: 28px; height: 28px; border-radius: 9px; cursor: pointer;
+  border: 2px solid var(--line); background: #fff; color: #fff; font-size: 1rem; font-weight: 800;
+  line-height: 1; padding: 0; }
+.essi.done .ess-check { background: #22c55e; border-color: #22c55e; }
+.ess-check:active { transform: scale(.88); }
+.ess-word { flex: none; border: none; background: transparent; padding: 0; cursor: pointer;
+  font-size: 1.05rem; font-weight: 700; color: var(--blue); text-align: left; }
+.essi.done .ess-word { color: #15803d; }
+.ess-ko { flex: 1 1 0; min-width: 0; font-size: .88rem; color: var(--sub); text-align: right;
+  overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+.ess-more { width: 100%; margin-top: 12px; border: 1px solid var(--line); background: #fff;
+  color: var(--blue); font-weight: 800; font-size: .95rem; padding: 13px; border-radius: 12px;
+  cursor: pointer; }
+.ess-more:active { background: #eef2ff; }

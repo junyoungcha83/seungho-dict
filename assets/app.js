@@ -3,7 +3,7 @@
 // 발음소리: 브라우저 음성합성(speechSynthesis)  ·  예문: Tatoeba API(캐시)
 'use strict';
 
-const APP_VER = 'v13';
+const APP_VER = 'v14';
 const HANGUL = /[가-힣]/;
 const API = 'https://seungho-dict-api.junyoung-cha83.workers.dev';
 const EX_API = API + '/ex';   // 예문 프록시(무료)
@@ -210,12 +210,22 @@ function lemmas(w) {
 //   ② 나머지 낱말 — 내장 사전(enko)의 뜻을 한글 꼬리로 품사를 갈라 묶고(word.js),
 //      예문은 Tatoeba 에서 받아 품사별로 나눠 담는다. 뜻·예문이 ① 만큼 곱지는 않다.
 
-// 난이도 낱말집(초등·중등)은 한 줄 문자열이라 Set 으로 바꿔 둔다
+// 난이도 낱말집(교육부 기본 어휘)은 한 줄 문자열이라 Set 으로 바꿔 둔다.
+// 원문 목록은 대표형만 싣는다(원문 지침 3항). 예문에는 goes·went·running 처럼 바뀐 꼴이
+// 나오므로, 그대로 견주면 아는 낱말을 모르는 낱말로 세어 문장이 어려워 보인다.
+// 그래서 읽어 들일 때 활용형까지 펼쳐 둔다.
 let _lv = null;
 async function levelSets() {
   if (_lv) return _lv;
-  const j = await loadData('level');
-  const mk = s => new Set(String(s || '').split(/\s+/).filter(Boolean));
+  const [j, inflect] = await Promise.all([loadData('level'), loadData('inflect')]);
+  const mk = s => {
+    const out = new Set();
+    for (const w of String(s || '').split(/\s+/).filter(Boolean)) {
+      out.add(w);
+      for (const f of SDWord.allForms(w, inflect)) out.add(f);
+    }
+    return out;
+  };
   _lv = { lv1: mk(j.lv1), lv2: mk(j.lv2) };
   return _lv;
 }
@@ -527,6 +537,7 @@ function setTab(tab) {
     b.setAttribute('aria-selected', on ? 'true' : 'false');
   });
   if (tab === 'fav') { renderFavs(); renderRecent(); }
+  if (tab === 'ess' && window.SDEssential) SDEssential.render();
   if (tab === 'stats' && window.SDStats) SDStats.render();
   window.scrollTo(0, 0);
 }
