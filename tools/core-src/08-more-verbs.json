@@ -1,0 +1,169 @@
+{
+  "wash": { "lv": 1, "p": [
+    { "t": "v", "k": "씻다, 빨다", "e": [
+      ["Wash your hands before you eat.", "먹기 전에 손을 씻어."],
+      ["Mom washed my shirt.", "엄마가 내 셔츠를 빨아 주셨다."],
+      ["He washes the dishes every night.", "그는 매일 밤 설거지를 한다."]] }] },
+
+  "visit": { "lv": 1, "p": [
+    { "t": "v", "k": "방문하다, 찾아가다", "e": [
+      ["We visit our grandma every month.", "우리는 매달 할머니를 찾아뵌다."],
+      ["They visited the museum yesterday.", "그들은 어제 박물관을 방문했다."],
+      ["Come visit me sometime.", "언제 한번 놀러 와."]] }] },
+
+  "move": { "lv": 1, "p": [
+    { "t": "v", "k": "움직이다, 옮기다", "e": [
+      ["Don't move! Stay right there.", "움직이지 마! 거기 그대로 있어."],
+      ["We moved the desk to the window.", "우리는 책상을 창가로 옮겼다."],
+      ["The clouds are moving fast.", "구름이 빠르게 움직이고 있다."]] },
+    { "t": "v", "k": "이사하다", "e": [
+      ["We moved to a new house.", "우리는 새집으로 이사했다."],
+      ["They are moving next month.", "그들은 다음 달에 이사한다."],
+      ["My friend moved to Busan.", "내 친구는 부산으로 이사 갔다."]] }] },
+
+  "push": { "lv": 1, "p": [
+    { "t": "v", "k": "밀다, 누르다", "e": [
+      ["Push the door to open it.", "문을 밀어서 여세요."],
+      ["He pushed the button twice.", "그는 버튼을 두 번 눌렀다."],
+      ["Don't push your friends.", "친구들을 밀지 마."]] }] },
+
+  "pull": { "lv": 1, "p": [
+    { "t": "v", "k": "당기다, 끌다", "e": [
+      ["Pull the rope harder!", "줄을 더 세게 당겨!"],
+      ["She pulled the chair closer.", "그녀는 의자를 가까이 당겼다."],
+      ["The horse pulled the cart.", "말이 수레를 끌었다."]] }] },
+
+  "climb": { "lv": 1, "p": [
+    { "t": "v", "k": "오르다, 기어오르다", "e": [
+      ["The cat climbed the tree.", "고양이가 나무에 올라갔다."],
+      ["We climbed the mountain on Sunday.", "우리는 일요일에 산에 올랐다."],
+      ["He is climbing the stairs slowly.", "그는 천천히 계단을 오르고 있다."]] }] },
+
+  "cry": { "lv": 1, "p": [
+    { "t": "v", "k": "울다", "e": [
+      ["The baby is crying.", "아기가 울고 있다."],
+      ["Don't cry. It will be okay.", "울지 마. 괜찮을 거야."],
+      ["She cried after the sad movie.", "그녀는 슬픈 영화를 보고 울었다."]] }] },
+
+  "laugh": { "lv": 1, "p": [
+    { "t": "v", "k": "웃다", "e": [
+      ["We laughed at his joke.", "우리는 그의 농담에 웃었다."],
+      ["Don't laugh at other people.", "다른 사람을 비웃지 마."],
+      ["Everyone laughed together.", "모두가 함께 웃었다."]] }] },
+
+  "dance": { "lv": 1, "p": [
+    { "t": "v", "k": "춤추다", "e": [
+      ["They danced all night.", "그들은 밤새 춤을 췄다."],
+      ["Can you dance to this song?", "이 노래에 맞춰 춤출 수 있니?"],
+      ["She dances very well.", "그녀는 춤을 아주 잘 춘다."]] },
+    { "t": "n", "k": "춤", "e": [
+      ["That was a beautiful dance.", "정말 아름다운 춤이었다."],
+      ["We learned a new dance.", "우리는 새 춤을 배웠다."],
+      ["There is a dance at school tonight.", "오늘 밤 학교에서 무도회가 있다."]] }] },
+
+  "use": { "lv": 1, "p": [
+    { "t": "v", "k": "쓰다, 사용하다", "e": [
+      ["May I use your pencil?", "네 연필 좀 써도 될까?"],
+      ["We use computers at school.", "우리는 학교에서 컴퓨터를 쓴다."],
+      ["She used a big spoon.", "그녀는 큰 숟가락을 썼다."]] }] },
+
+  "live": { "lv": 1, "p": [
+    { "t": "v", "k": "살다", "e": [
+      ["I live in Seoul.", "나는 서울에 산다."],
+      ["Fish live in water.", "물고기는 물에서 산다."],
+      ["They lived there for ten years.", "그들은 거기에서 10년을 살았다."]] }] },
+
+  "leave": { "lv": 1, "p": [
+    { "t": "v", "k": "떠나다, 출발하다", "e": [
+      ["The train leaves at eight.", "기차는 8시에 떠난다."],
+      ["We left the house early.", "우리는 집을 일찍 나섰다."],
+      ["Don't leave without me.", "나 두고 가지 마."]] },
+    { "t": "v", "k": "두고 가다, 남기다", "e": [
+      ["I left my bag on the bus.", "나는 버스에 가방을 두고 내렸다."],
+      ["Leave the door open, please.", "문을 열어 두세요."],
+      ["She left a note on the desk.", "그녀는 책상에 쪽지를 남겼다."]] }] },
+
+  "save": { "lv": 1, "p": [
+    { "t": "v", "k": "구하다", "e": [
+      ["He saved a drowning boy.", "그는 물에 빠진 아이를 구했다."],
+      ["The doctor saved her life.", "의사가 그녀의 생명을 구했다."],
+      ["We must save the animals.", "우리는 동물을 지켜야 한다."]] },
+    { "t": "v", "k": "모으다, 아끼다", "e": [
+      ["I save money in a piggy bank.", "나는 저금통에 돈을 모은다."],
+      ["Save water. Don't waste it.", "물을 아껴. 낭비하지 마."],
+      ["She saved for a new bike.", "그녀는 새 자전거를 사려고 돈을 모았다."]] }] },
+
+  "remember": { "lv": 1, "p": [
+    { "t": "v", "k": "기억하다", "e": [
+      ["I remember his name now.", "이제 그의 이름이 기억난다."],
+      ["Remember to bring your book.", "책 가져오는 것 기억해."],
+      ["She remembered the way home.", "그녀는 집에 가는 길을 기억했다."]] }] },
+
+  "forget": { "lv": 1, "p": [
+    { "t": "v", "k": "잊다", "e": [
+      ["Don't forget your umbrella.", "우산 잊지 마."],
+      ["I forgot my homework at home.", "나는 숙제를 집에 두고 왔다."],
+      ["He never forgets a face.", "그는 얼굴은 절대 잊지 않는다."]] }] },
+
+  "change": { "lv": 1, "p": [
+    { "t": "v", "k": "바꾸다, 변하다", "e": [
+      ["The leaves change color in autumn.", "가을에 나뭇잎 색이 변한다."],
+      ["I want to change my seat.", "자리를 바꾸고 싶어요."],
+      ["She changed her mind.", "그녀는 마음을 바꿨다."]] },
+    { "t": "n", "k": "거스름돈, 잔돈", "e": [
+      ["Here is your change.", "여기 거스름돈이요."],
+      ["I don't have any change.", "나는 잔돈이 없다."],
+      ["He put the change in his pocket.", "그는 잔돈을 주머니에 넣었다."]] }] },
+
+  "choose": { "lv": 1, "p": [
+    { "t": "v", "k": "고르다, 선택하다", "e": [
+      ["Choose one color, please.", "색깔 하나를 고르세요."],
+      ["She chose the red one.", "그녀는 빨간 것을 골랐다."],
+      ["It is hard to choose.", "고르기가 어렵다."]] }] },
+
+  "join": { "lv": 1, "p": [
+    { "t": "v", "k": "가입하다, 함께하다", "e": [
+      ["I joined the soccer club.", "나는 축구부에 들어갔다."],
+      ["Would you like to join us?", "우리와 함께할래?"],
+      ["She joined the class last month.", "그녀는 지난달에 이 반에 들어왔다."]] }] },
+
+  "send": { "lv": 1, "p": [
+    { "t": "v", "k": "보내다", "e": [
+      ["I will send you a photo.", "내가 사진을 보내 줄게."],
+      ["She sent a letter to her friend.", "그녀는 친구에게 편지를 보냈다."],
+      ["Please send it by tomorrow.", "내일까지 보내 주세요."]] }] },
+
+  "spend": { "lv": 1, "p": [
+    { "t": "v", "k": "(돈을) 쓰다, (시간을) 보내다", "e": [
+      ["I spent all my money.", "나는 돈을 다 썼다."],
+      ["We spend summer at the beach.", "우리는 여름을 바닷가에서 보낸다."],
+      ["He spends an hour reading.", "그는 한 시간 동안 책을 읽는다."]] }] },
+
+  "enter": { "lv": 1, "p": [
+    { "t": "v", "k": "들어가다", "e": [
+      ["Please enter the room quietly.", "조용히 방에 들어오세요."],
+      ["He entered the shop first.", "그가 먼저 가게에 들어갔다."],
+      ["Do not enter this door.", "이 문으로 들어가지 마세요."]] }] },
+
+  "grow": { "lv": 1, "p": [
+    { "t": "v", "k": "자라다, 크다", "e": [
+      ["Plants grow with water and sun.", "식물은 물과 해로 자란다."],
+      ["You grew so tall!", "너 키가 정말 많이 컸구나!"],
+      ["The tree is growing fast.", "그 나무는 빨리 자라고 있다."]] },
+    { "t": "v", "k": "기르다, 재배하다", "e": [
+      ["We grow tomatoes in our garden.", "우리는 정원에서 토마토를 기른다."],
+      ["Farmers grow rice here.", "농부들이 여기서 벼를 재배한다."],
+      ["She grew flowers on the balcony.", "그녀는 베란다에서 꽃을 길렀다."]] }] },
+
+  "carry": { "lv": 1, "p": [
+    { "t": "v", "k": "나르다, 들고 가다", "e": [
+      ["Can you carry this box?", "이 상자 좀 들어 줄래?"],
+      ["She carried the baby upstairs.", "그녀는 아기를 안고 위층으로 올라갔다."],
+      ["He carries his lunch to school.", "그는 점심을 싸서 학교에 간다."]] }] },
+
+  "believe": { "lv": 2, "p": [
+    { "t": "v", "k": "믿다", "e": [
+      ["I believe you.", "나는 너를 믿어."],
+      ["She believed his story.", "그녀는 그의 이야기를 믿었다."],
+      ["Believe in yourself.", "너 자신을 믿어."]] }] }
+}

@@ -1,0 +1,973 @@
+{
+  "_note": "규칙으로 못 만드는 활용형만 모았다. 규칙형(-s/-ed/-ing/비교급)은 assets/word.js 가 계산한다.",
+  "verb": {
+    "be": [
+      "was",
+      "been",
+      "is",
+      "being"
+    ],
+    "have": [
+      "had",
+      "had",
+      "has",
+      "having"
+    ],
+    "do": [
+      "did",
+      "done",
+      "does",
+      "doing"
+    ],
+    "go": [
+      "went",
+      "gone",
+      "goes",
+      "going"
+    ],
+    "say": [
+      "said",
+      "said",
+      "says",
+      "saying"
+    ],
+    "get": [
+      "got",
+      "gotten",
+      "gets",
+      "getting"
+    ],
+    "make": [
+      "made",
+      "made"
+    ],
+    "know": [
+      "knew",
+      "known"
+    ],
+    "think": [
+      "thought",
+      "thought"
+    ],
+    "take": [
+      "took",
+      "taken"
+    ],
+    "see": [
+      "saw",
+      "seen"
+    ],
+    "come": [
+      "came",
+      "come"
+    ],
+    "want": [
+      "wanted",
+      "wanted"
+    ],
+    "give": [
+      "gave",
+      "given"
+    ],
+    "find": [
+      "found",
+      "found"
+    ],
+    "tell": [
+      "told",
+      "told"
+    ],
+    "become": [
+      "became",
+      "become"
+    ],
+    "leave": [
+      "left",
+      "left"
+    ],
+    "feel": [
+      "felt",
+      "felt"
+    ],
+    "put": [
+      "put",
+      "put"
+    ],
+    "bring": [
+      "brought",
+      "brought"
+    ],
+    "begin": [
+      "began",
+      "begun"
+    ],
+    "keep": [
+      "kept",
+      "kept"
+    ],
+    "hold": [
+      "held",
+      "held"
+    ],
+    "write": [
+      "wrote",
+      "written"
+    ],
+    "stand": [
+      "stood",
+      "stood"
+    ],
+    "hear": [
+      "heard",
+      "heard"
+    ],
+    "let": [
+      "let",
+      "let"
+    ],
+    "mean": [
+      "meant",
+      "meant"
+    ],
+    "set": [
+      "set",
+      "set"
+    ],
+    "meet": [
+      "met",
+      "met"
+    ],
+    "run": [
+      "ran",
+      "run"
+    ],
+    "pay": [
+      "paid",
+      "paid"
+    ],
+    "sit": [
+      "sat",
+      "sat"
+    ],
+    "speak": [
+      "spoke",
+      "spoken"
+    ],
+    "lie": [
+      "lay",
+      "lain"
+    ],
+    "lead": [
+      "led",
+      "led"
+    ],
+    "read": [
+      "read",
+      "read"
+    ],
+    "grow": [
+      "grew",
+      "grown"
+    ],
+    "lose": [
+      "lost",
+      "lost"
+    ],
+    "fall": [
+      "fell",
+      "fallen"
+    ],
+    "send": [
+      "sent",
+      "sent"
+    ],
+    "build": [
+      "built",
+      "built"
+    ],
+    "understand": [
+      "understood",
+      "understood"
+    ],
+    "draw": [
+      "drew",
+      "drawn"
+    ],
+    "break": [
+      "broke",
+      "broken"
+    ],
+    "spend": [
+      "spent",
+      "spent"
+    ],
+    "cut": [
+      "cut",
+      "cut"
+    ],
+    "rise": [
+      "rose",
+      "risen"
+    ],
+    "drive": [
+      "drove",
+      "driven"
+    ],
+    "buy": [
+      "bought",
+      "bought"
+    ],
+    "wear": [
+      "wore",
+      "worn"
+    ],
+    "choose": [
+      "chose",
+      "chosen"
+    ],
+    "seek": [
+      "sought",
+      "sought"
+    ],
+    "throw": [
+      "threw",
+      "thrown"
+    ],
+    "catch": [
+      "caught",
+      "caught"
+    ],
+    "deal": [
+      "dealt",
+      "dealt"
+    ],
+    "win": [
+      "won",
+      "won"
+    ],
+    "forget": [
+      "forgot",
+      "forgotten"
+    ],
+    "eat": [
+      "ate",
+      "eaten"
+    ],
+    "teach": [
+      "taught",
+      "taught"
+    ],
+    "sell": [
+      "sold",
+      "sold"
+    ],
+    "fly": [
+      "flew",
+      "flown"
+    ],
+    "sing": [
+      "sang",
+      "sung"
+    ],
+    "drink": [
+      "drank",
+      "drunk"
+    ],
+    "swim": [
+      "swam",
+      "swum"
+    ],
+    "ride": [
+      "rode",
+      "ridden"
+    ],
+    "sleep": [
+      "slept",
+      "slept"
+    ],
+    "wake": [
+      "woke",
+      "woken"
+    ],
+    "hit": [
+      "hit",
+      "hit"
+    ],
+    "hurt": [
+      "hurt",
+      "hurt"
+    ],
+    "shut": [
+      "shut",
+      "shut"
+    ],
+    "cost": [
+      "cost",
+      "cost"
+    ],
+    "spread": [
+      "spread",
+      "spread"
+    ],
+    "hang": [
+      "hung",
+      "hung"
+    ],
+    "bite": [
+      "bit",
+      "bitten"
+    ],
+    "blow": [
+      "blew",
+      "blown"
+    ],
+    "burn": [
+      "burned",
+      "burned"
+    ],
+    "dig": [
+      "dug",
+      "dug"
+    ],
+    "dream": [
+      "dreamed",
+      "dreamed"
+    ],
+    "fight": [
+      "fought",
+      "fought"
+    ],
+    "feed": [
+      "fed",
+      "fed"
+    ],
+    "freeze": [
+      "froze",
+      "frozen"
+    ],
+    "forgive": [
+      "forgave",
+      "forgiven"
+    ],
+    "hide": [
+      "hid",
+      "hidden"
+    ],
+    "lay": [
+      "laid",
+      "laid"
+    ],
+    "lend": [
+      "lent",
+      "lent"
+    ],
+    "light": [
+      "lit",
+      "lit"
+    ],
+    "quit": [
+      "quit",
+      "quit"
+    ],
+    "ring": [
+      "rang",
+      "rung"
+    ],
+    "shake": [
+      "shook",
+      "shaken"
+    ],
+    "shine": [
+      "shone",
+      "shone"
+    ],
+    "shoot": [
+      "shot",
+      "shot"
+    ],
+    "show": [
+      "showed",
+      "shown"
+    ],
+    "sink": [
+      "sank",
+      "sunk"
+    ],
+    "slide": [
+      "slid",
+      "slid"
+    ],
+    "smell": [
+      "smelled",
+      "smelled"
+    ],
+    "spell": [
+      "spelled",
+      "spelled"
+    ],
+    "spill": [
+      "spilled",
+      "spilled"
+    ],
+    "steal": [
+      "stole",
+      "stolen"
+    ],
+    "stick": [
+      "stuck",
+      "stuck"
+    ],
+    "strike": [
+      "struck",
+      "struck"
+    ],
+    "sweep": [
+      "swept",
+      "swept"
+    ],
+    "swing": [
+      "swung",
+      "swung"
+    ],
+    "weep": [
+      "wept",
+      "wept"
+    ],
+    "bend": [
+      "bent",
+      "bent"
+    ],
+    "bet": [
+      "bet",
+      "bet"
+    ],
+    "bind": [
+      "bound",
+      "bound"
+    ],
+    "breed": [
+      "bred",
+      "bred"
+    ],
+    "cast": [
+      "cast",
+      "cast"
+    ],
+    "cling": [
+      "clung",
+      "clung"
+    ],
+    "creep": [
+      "crept",
+      "crept"
+    ],
+    "flee": [
+      "fled",
+      "fled"
+    ],
+    "grind": [
+      "ground",
+      "ground"
+    ],
+    "kneel": [
+      "knelt",
+      "knelt"
+    ],
+    "knit": [
+      "knitted",
+      "knitted"
+    ],
+    "mistake": [
+      "mistook",
+      "mistaken"
+    ],
+    "overcome": [
+      "overcame",
+      "overcome"
+    ],
+    "prove": [
+      "proved",
+      "proven"
+    ],
+    "sew": [
+      "sewed",
+      "sewn"
+    ],
+    "shrink": [
+      "shrank",
+      "shrunk"
+    ],
+    "sow": [
+      "sowed",
+      "sown"
+    ],
+    "spin": [
+      "spun",
+      "spun"
+    ],
+    "split": [
+      "split",
+      "split"
+    ],
+    "spring": [
+      "sprang",
+      "sprung"
+    ],
+    "stink": [
+      "stank",
+      "stunk"
+    ],
+    "strive": [
+      "strove",
+      "striven"
+    ],
+    "swear": [
+      "swore",
+      "sworn"
+    ],
+    "tear": [
+      "tore",
+      "torn"
+    ],
+    "thrust": [
+      "thrust",
+      "thrust"
+    ],
+    "undergo": [
+      "underwent",
+      "undergone"
+    ],
+    "upset": [
+      "upset",
+      "upset"
+    ],
+    "wind": [
+      "wound",
+      "wound"
+    ],
+    "withdraw": [
+      "withdrew",
+      "withdrawn"
+    ]
+  },
+  "_double": "마지막 자음을 한 번 더 쓰고 -ed/-ing 를 붙이는 동사 (stop → stopped/stopping). 규칙만으로는 강세를 알 수 없어 따로 적는다.",
+  "double": [
+    "admit",
+    "ban",
+    "bat",
+    "beg",
+    "begin",
+    "bet",
+    "bid",
+    "brag",
+    "cancel",
+    "chat",
+    "chop",
+    "clap",
+    "clip",
+    "club",
+    "commit",
+    "control",
+    "cut",
+    "deter",
+    "dig",
+    "dip",
+    "drag",
+    "drop",
+    "drum",
+    "equal",
+    "fit",
+    "flip",
+    "forget",
+    "get",
+    "grab",
+    "grin",
+    "grip",
+    "hit",
+    "hop",
+    "hug",
+    "hum",
+    "infer",
+    "jet",
+    "jog",
+    "kid",
+    "knit",
+    "label",
+    "let",
+    "net",
+    "nod",
+    "nut",
+    "occur",
+    "omit",
+    "pat",
+    "patrol",
+    "permit",
+    "pet",
+    "pin",
+    "plan",
+    "plod",
+    "plug",
+    "pop",
+    "prefer",
+    "program",
+    "put",
+    "quarrel",
+    "quit",
+    "refer",
+    "regret",
+    "rid",
+    "rip",
+    "rob",
+    "rot",
+    "rub",
+    "run",
+    "scan",
+    "scrub",
+    "set",
+    "ship",
+    "shop",
+    "shred",
+    "shrug",
+    "shut",
+    "signal",
+    "sin",
+    "sip",
+    "sit",
+    "skip",
+    "slap",
+    "slim",
+    "slip",
+    "snap",
+    "sob",
+    "spin",
+    "spot",
+    "stab",
+    "step",
+    "stop",
+    "stun",
+    "submit",
+    "sum",
+    "swat",
+    "swim",
+    "tap",
+    "transmit",
+    "trap",
+    "travel",
+    "trim",
+    "trip",
+    "wag",
+    "wed",
+    "win",
+    "wrap",
+    "zip"
+  ],
+  "_plural": "불규칙 복수형",
+  "plural": {
+    "child": "children",
+    "man": "men",
+    "woman": "women",
+    "person": "people",
+    "foot": "feet",
+    "tooth": "teeth",
+    "goose": "geese",
+    "mouse": "mice",
+    "louse": "lice",
+    "ox": "oxen",
+    "sheep": "sheep",
+    "fish": "fish",
+    "deer": "deer",
+    "series": "series",
+    "species": "species",
+    "aircraft": "aircraft",
+    "means": "means",
+    "salmon": "salmon",
+    "life": "lives",
+    "knife": "knives",
+    "wife": "wives",
+    "leaf": "leaves",
+    "half": "halves",
+    "shelf": "shelves",
+    "wolf": "wolves",
+    "thief": "thieves",
+    "loaf": "loaves",
+    "calf": "calves",
+    "self": "selves",
+    "scarf": "scarves",
+    "potato": "potatoes",
+    "tomato": "tomatoes",
+    "hero": "heroes",
+    "echo": "echoes",
+    "analysis": "analyses",
+    "basis": "bases",
+    "crisis": "crises",
+    "thesis": "theses",
+    "cactus": "cacti",
+    "focus": "foci",
+    "fungus": "fungi",
+    "nucleus": "nuclei",
+    "datum": "data",
+    "medium": "media",
+    "curriculum": "curricula",
+    "phenomenon": "phenomena",
+    "criterion": "criteria",
+    "index": "indices",
+    "appendix": "appendices",
+    "roof": "roofs",
+    "belief": "beliefs",
+    "chief": "chiefs",
+    "cliff": "cliffs",
+    "proof": "proofs",
+    "piano": "pianos",
+    "photo": "photos",
+    "radio": "radios",
+    "video": "videos",
+    "zoo": "zoos",
+    "kilo": "kilos",
+    "solo": "solos",
+    "studio": "studios"
+  },
+  "_uncount": "셀 수 없는 명사 — 복수형을 만들면 안 된다",
+  "uncount": [
+    "water",
+    "milk",
+    "juice",
+    "coffee",
+    "tea",
+    "bread",
+    "rice",
+    "sugar",
+    "salt",
+    "butter",
+    "cheese",
+    "meat",
+    "soup",
+    "food",
+    "money",
+    "music",
+    "news",
+    "information",
+    "advice",
+    "homework",
+    "work",
+    "weather",
+    "air",
+    "snow",
+    "rain",
+    "sand",
+    "paper",
+    "hair",
+    "furniture",
+    "luggage",
+    "knowledge",
+    "help",
+    "fun",
+    "love",
+    "peace",
+    "health",
+    "traffic",
+    "electricity",
+    "oil",
+    "gold",
+    "wood",
+    "glass",
+    "soap",
+    "ice"
+  ],
+  "_adj": "불규칙 비교급·최상급",
+  "adj": {
+    "good": [
+      "better",
+      "best"
+    ],
+    "bad": [
+      "worse",
+      "worst"
+    ],
+    "well": [
+      "better",
+      "best"
+    ],
+    "far": [
+      "farther",
+      "farthest"
+    ],
+    "little": [
+      "less",
+      "least"
+    ],
+    "many": [
+      "more",
+      "most"
+    ],
+    "much": [
+      "more",
+      "most"
+    ],
+    "old": [
+      "older",
+      "oldest"
+    ],
+    "late": [
+      "later",
+      "latest"
+    ]
+  },
+  "_more": "-er/-est 가 아니라 more/most 를 쓰는 2음절 형용사 (규칙만으로는 갈리지 않는다)",
+  "more": [
+    "famous",
+    "careful",
+    "useful",
+    "helpful",
+    "boring",
+    "tired",
+    "afraid",
+    "modern",
+    "honest",
+    "active",
+    "common",
+    "eager",
+    "certain",
+    "proper",
+    "public",
+    "recent",
+    "special",
+    "current"
+  ],
+  "_er": "-er/-est 를 쓰는 2음절 형용사 (-y, -er, -ow, -le 로 끝나는 말)",
+  "er": [
+    "happy",
+    "easy",
+    "busy",
+    "early",
+    "funny",
+    "pretty",
+    "heavy",
+    "angry",
+    "hungry",
+    "lucky",
+    "dirty",
+    "noisy",
+    "lazy",
+    "tiny",
+    "silly",
+    "friendly",
+    "lovely",
+    "clever",
+    "narrow",
+    "shallow",
+    "simple",
+    "gentle",
+    "quiet"
+  ],
+  "_derive": "파생어(명사형·형용사형 등) 를 찾을 때 붙여 보는 꼬리. 앞이 우선순위.",
+  "suffix": [
+    [
+      "er",
+      "~하는 사람·기계"
+    ],
+    [
+      "or",
+      "~하는 사람"
+    ],
+    [
+      "ing",
+      "~하기·~하는 것"
+    ],
+    [
+      "tion",
+      "~하는 일·상태"
+    ],
+    [
+      "ation",
+      "~하는 일·상태"
+    ],
+    [
+      "sion",
+      "~하는 일·상태"
+    ],
+    [
+      "ment",
+      "~하는 일·결과"
+    ],
+    [
+      "ness",
+      "~한 성질·상태"
+    ],
+    [
+      "ity",
+      "~한 성질"
+    ],
+    [
+      "ance",
+      "~하는 일·상태"
+    ],
+    [
+      "ence",
+      "~하는 일·상태"
+    ],
+    [
+      "ful",
+      "~이 가득한"
+    ],
+    [
+      "less",
+      "~이 없는"
+    ],
+    [
+      "ly",
+      "~하게"
+    ],
+    [
+      "y",
+      "~한"
+    ],
+    [
+      "al",
+      "~의"
+    ],
+    [
+      "able",
+      "~할 수 있는"
+    ],
+    [
+      "ible",
+      "~할 수 있는"
+    ],
+    [
+      "ous",
+      "~한"
+    ],
+    [
+      "ive",
+      "~하는"
+    ],
+    [
+      "ist",
+      "~하는 사람"
+    ],
+    [
+      "ism",
+      "~주의"
+    ],
+    [
+      "ize",
+      "~하게 만들다"
+    ],
+    [
+      "en",
+      "~하게 만들다"
+    ],
+    [
+      "ship",
+      "~인 상태·관계"
+    ],
+    [
+      "hood",
+      "~인 시절·신분"
+    ],
+    [
+      "dom",
+      "~인 상태"
+    ]
+  ]
+}

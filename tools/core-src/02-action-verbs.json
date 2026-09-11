@@ -1,0 +1,279 @@
+{
+  "walk": { "lv": 1, "p": [
+    { "t": "v", "k": "걷다, 걸어가다", "e": [
+      ["I walk to school every day.", "나는 매일 학교까지 걸어간다."],
+      ["Let's walk together.", "같이 걷자."],
+      ["She walked slowly up the hill.", "그녀는 언덕을 천천히 걸어 올라갔다."]] },
+    { "t": "n", "k": "걷기, 산책", "e": [
+      ["Let's go for a walk.", "산책하러 가자."],
+      ["It is a ten-minute walk.", "걸어서 10분 거리다."],
+      ["We took a walk after dinner.", "우리는 저녁 먹고 산책을 했다."]] }] },
+
+  "talk": { "lv": 1, "p": [
+    { "t": "v", "k": "이야기하다", "e": [
+      ["Don't talk in the library.", "도서관에서는 떠들지 마."],
+      ["I talked with my teacher.", "나는 선생님과 이야기했다."],
+      ["They are talking about the game.", "그들은 그 경기에 대해 이야기하고 있다."]] },
+    { "t": "n", "k": "이야기, 대화", "e": [
+      ["We had a long talk.", "우리는 오래 이야기를 나눴다."],
+      ["Her talk was very useful.", "그녀의 강연은 아주 유익했다."],
+      ["I need a talk with you.", "너와 이야기 좀 해야겠어."]] }] },
+
+  "call": { "lv": 1, "p": [
+    { "t": "v", "k": "부르다", "e": [
+      ["My mom called my name.", "엄마가 내 이름을 부르셨다."],
+      ["We call him Tom.", "우리는 그를 톰이라고 부른다."],
+      ["Call me when you arrive.", "도착하면 불러 줘."]] },
+    { "t": "v", "k": "전화하다", "e": [
+      ["I will call you tonight.", "오늘 밤에 전화할게."],
+      ["She called the doctor.", "그녀는 의사에게 전화했다."],
+      ["Please call 119.", "119에 전화하세요."]] },
+    { "t": "n", "k": "전화, 통화", "e": [
+      ["I got a call from my friend.", "친구에게서 전화가 왔다."],
+      ["Give me a call later.", "나중에 전화 줘."],
+      ["The call was very short.", "통화는 아주 짧았다."]] }] },
+
+  "clean": { "lv": 1, "p": [
+    { "t": "v", "k": "청소하다, 닦다", "e": [
+      ["I clean my room on Saturday.", "나는 토요일에 방을 청소한다."],
+      ["Clean your desk, please.", "책상을 치워 주세요."],
+      ["He cleaned the windows.", "그는 창문을 닦았다."]] },
+    { "t": "a", "k": "깨끗한", "e": [
+      ["My hands are clean.", "내 손은 깨끗하다."],
+      ["Keep the classroom clean.", "교실을 깨끗하게 유지해."],
+      ["She wore a clean shirt.", "그녀는 깨끗한 셔츠를 입었다."]] }] },
+
+  "cook": { "lv": 1, "p": [
+    { "t": "v", "k": "요리하다", "e": [
+      ["Dad cooks dinner on Friday.", "아빠는 금요일에 저녁을 요리하신다."],
+      ["I can cook rice.", "나는 밥을 지을 수 있다."],
+      ["She cooked soup for us.", "그녀는 우리를 위해 국을 끓였다."]] },
+    { "t": "n", "k": "요리사", "e": [
+      ["My uncle is a good cook.", "우리 삼촌은 요리를 잘하신다."],
+      ["The cook made a big cake.", "그 요리사는 큰 케이크를 만들었다."],
+      ["He wants to be a cook.", "그는 요리사가 되고 싶어 한다."]] }] },
+
+  "buy": { "lv": 1, "p": [
+    { "t": "v", "k": "사다", "e": [
+      ["I want to buy a new bag.", "나는 새 가방을 사고 싶다."],
+      ["She bought some bread.", "그녀는 빵을 조금 샀다."],
+      ["Where did you buy it?", "그거 어디서 샀어?"]] }] },
+
+  "sell": { "lv": 1, "p": [
+    { "t": "v", "k": "팔다", "e": [
+      ["They sell fruit at the market.", "그들은 시장에서 과일을 판다."],
+      ["He sold his old bike.", "그는 낡은 자전거를 팔았다."],
+      ["This shop sells school supplies.", "이 가게는 학용품을 판다."]] }] },
+
+  "start": { "lv": 1, "p": [
+    { "t": "v", "k": "시작하다", "e": [
+      ["School starts at nine.", "학교는 9시에 시작한다."],
+      ["Let's start the game.", "게임을 시작하자."],
+      ["It started to rain.", "비가 오기 시작했다."]] },
+    { "t": "n", "k": "시작", "e": [
+      ["It was a good start.", "좋은 시작이었다."],
+      ["We were late from the start.", "우리는 처음부터 늦었다."],
+      ["The start of the race was exciting.", "경주의 시작은 신났다."]] }] },
+
+  "stop": { "lv": 1, "p": [
+    { "t": "v", "k": "멈추다, 그만두다", "e": [
+      ["Stop! The light is red.", "멈춰! 신호가 빨간불이야."],
+      ["The rain stopped in the morning.", "아침에 비가 그쳤다."],
+      ["Please stop talking.", "그만 이야기해 주세요."]] },
+    { "t": "n", "k": "정류장, 멈춤", "e": [
+      ["I get off at the next stop.", "나는 다음 정류장에서 내린다."],
+      ["The bus stop is over there.", "버스 정류장은 저쪽이다."],
+      ["We made a short stop.", "우리는 잠깐 멈췄다."]] }] },
+
+  "turn": { "lv": 1, "p": [
+    { "t": "v", "k": "돌다, 돌리다", "e": [
+      ["Turn right at the corner.", "모퉁이에서 오른쪽으로 도세요."],
+      ["She turned the key.", "그녀는 열쇠를 돌렸다."],
+      ["He turned and looked at me.", "그는 돌아서서 나를 보았다."]] },
+    { "t": "n", "k": "차례", "e": [
+      ["It's your turn.", "네 차례야."],
+      ["Wait for your turn.", "네 차례를 기다려."],
+      ["We took turns reading.", "우리는 번갈아 가며 읽었다."]] }] },
+
+  "put": { "lv": 1, "p": [
+    { "t": "v", "k": "놓다, 두다", "e": [
+      ["Put the book on the desk.", "책을 책상 위에 놓아라."],
+      ["She put her bag down.", "그녀는 가방을 내려놓았다."],
+      ["I put the milk in the fridge.", "나는 우유를 냉장고에 넣었다."]] }] },
+
+  "find": { "lv": 1, "p": [
+    { "t": "v", "k": "찾다, 발견하다", "e": [
+      ["I can't find my pencil.", "내 연필을 못 찾겠어."],
+      ["She found a coin on the road.", "그녀는 길에서 동전을 하나 발견했다."],
+      ["Did you find your dog?", "네 개 찾았니?"]] }] },
+
+  "keep": { "lv": 1, "p": [
+    { "t": "v", "k": "계속 ~하다, 유지하다", "e": [
+      ["Keep quiet, please.", "조용히 해 주세요."],
+      ["He kept running to the end.", "그는 끝까지 계속 달렸다."],
+      ["Keep the food warm.", "음식을 따뜻하게 유지해."]] },
+    { "t": "v", "k": "가지고 있다, 보관하다", "e": [
+      ["You can keep this pen.", "이 펜 가져도 돼."],
+      ["I keep my toys in a box.", "나는 장난감을 상자에 보관한다."],
+      ["She keeps a diary.", "그녀는 일기를 쓴다."]] }] },
+
+  "hold": { "lv": 1, "p": [
+    { "t": "v", "k": "잡다, 들다", "e": [
+      ["Hold my hand.", "내 손을 잡아."],
+      ["She is holding a big box.", "그녀는 큰 상자를 들고 있다."],
+      ["He held the door for me.", "그는 나를 위해 문을 잡아 주었다."]] },
+    { "t": "v", "k": "(행사를) 열다", "e": [
+      ["We hold a sports day in May.", "우리는 5월에 운동회를 연다."],
+      ["The school held a concert.", "학교는 음악회를 열었다."],
+      ["They will hold a meeting.", "그들은 회의를 열 것이다."]] }] },
+
+  "break": { "lv": 1, "p": [
+    { "t": "v", "k": "깨다, 부러뜨리다", "e": [
+      ["Don't break the glass.", "유리를 깨뜨리지 마."],
+      ["He broke his arm.", "그는 팔이 부러졌다."],
+      ["The cup broke into pieces.", "컵이 산산조각 났다."]] },
+    { "t": "n", "k": "쉬는 시간, 휴식", "e": [
+      ["Let's take a break.", "잠깐 쉬자."],
+      ["We have a ten-minute break.", "우리는 10분 쉬는 시간이 있다."],
+      ["He had lunch during the break.", "그는 쉬는 시간에 점심을 먹었다."]] }] },
+
+  "drive": { "lv": 1, "p": [
+    { "t": "v", "k": "운전하다", "e": [
+      ["My mom drives to work.", "우리 엄마는 차를 몰고 출근하신다."],
+      ["He drove me to the station.", "그가 나를 역까지 태워다 주었다."],
+      ["Can you drive a car?", "너 운전할 줄 아니?"]] }] },
+
+  "fly": { "lv": 1, "p": [
+    { "t": "v", "k": "날다, 비행기로 가다", "e": [
+      ["Birds fly in the sky.", "새들이 하늘을 난다."],
+      ["We flew to Jeju last summer.", "우리는 지난여름에 제주도로 비행기를 타고 갔다."],
+      ["Let's fly a kite.", "연을 날리자."]] },
+    { "t": "n", "k": "파리", "e": [
+      ["A fly landed on my food.", "파리가 내 음식에 앉았다."],
+      ["There are flies in the kitchen.", "부엌에 파리가 있다."],
+      ["He caught the fly.", "그는 파리를 잡았다."]] }] },
+
+  "swim": { "lv": 1, "p": [
+    { "t": "v", "k": "수영하다, 헤엄치다", "e": [
+      ["I can swim very well.", "나는 수영을 아주 잘한다."],
+      ["Fish swim in the river.", "물고기가 강에서 헤엄친다."],
+      ["We swam in the sea.", "우리는 바다에서 수영했다."]] }] },
+
+  "jump": { "lv": 1, "p": [
+    { "t": "v", "k": "뛰어오르다, 점프하다", "e": [
+      ["The cat jumped onto the table.", "고양이가 탁자 위로 뛰어올랐다."],
+      ["Can you jump over this?", "이거 뛰어넘을 수 있어?"],
+      ["We jumped rope at recess.", "우리는 쉬는 시간에 줄넘기를 했다."]] }] },
+
+  "sing": { "lv": 1, "p": [
+    { "t": "v", "k": "노래하다", "e": [
+      ["Let's sing a song together.", "같이 노래 부르자."],
+      ["She sings in the school choir.", "그녀는 학교 합창단에서 노래한다."],
+      ["The birds sang in the morning.", "새들이 아침에 노래했다."]] }] },
+
+  "draw": { "lv": 1, "p": [
+    { "t": "v", "k": "(그림을) 그리다", "e": [
+      ["I like to draw animals.", "나는 동물 그리는 것을 좋아한다."],
+      ["She drew a big tree.", "그녀는 큰 나무를 그렸다."],
+      ["Draw a line here.", "여기에 선을 그으세요."]] }] },
+
+  "smile": { "lv": 1, "p": [
+    { "t": "v", "k": "미소 짓다, 웃다", "e": [
+      ["She smiled at me.", "그녀가 나를 보고 미소 지었다."],
+      ["Smile for the camera!", "카메라 보고 웃어요!"],
+      ["The baby smiled happily.", "아기가 행복하게 웃었다."]] },
+    { "t": "n", "k": "미소", "e": [
+      ["He has a nice smile.", "그는 미소가 예쁘다."],
+      ["Her smile made me happy.", "그녀의 미소가 나를 행복하게 했다."],
+      ["Give me a big smile.", "활짝 웃어 봐."]] }] },
+
+  "wait": { "lv": 1, "p": [
+    { "t": "v", "k": "기다리다", "e": [
+      ["Wait for me!", "나 좀 기다려!"],
+      ["I waited for the bus.", "나는 버스를 기다렸다."],
+      ["Please wait a minute.", "잠깐만 기다려 주세요."]] }] },
+
+  "meet": { "lv": 1, "p": [
+    { "t": "v", "k": "만나다", "e": [
+      ["Let's meet at two o'clock.", "2시에 만나자."],
+      ["I met my old friend today.", "나는 오늘 옛 친구를 만났다."],
+      ["Nice to meet you.", "만나서 반가워."]] }] },
+
+  "catch": { "lv": 1, "p": [
+    { "t": "v", "k": "잡다, 받다", "e": [
+      ["Catch the ball!", "공 받아!"],
+      ["The cat caught a mouse.", "고양이가 쥐를 잡았다."],
+      ["I ran to catch the bus.", "나는 버스를 타려고 뛰었다."]] }] },
+
+  "throw": { "lv": 1, "p": [
+    { "t": "v", "k": "던지다", "e": [
+      ["Throw the ball to me.", "나에게 공을 던져."],
+      ["He threw a stone into the river.", "그는 강에 돌을 던졌다."],
+      ["Don't throw trash on the ground.", "바닥에 쓰레기를 버리지 마."]] }] },
+
+  "ride": { "lv": 1, "p": [
+    { "t": "v", "k": "타다", "e": [
+      ["I ride my bike to the park.", "나는 자전거를 타고 공원에 간다."],
+      ["She rode a horse for the first time.", "그녀는 처음으로 말을 탔다."],
+      ["Can you ride a bicycle?", "너 자전거 탈 줄 아니?"]] },
+    { "t": "n", "k": "타기, 놀이기구", "e": [
+      ["Let's go for a ride.", "한 바퀴 타러 가자."],
+      ["That ride was so much fun!", "그 놀이기구 정말 재밌었어!"],
+      ["He gave me a ride home.", "그가 나를 집까지 태워다 주었다."]] }] },
+
+  "fall": { "lv": 1, "p": [
+    { "t": "v", "k": "떨어지다, 넘어지다", "e": [
+      ["Leaves fall in autumn.", "가을에는 나뭇잎이 떨어진다."],
+      ["He fell off his bike.", "그는 자전거에서 넘어졌다."],
+      ["Be careful not to fall.", "넘어지지 않게 조심해."]] },
+    { "t": "n", "k": "가을", "e": [
+      ["I like fall the best.", "나는 가을이 제일 좋다."],
+      ["It gets cool in fall.", "가을에는 시원해진다."],
+      ["We went hiking last fall.", "우리는 지난가을에 등산을 갔다."]] }] },
+
+  "feel": { "lv": 1, "p": [
+    { "t": "v", "k": "느끼다, ~한 기분이다", "e": [
+      ["I feel happy today.", "나는 오늘 기분이 좋다."],
+      ["She felt sad after the movie.", "그녀는 영화를 보고 슬펐다."],
+      ["Do you feel cold?", "너 춥니?"]] }] },
+
+  "think": { "lv": 1, "p": [
+    { "t": "v", "k": "생각하다", "e": [
+      ["I think it will rain.", "내 생각엔 비가 올 것 같아."],
+      ["Think before you speak.", "말하기 전에 생각해."],
+      ["What do you think about this?", "이것에 대해 어떻게 생각해?"]] }] },
+
+  "know": { "lv": 1, "p": [
+    { "t": "v", "k": "알다", "e": [
+      ["I know the answer.", "나는 답을 안다."],
+      ["Do you know his name?", "그의 이름을 아니?"],
+      ["She knew the way home.", "그녀는 집에 가는 길을 알고 있었다."]] }] },
+
+  "learn": { "lv": 1, "p": [
+    { "t": "v", "k": "배우다", "e": [
+      ["I learn English at school.", "나는 학교에서 영어를 배운다."],
+      ["She learned to swim last year.", "그녀는 작년에 수영을 배웠다."],
+      ["We learn a lot from books.", "우리는 책에서 많은 것을 배운다."]] }] },
+
+  "teach": { "lv": 1, "p": [
+    { "t": "v", "k": "가르치다", "e": [
+      ["Ms. Kim teaches math.", "김 선생님은 수학을 가르치신다."],
+      ["Can you teach me this song?", "이 노래 좀 가르쳐 줄래?"],
+      ["My dad taught me to ride a bike.", "아빠가 나에게 자전거 타는 법을 가르쳐 주셨다."]] }] },
+
+  "ask": { "lv": 1, "p": [
+    { "t": "v", "k": "묻다, 부탁하다", "e": [
+      ["Ask your teacher.", "선생님께 여쭤봐."],
+      ["He asked me a question.", "그는 나에게 질문을 했다."],
+      ["She asked for help.", "그녀는 도움을 청했다."]] }] },
+
+  "answer": { "lv": 1, "p": [
+    { "t": "v", "k": "대답하다", "e": [
+      ["Please answer my question.", "내 질문에 대답해 주세요."],
+      ["Nobody answered the phone.", "아무도 전화를 받지 않았다."],
+      ["She answered in English.", "그녀는 영어로 대답했다."]] },
+    { "t": "n", "k": "대답, 정답", "e": [
+      ["What is the answer?", "정답이 뭐니?"],
+      ["His answer was right.", "그의 대답이 맞았다."],
+      ["I don't know the answer.", "나는 답을 모르겠다."]] }] }
+}

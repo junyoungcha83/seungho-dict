@@ -1,0 +1,149 @@
+{
+  "sun": { "lv": 1, "p": [
+    { "t": "n", "k": "해, 태양", "e": [
+      ["The sun is very bright today.", "오늘은 해가 아주 밝다."],
+      ["The sun rises in the east.", "해는 동쪽에서 뜬다."],
+      ["We sat in the sun.", "우리는 햇볕 아래 앉았다."]] }] },
+
+  "moon": { "lv": 1, "p": [
+    { "t": "n", "k": "달", "e": [
+      ["Look at the moon tonight.", "오늘 밤 달 좀 봐."],
+      ["The moon is round and white.", "달이 둥글고 하얗다."],
+      ["People walked on the moon.", "사람들이 달 위를 걸었다."]] }] },
+
+  "star": { "lv": 1, "p": [
+    { "t": "n", "k": "별", "e": [
+      ["I can see many stars.", "별이 많이 보인다."],
+      ["That star is very bright.", "저 별은 아주 밝다."],
+      ["We counted the stars together.", "우리는 함께 별을 세었다."]] }] },
+
+  "sky": { "lv": 1, "p": [
+    { "t": "n", "k": "하늘", "e": [
+      ["The sky is blue today.", "오늘 하늘이 파랗다."],
+      ["Birds are flying in the sky.", "새들이 하늘을 날고 있다."],
+      ["The sky turned dark.", "하늘이 어두워졌다."]] }] },
+
+  "wind": { "lv": 1, "p": [
+    { "t": "n", "k": "바람", "e": [
+      ["The wind is very strong.", "바람이 아주 세다."],
+      ["A cold wind blew all night.", "찬 바람이 밤새 불었다."],
+      ["The wind moved the leaves.", "바람이 나뭇잎을 흔들었다."]] }] },
+
+  "sea": { "lv": 1, "p": [
+    { "t": "n", "k": "바다", "e": [
+      ["The sea is blue and deep.", "바다는 파랗고 깊다."],
+      ["We swam in the sea.", "우리는 바다에서 수영했다."],
+      ["Many fish live in the sea.", "바다에는 물고기가 많이 산다."]] }] },
+
+  "river": { "lv": 1, "p": [
+    { "t": "n", "k": "강", "e": [
+      ["The river runs through the city.", "강이 도시를 가로질러 흐른다."],
+      ["We walked along the river.", "우리는 강을 따라 걸었다."],
+      ["The river is very long.", "그 강은 아주 길다."]] }] },
+
+  "mountain": { "lv": 1, "p": [
+    { "t": "n", "k": "산", "e": [
+      ["We climbed the mountain together.", "우리는 함께 산을 올랐다."],
+      ["That mountain is very high.", "저 산은 아주 높다."],
+      ["There is snow on the mountains.", "산에 눈이 있다."]] }] },
+
+  "bird": { "lv": 1, "p": [
+    { "t": "n", "k": "새", "e": [
+      ["A bird is singing outside.", "밖에서 새가 노래하고 있다."],
+      ["Birds build nests in trees.", "새들은 나무에 둥지를 짓는다."],
+      ["I saw a blue bird.", "나는 파란 새를 보았다."]] }] },
+
+  "dog": { "lv": 1, "p": [
+    { "t": "n", "k": "개", "e": [
+      ["My dog is very friendly.", "우리 개는 아주 순하다."],
+      ["The dog is barking.", "개가 짖고 있다."],
+      ["Two dogs are running in the park.", "개 두 마리가 공원에서 달리고 있다."]] }] },
+
+  "cat": { "lv": 1, "p": [
+    { "t": "n", "k": "고양이", "e": [
+      ["The cat is sleeping on the sofa.", "고양이가 소파에서 자고 있다."],
+      ["My cat likes fish.", "우리 고양이는 생선을 좋아한다."],
+      ["Cats can climb trees.", "고양이는 나무에 오를 수 있다."]] }] },
+
+  "fish": { "lv": 1, "p": [
+    { "t": "n", "k": "물고기, 생선", "e": [
+      ["The fish are swimming fast.", "물고기들이 빠르게 헤엄치고 있다."],
+      ["I ate fish for dinner.", "나는 저녁으로 생선을 먹었다."],
+      ["He caught a big fish.", "그는 큰 물고기를 잡았다."]] },
+    { "t": "v", "k": "낚시하다", "e": [
+      ["We fish at the river every summer.", "우리는 여름마다 강에서 낚시한다."],
+      ["Dad fished all morning.", "아빠는 아침 내내 낚시하셨다."],
+      ["Let's go fishing tomorrow.", "내일 낚시하러 가자."]] }] },
+
+  "apple": { "lv": 1, "p": [
+    { "t": "n", "k": "사과", "e": [
+      ["I eat an apple every day.", "나는 매일 사과를 하나 먹는다."],
+      ["These apples are sweet.", "이 사과들은 달다."],
+      ["She cut the apple in half.", "그녀는 사과를 반으로 잘랐다."]] }] },
+
+  "milk": { "lv": 1, "p": [
+    { "t": "n", "k": "우유", "e": [
+      ["I drink milk every morning.", "나는 매일 아침 우유를 마신다."],
+      ["The milk is in the fridge.", "우유는 냉장고에 있다."],
+      ["Milk is good for your bones.", "우유는 뼈에 좋다."]] }] },
+
+  "bread": { "lv": 1, "p": [
+    { "t": "n", "k": "빵", "e": [
+      ["I had bread for breakfast.", "나는 아침으로 빵을 먹었다."],
+      ["The bread smells so good.", "빵 냄새가 정말 좋다."],
+      ["Mom baked bread this morning.", "엄마가 오늘 아침에 빵을 구우셨다."]] }] },
+
+  "egg": { "lv": 1, "p": [
+    { "t": "n", "k": "달걀, 알", "e": [
+      ["I eat two eggs for breakfast.", "나는 아침에 달걀 두 개를 먹는다."],
+      ["The bird laid an egg.", "새가 알을 낳았다."],
+      ["Boil the eggs for ten minutes.", "달걀을 10분 동안 삶으세요."]] }] },
+
+  "rice": { "lv": 1, "p": [
+    { "t": "n", "k": "밥, 쌀", "e": [
+      ["We eat rice every day.", "우리는 매일 밥을 먹는다."],
+      ["The rice is still hot.", "밥이 아직 뜨겁다."],
+      ["She cooked rice for dinner.", "그녀는 저녁으로 밥을 지었다."]] }] },
+
+  "fruit": { "lv": 1, "p": [
+    { "t": "n", "k": "과일", "e": [
+      ["Fruit is good for your health.", "과일은 건강에 좋다."],
+      ["What fruit do you like best?", "무슨 과일을 가장 좋아하니?"],
+      ["We bought fruit at the market.", "우리는 시장에서 과일을 샀다."]] }] },
+
+  "breakfast": { "lv": 1, "p": [
+    { "t": "n", "k": "아침 식사", "e": [
+      ["I have breakfast at seven.", "나는 7시에 아침을 먹는다."],
+      ["Breakfast is the most important meal.", "아침 식사가 가장 중요한 끼니다."],
+      ["We made breakfast together.", "우리는 함께 아침을 차렸다."]] }] },
+
+  "lunch": { "lv": 1, "p": [
+    { "t": "n", "k": "점심 식사", "e": [
+      ["We eat lunch at school.", "우리는 학교에서 점심을 먹는다."],
+      ["What did you have for lunch?", "점심으로 뭐 먹었어?"],
+      ["Lunch starts at twelve thirty.", "점심시간은 12시 30분에 시작한다."]] }] },
+
+  "dinner": { "lv": 1, "p": [
+    { "t": "n", "k": "저녁 식사", "e": [
+      ["Dinner is ready!", "저녁 다 됐어!"],
+      ["We had dinner at seven.", "우리는 7시에 저녁을 먹었다."],
+      ["Mom cooked a big dinner.", "엄마가 푸짐한 저녁을 차리셨다."]] }] },
+
+  "summer": { "lv": 1, "p": [
+    { "t": "n", "k": "여름", "e": [
+      ["Summer is very hot in Korea.", "한국의 여름은 아주 덥다."],
+      ["We go to the beach in summer.", "우리는 여름에 바다에 간다."],
+      ["Last summer was really long.", "지난여름은 정말 길었다."]] }] },
+
+  "winter": { "lv": 1, "p": [
+    { "t": "n", "k": "겨울", "e": [
+      ["Winter is cold and snowy.", "겨울은 춥고 눈이 온다."],
+      ["I like winter because of the snow.", "나는 눈 때문에 겨울이 좋다."],
+      ["We wear thick coats in winter.", "우리는 겨울에 두꺼운 외투를 입는다."]] }] },
+
+  "weather": { "lv": 1, "p": [
+    { "t": "n", "k": "날씨", "e": [
+      ["How is the weather today?", "오늘 날씨 어때?"],
+      ["The weather is nice and warm.", "날씨가 좋고 따뜻하다."],
+      ["Bad weather stopped the game.", "궂은 날씨 때문에 경기가 멈췄다."]] }] }
+}

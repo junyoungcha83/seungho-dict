@@ -1,0 +1,309 @@
+{
+  "_note": "‘단어정보’ 칸 재료. pv=구동사(동사+부사/전치사로 뜻이 통째로 바뀌는 말), mix=헷갈리기 쉬운 짝, tip=그 단어를 쓸 때 알아 두면 좋은 것.",
+
+  "pv": {
+    "get": [
+      ["get up", "일어나다", "잠자리에서 몸을 일으키는 것. ‘일어서다’ 도 된다."],
+      ["get on", "(버스·기차에) 타다", "타고 서 있을 수 있는 큰 탈것에 쓴다."],
+      ["get off", "(버스·기차에서) 내리다", "get on 의 반대."],
+      ["get in", "(차 안으로) 타다", "승용차·택시처럼 앉아서 타는 작은 차에 쓴다."],
+      ["get along with", "~와 잘 지내다", "사이좋게 지낸다는 뜻."],
+      ["get over", "(병·슬픔을) 이겨내다", "넘어간다(over)는 그림으로 기억하면 쉽다."],
+      ["get back", "돌아오다, 돌려받다", "뒤(back)로 간다 → 돌아온다."],
+      ["get to", "~에 도착하다", "arrive at 과 같은 뜻으로 아주 자주 쓴다."]
+    ],
+    "take": [
+      ["take off", "(옷을) 벗다, (비행기가) 이륙하다", "몸이나 땅에서 떨어져 나가는(off) 그림."],
+      ["take out", "꺼내다, (음식을) 포장해 가다", "가게에서 ‘포장이요’ 가 to take out."],
+      ["take care of", "~를 돌보다", "동생이나 애완동물을 보살필 때."],
+      ["take a walk", "산책하다", "take 는 ‘(행동을) 하다’ 로도 쓴다."],
+      ["take part in", "~에 참가하다", "join 과 바꿔 쓸 수 있다."],
+      ["take away", "치우다, 가져가 버리다", "멀리(away) 가져간다."],
+      ["take back", "돌려주다, 취소하다", "말을 take back 하면 ‘한 말을 무르다’."]
+    ],
+    "put": [
+      ["put on", "(옷을) 입다, 쓰다, 신다", "몸 위에(on) 얹는 그림. 이미 입은 상태는 wear."],
+      ["put off", "미루다", "일을 뒤로 밀어 놓는 것. delay 와 같다."],
+      ["put out", "(불을) 끄다", "불이 밖으로(out) 나가게 한다."],
+      ["put away", "치우다, 제자리에 넣다", "장난감을 다 쓰고 넣어 두는 것."],
+      ["put up with", "~를 참다", "세 낱말이 붙어 한 덩어리로 ‘참다’ 가 된다."],
+      ["put down", "내려놓다", "들고 있던 것을 아래로(down)."]
+    ],
+    "look": [
+      ["look at", "~를 보다", "눈길을 그쪽으로 돌리는 것. 그냥 look 뒤엔 at 이 꼭 온다."],
+      ["look for", "~를 찾다", "찾는 중이라는 뜻. 찾아냈으면 find."],
+      ["look after", "~를 돌보다", "take care of 와 같은 뜻."],
+      ["look up", "(사전에서) 찾아보다, 올려다보다", "사전에서 낱말을 찾을 때 쓴다."],
+      ["look forward to", "~를 기대하다", "to 뒤에 -ing 가 온다. look forward to seeing you."],
+      ["look like", "~처럼 보이다", "You look like your mom. (엄마를 닮았구나.)"],
+      ["look out", "조심해!", "Watch out! 과 같다."]
+    ],
+    "run": [
+      ["run away", "도망가다", "무섭거나 힘든 일에서 달아나는 것."],
+      ["run into", "~와 우연히 마주치다", "길에서 뜻밖에 만나는 것."],
+      ["run out of", "~를 다 써 버리다", "We ran out of milk. (우유가 다 떨어졌어.)"],
+      ["run after", "~를 뒤쫓다", "chase 와 같은 뜻."],
+      ["run over", "(차가) 치다", "차가 위를 지나가 버리는 그림."]
+    ],
+    "come": [
+      ["come back", "돌아오다", "떠났다가 다시 오는 것."],
+      ["come from", "~에서 오다, ~출신이다", "I come from Korea."],
+      ["come in", "들어오다", "문 앞에서 Come in! (들어와!)"],
+      ["come on", "어서, 힘내", "재촉하거나 응원할 때 쓰는 말."],
+      ["come true", "이루어지다", "꿈이 현실이 될 때. My dream came true."],
+      ["come over", "놀러 오다", "우리 집으로 건너오는 것."]
+    ],
+    "go": [
+      ["go out", "밖에 나가다, (불이) 꺼지다", "밖으로(out) 나간다."],
+      ["go on", "계속하다", "Go on! (계속해!)"],
+      ["go to bed", "자러 가다", "잠자리에 드는 것. 잠든 것은 fall asleep."],
+      ["go back", "돌아가다", "왔던 곳으로 다시."],
+      ["go up", "올라가다, (값이) 오르다", "반대는 go down."],
+      ["go away", "저리 가다, 사라지다", "멀리(away) 가 버린다."]
+    ],
+    "turn": [
+      ["turn on", "(전등·TV를) 켜다", "스위치를 돌려(turn) 붙이는(on) 그림."],
+      ["turn off", "끄다", "turn on 의 반대."],
+      ["turn up", "(소리를) 크게 하다", "볼륨을 올린다."],
+      ["turn down", "(소리를) 줄이다, 거절하다", "볼륨을 내리거나, 부탁을 거절한다."],
+      ["turn into", "~로 변하다", "The frog turned into a prince."],
+      ["turn around", "돌아서다", "몸을 빙 돌리는 것."]
+    ],
+    "make": [
+      ["make up", "지어내다, 화해하다", "이야기를 make up 하면 ‘꾸며내다’."],
+      ["make sure", "꼭 확인하다", "Make sure to lock the door."],
+      ["make friends", "친구를 사귀다", "friends 로 꼭 복수를 쓴다."],
+      ["make a mistake", "실수하다", "do a mistake 라고 하지 않는다."],
+      ["make it", "해내다, 시간에 대다", "I made it! (해냈어!)"]
+    ],
+    "give": [
+      ["give up", "포기하다", "Don't give up! (포기하지 마!)"],
+      ["give back", "돌려주다", "빌린 것을 되돌려 준다."],
+      ["give away", "거저 주다", "공짜로 남에게 줘 버리는 것."],
+      ["give out", "나눠 주다", "여러 사람에게 하나씩."]
+    ],
+    "bring": [
+      ["bring up", "기르다, (이야기를) 꺼내다", "아이를 키우는 것도 bring up."],
+      ["bring back", "도로 가져오다", "빌려 간 것을 되가져온다."],
+      ["bring about", "일으키다", "어떤 일이 생기게 만든다."]
+    ],
+    "call": [
+      ["call back", "다시 전화하다", "전화를 되걸어 주는 것."],
+      ["call off", "취소하다", "경기를 call off 하면 ‘취소하다’."],
+      ["call on", "방문하다, 시키다", "선생님이 학생을 call on 하면 ‘발표시키다’."],
+      ["call up", "전화를 걸다", "call 만 써도 된다."]
+    ],
+    "break": [
+      ["break down", "고장 나다", "기계가 멈춰 서는 것."],
+      ["break out", "(불·전쟁이) 갑자기 일어나다", "A fire broke out."],
+      ["break up", "헤어지다, 부수다", "사이가 끝나는 것."],
+      ["break into", "침입하다", "부수고 안으로 들어간다."]
+    ],
+    "check": [
+      ["check out", "확인하다, (호텔에서) 나가다", "Check it out! (이것 좀 봐!)"],
+      ["check in", "(호텔·공항에서) 수속하다", "check out 의 반대."],
+      ["check up on", "~를 살펴보다", "잘 있는지 확인한다."]
+    ],
+    "cut": [
+      ["cut off", "잘라 내다, 끊다", "전화가 cut off 되면 ‘끊기다’."],
+      ["cut down", "베어 넘어뜨리다, 줄이다", "나무를 베거나 양을 줄인다."],
+      ["cut in", "끼어들다", "말이나 줄에 새치기하듯 들어온다."]
+    ],
+    "fall": [
+      ["fall asleep", "잠들다", "go to sleep 과 비슷. 자는 중은 be sleeping."],
+      ["fall down", "넘어지다", "서 있다가 아래로."],
+      ["fall in love", "사랑에 빠지다", "with 를 붙여 fall in love with ~."],
+      ["fall behind", "뒤처지다", "남들보다 뒤로 밀린다."]
+    ],
+    "hold": [
+      ["hold on", "잠깐 기다리다, 꽉 잡다", "전화에서 Hold on! (잠깐만요!)"],
+      ["hold up", "들어 올리다, 늦추다", "Hold up your hand."],
+      ["hold back", "참다, 막다", "눈물을 hold back 하면 ‘참다’."]
+    ],
+    "keep": [
+      ["keep on", "계속 ~하다", "뒤에 -ing 가 온다. keep on running."],
+      ["keep out", "들어오지 마", "표지판에 자주 쓰인다."],
+      ["keep up with", "~를 따라가다", "뒤처지지 않고 쫓아간다."],
+      ["keep a diary", "일기를 쓰다", "keep 은 ‘꾸준히 하다’ 라는 맛이 있다."]
+    ],
+    "pick": [
+      ["pick up", "줍다, (차로) 데리러 가다", "엄마가 학교로 pick up 하러 온다."],
+      ["pick out", "골라내다", "여럿 중에서 하나를 고른다."]
+    ],
+    "set": [
+      ["set up", "세우다, 차리다", "천막이나 가게를 세운다."],
+      ["set off", "출발하다", "여행을 떠난다."],
+      ["set the table", "상을 차리다", "밥 먹기 전에 그릇을 놓는 일."]
+    ],
+    "stand": [
+      ["stand up", "일어서다", "앉아 있다가 몸을 세운다."],
+      ["stand for", "~를 뜻하다", "USA stands for the United States of America."],
+      ["stand by", "곁에서 돕다, 대기하다", "친구 옆을 지켜 준다."]
+    ],
+    "work": [
+      ["work out", "운동하다, 잘 풀리다", "헬스장에서 운동하는 것도 work out."],
+      ["work on", "~에 매달려 일하다", "숙제를 work on 하는 중."]
+    ],
+    "find": [
+      ["find out", "알아내다", "몰랐던 사실을 알게 되는 것. 물건을 찾은 건 그냥 find."]
+    ],
+    "grow": [
+      ["grow up", "자라다, 어른이 되다", "What do you want to be when you grow up?"]
+    ],
+    "pass": [
+      ["pass by", "지나가다", "옆을 스쳐 지나간다."],
+      ["pass away", "돌아가시다", "die 를 부드럽게 이르는 말."]
+    ],
+    "pay": [
+      ["pay attention to", "~에 주의를 기울이다", "수업 시간에 자주 듣는 말."],
+      ["pay back", "갚다", "빌린 돈을 되돌려 준다."]
+    ],
+    "show": [
+      ["show up", "나타나다", "약속 장소에 모습을 드러낸다."],
+      ["show off", "뽐내다", "자랑하듯 보여 준다."]
+    ],
+    "try": [
+      ["try on", "입어 보다", "옷 가게에서 Can I try it on?"],
+      ["try out", "시험 삼아 해 보다", "새 자전거를 한번 타 본다."]
+    ],
+    "wake": [
+      ["wake up", "잠에서 깨다", "눈이 떠지는 것. 몸을 일으키는 건 get up."]
+    ],
+    "hand": [
+      ["hand in", "제출하다", "숙제를 선생님께 낸다."],
+      ["hand out", "나눠 주다", "여러 사람에게 하나씩 준다."]
+    ],
+    "carry": [
+      ["carry out", "실행하다", "계획을 실제로 해낸다."],
+      ["carry on", "계속하다", "하던 일을 이어서 한다."]
+    ],
+    "throw": [
+      ["throw away", "버리다", "쓰레기를 던져 없앤다."],
+      ["throw up", "토하다", "속이 안 좋을 때."]
+    ],
+    "write": [
+      ["write down", "받아 적다", "잊지 않게 종이에 적는다."]
+    ],
+    "sit": [
+      ["sit down", "앉다", "Please sit down. (앉으세요.)"]
+    ],
+    "eat": [
+      ["eat out", "외식하다", "밖에서 사 먹는 것."],
+      ["eat up", "다 먹어 치우다", "남김없이."]
+    ],
+    "clean": [
+      ["clean up", "깨끗이 치우다", "어질러진 것을 정리한다."]
+    ],
+    "talk": [
+      ["talk about", "~에 대해 이야기하다", "이야깃거리 앞에는 about."],
+      ["talk to", "~에게 말을 걸다", "상대 앞에는 to."]
+    ],
+    "listen": [
+      ["listen to", "~를 귀 기울여 듣다", "listen 뒤엔 to 가 꼭 온다."]
+    ],
+    "wait": [
+      ["wait for", "~를 기다리다", "wait 뒤엔 for 가 온다. wait a bus (×)"]
+    ],
+    "think": [
+      ["think about", "~에 대해 생각하다", "곰곰이 떠올려 본다."],
+      ["think of", "~를 떠올리다", "머리에 딱 떠오르는 것."]
+    ],
+    "watch": [
+      ["watch out", "조심해!", "위험할 때 외치는 말."]
+    ]
+  },
+
+  "mix": [
+    { "w": ["see", "look", "watch"], "t": "see · look · watch",
+      "d": "see 는 눈에 그냥 들어오는 것, look 은 일부러 눈길을 돌리는 것(look at), watch 는 움직이는 것을 한참 지켜보는 것(TV·경기)." },
+    { "w": ["hear", "listen"], "t": "hear · listen",
+      "d": "hear 는 소리가 저절로 들리는 것, listen 은 귀를 기울여 듣는 것. listen 뒤에는 to 가 온다." },
+    { "w": ["say", "tell", "speak", "talk"], "t": "say · tell · speak · talk",
+      "d": "say 는 말의 내용(say hello), tell 은 누구에게 알려 주는 것(tell me), speak 은 말을 할 줄 아는 것(speak English), talk 은 서로 이야기 나누는 것(talk with)." },
+    { "w": ["borrow", "lend"], "t": "borrow · lend",
+      "d": "borrow 는 내가 빌려 ‘오는’ 것, lend 는 남에게 빌려 ‘주는’ 것. Can I borrow your pen? / I'll lend you my pen." },
+    { "w": ["bring", "take"], "t": "bring · take",
+      "d": "bring 은 말하는 사람 쪽으로 가져‘오는’ 것, take 는 다른 데로 가져‘가는’ 것." },
+    { "w": ["come", "go"], "t": "come · go",
+      "d": "come 은 듣는 사람 쪽으로 다가가는 것, go 는 둘 다한테서 멀어지는 것. 부를 때 대답은 I'm coming! (I'm going! 이 아니다)" },
+    { "w": ["make", "do"], "t": "make · do",
+      "d": "make 는 없던 것을 만들어 내는 것(make a cake), do 는 이미 있는 일을 해내는 것(do homework)." },
+    { "w": ["teach", "learn"], "t": "teach · learn",
+      "d": "teach 는 가르치는 쪽, learn 은 배우는 쪽. 선생님이 teach 하고 학생이 learn 한다." },
+    { "w": ["lie", "lay"], "t": "lie · lay",
+      "d": "lie 는 내가 눕는 것(lie-lay-lain), lay 는 무언가를 눕혀 놓는 것(lay-laid-laid). 과거형 lay 가 겹쳐서 제일 헷갈린다." },
+    { "w": ["rise", "raise"], "t": "rise · raise",
+      "d": "rise 는 저절로 오르는 것(해가 뜬다), raise 는 내가 무언가를 들어 올리는 것(손을 든다)." },
+    { "w": ["wear", "put"], "t": "wear · put on",
+      "d": "put on 은 입는 ‘동작’, wear 는 입고 있는 ‘상태’. He put on a coat. → He is wearing a coat." },
+    { "w": ["win", "beat"], "t": "win · beat",
+      "d": "win 뒤에는 경기·상이 오고(win the game), beat 뒤에는 이긴 상대가 온다(beat Tom)." },
+    { "w": ["many", "much"], "t": "many · much",
+      "d": "many 는 셀 수 있는 것(many books), much 는 셀 수 없는 것(much water). 둘 다 될 땐 a lot of." },
+    { "w": ["few", "little"], "t": "few · little",
+      "d": "few 는 셀 수 있는 것에, little 은 셀 수 없는 것에. a 가 붙으면 ‘조금 있다’, 없으면 ‘거의 없다’." },
+    { "w": ["other", "another"], "t": "other · another",
+      "d": "another 는 ‘또 하나(단수)’, other 는 ‘다른 것들’. the other 는 둘 중 나머지 하나." },
+    { "w": ["some", "any"], "t": "some · any",
+      "d": "보통 긍정문에는 some, 부정문·의문문에는 any. 다만 권할 때는 의문문에도 some 을 쓴다(Would you like some tea?)." },
+    { "w": ["too", "also", "either"], "t": "too · also · either",
+      "d": "too 와 also 는 ‘~도’ (긍정), either 는 부정문의 ‘~도’. I don't like it either." },
+    { "w": ["affect", "effect"], "t": "affect · effect",
+      "d": "affect 는 동사 ‘영향을 주다’, effect 는 명사 ‘효과·영향’. 철자가 한 글자 차이라 자주 틀린다." },
+    { "w": ["quiet", "quite"], "t": "quiet · quite",
+      "d": "quiet 는 ‘조용한’, quite 는 ‘꽤’. 글자 순서만 바뀐 다른 낱말이다." },
+    { "w": ["desert", "dessert"], "t": "desert · dessert",
+      "d": "desert 는 사막, dessert 는 후식. s 가 두 개면 달콤한 쪽이라고 외우면 쉽다." },
+    { "w": ["live", "leave"], "t": "live · leave",
+      "d": "live 는 ‘살다’, leave 는 ‘떠나다·두고 가다’. 소리가 비슷해 헷갈린다." },
+    { "w": ["hard", "hardly"], "t": "hard · hardly",
+      "d": "hard 는 ‘열심히·단단한’, hardly 는 ‘거의 ~않다’. -ly 가 붙었다고 ‘열심히’ 가 아니다." },
+    { "w": ["high", "highly"], "t": "high · highly",
+      "d": "high 는 실제로 높이 있는 것, highly 는 ‘매우·대단히’ 라는 뜻." },
+    { "w": ["late", "lately"], "t": "late · lately",
+      "d": "late 는 ‘늦은·늦게’, lately 는 ‘요즘’. 뜻이 아주 다르다." },
+    { "w": ["sit", "seat"], "t": "sit · seat",
+      "d": "sit 은 ‘앉다’, seat 은 ‘자리’(명사) 또는 ‘앉히다’. Take a seat. = 앉으세요." },
+    { "w": ["hope", "wish"], "t": "hope · wish",
+      "d": "hope 는 이루어질 만한 바람, wish 는 이루기 어려운 바람. I wish I were a bird." },
+    { "w": ["arrive", "reach", "get"], "t": "arrive · reach · get to",
+      "d": "arrive 뒤엔 at/in, get 뒤엔 to 가 오지만 reach 뒤엔 전치사가 없다. reach at the school (×)" },
+    { "w": ["almost", "most"], "t": "almost · most",
+      "d": "almost 는 ‘거의’ (부사), most 는 ‘대부분의’ (형용사). Almost students (×) → Most students (○)" },
+    { "w": ["its", "it"], "t": "its · it's",
+      "d": "its 는 ‘그것의’, it's 는 it is 의 줄임말. 아포스트로피가 있으면 ‘이다’ 쪽." },
+    { "w": ["their", "there"], "t": "their · there · they're",
+      "d": "their=그들의, there=거기, they're=they are. 소리가 같아 글로 쓸 때 틀리기 쉽다." },
+    { "w": ["hear", "here"], "t": "hear · here",
+      "d": "hear=듣다, here=여기. hear 안에 ear(귀)가 들어 있다고 외우면 쉽다." },
+    { "w": ["break", "brake"], "t": "break · brake",
+      "d": "break=부수다, brake=(자동차) 브레이크." },
+    { "w": ["piece", "peace"], "t": "piece · peace",
+      "d": "piece=한 조각, peace=평화. a piece of cake 는 ‘식은 죽 먹기’ 라는 뜻도 된다." },
+    { "w": ["weather", "whether"], "t": "weather · whether",
+      "d": "weather=날씨, whether=~인지 아닌지." },
+    { "w": ["advice", "advise"], "t": "advice · advise",
+      "d": "advice 는 명사 ‘충고’(셀 수 없다), advise 는 동사 ‘충고하다’. an advice (×) → a piece of advice (○)" }
+  ],
+
+  "tip": {
+    "run": "run 은 ‘달리다’ 말고 ‘(가게·회사를) 운영하다’ 라는 뜻으로도 아주 자주 쓴다.",
+    "book": "book 은 명사 ‘책’ 이지만 동사로 쓰면 ‘예약하다’ 가 된다.",
+    "watch": "watch 는 명사로 ‘손목시계’, 동사로 ‘지켜보다’.",
+    "light": "light 는 명사 ‘빛’, 동사 ‘불을 붙이다’, 형용사 ‘가벼운·밝은’ 까지 세 품사로 쓴다.",
+    "fine": "fine 은 ‘좋은’ 말고 명사로 ‘벌금’ 이라는 뜻도 있다.",
+    "kind": "kind 는 형용사 ‘친절한’ 과 명사 ‘종류’ 두 가지로 쓴다. What kind of ~?",
+    "hard": "hard 는 형용사 ‘어려운·단단한’ 과 부사 ‘열심히’ 로 함께 쓴다.",
+    "left": "left 는 leave 의 과거형이기도 하고 ‘왼쪽’ 이기도 하다.",
+    "orange": "orange 는 과일 ‘오렌지’ 이면서 색깔 ‘주황색’ 이다.",
+    "can": "can 은 조동사 ‘~할 수 있다’ 이면서 명사 ‘깡통’ 이다.",
+    "well": "well 은 부사 ‘잘’, 감탄사 ‘음…’, 명사 ‘우물’ 로 쓴다. good 의 부사형이기도 하다.",
+    "water": "water 는 셀 수 없는 명사라 a water · waters 라고 하지 않는다. a glass of water 로 센다.",
+    "people": "people 은 그 자체가 복수다. peoples 라고 쓰지 않고, 뒤에 are 가 온다.",
+    "homework": "homework 는 셀 수 없다. homeworks (×), a lot of homework (○)",
+    "information": "information 은 셀 수 없다. informations (×)",
+    "news": "news 는 s 로 끝나지만 단수 취급한다. The news is sad.",
+    "money": "money 는 셀 수 없다. moneys (×). 셀 때는 coins · bills 로.",
+    "fish": "fish 는 복수형도 fish 다. 여러 종류를 말할 때만 fishes."
+  }
+}

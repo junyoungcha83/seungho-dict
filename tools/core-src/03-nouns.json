@@ -1,0 +1,207 @@
+{
+  "water": { "lv": 1, "p": [
+    { "t": "n", "k": "물", "e": [
+      ["I drink a lot of water.", "나는 물을 많이 마신다."],
+      ["The water is very cold.", "물이 아주 차갑다."],
+      ["Can I have a glass of water?", "물 한 잔 주시겠어요?"]] },
+    { "t": "v", "k": "물을 주다", "e": [
+      ["I water the flowers every morning.", "나는 매일 아침 꽃에 물을 준다."],
+      ["Don't forget to water the plants.", "화분에 물 주는 것을 잊지 마."],
+      ["She watered the garden.", "그녀는 정원에 물을 주었다."]] }] },
+
+  "book": { "lv": 1, "p": [
+    { "t": "n", "k": "책", "e": [
+      ["This book is very interesting.", "이 책은 아주 재미있다."],
+      ["I borrowed three books.", "나는 책 세 권을 빌렸다."],
+      ["Put your books in your bag.", "책을 가방에 넣으렴."]] },
+    { "t": "v", "k": "예약하다", "e": [
+      ["We booked a room at the hotel.", "우리는 호텔 방을 예약했다."],
+      ["I want to book two tickets.", "표 두 장을 예약하고 싶어요."],
+      ["She booked a table for dinner.", "그녀는 저녁 식사 자리를 예약했다."]] }] },
+
+  "light": { "lv": 1, "p": [
+    { "t": "n", "k": "빛, 불, 전등", "e": [
+      ["Turn on the light, please.", "불 좀 켜 주세요."],
+      ["The light of the sun is warm.", "햇빛이 따뜻하다."],
+      ["There is a red light ahead.", "앞에 빨간불이 있다."]] },
+    { "t": "a", "k": "가벼운", "e": [
+      ["This bag is very light.", "이 가방은 아주 가볍다."],
+      ["I had a light lunch.", "나는 점심을 가볍게 먹었다."],
+      ["Wear light clothes in summer.", "여름에는 가벼운 옷을 입어."]] },
+    { "t": "a", "k": "밝은, 연한", "e": [
+      ["The room is light and clean.", "그 방은 밝고 깨끗하다."],
+      ["She likes light blue.", "그녀는 연한 파란색을 좋아한다."],
+      ["It is still light outside.", "밖은 아직 환하다."]] }] },
+
+  "home": { "lv": 1, "p": [
+    { "t": "n", "k": "집, 가정", "e": [
+      ["My home is near the school.", "우리 집은 학교 근처에 있다."],
+      ["There is no place like home.", "집만 한 곳은 없다."],
+      ["She left home at eight.", "그녀는 8시에 집을 나섰다."]] },
+    { "t": "r", "k": "집으로, 집에", "e": [
+      ["I go home at five.", "나는 5시에 집에 간다."],
+      ["Come home early today.", "오늘은 일찍 집에 와."],
+      ["Is your mom home?", "너희 엄마 집에 계시니?"]] }] },
+
+  "school": { "lv": 1, "p": [
+    { "t": "n", "k": "학교", "e": [
+      ["Our school is very big.", "우리 학교는 아주 크다."],
+      ["School begins at nine.", "학교는 9시에 시작한다."],
+      ["I walk to school with my sister.", "나는 언니와 학교에 걸어간다."]] }] },
+
+  "friend": { "lv": 1, "p": [
+    { "t": "n", "k": "친구", "e": [
+      ["He is my best friend.", "그는 내 가장 친한 친구다."],
+      ["I made a new friend today.", "나는 오늘 새 친구를 사귀었다."],
+      ["My friends came to my birthday party.", "친구들이 내 생일 파티에 왔다."]] }] },
+
+  "time": { "lv": 1, "p": [
+    { "t": "n", "k": "시간", "e": [
+      ["What time is it now?", "지금 몇 시니?"],
+      ["I don't have much time.", "나는 시간이 많지 않다."],
+      ["Time flies so fast.", "시간이 정말 빨리 간다."]] },
+    { "t": "n", "k": "번, 회", "e": [
+      ["I read this book three times.", "나는 이 책을 세 번 읽었다."],
+      ["Try one more time.", "한 번만 더 해 봐."],
+      ["This is the first time for me.", "이번이 나에게는 처음이다."]] }] },
+
+  "day": { "lv": 1, "p": [
+    { "t": "n", "k": "날, 하루", "e": [
+      ["Have a nice day!", "좋은 하루 보내!"],
+      ["There are seven days in a week.", "일주일은 7일이다."],
+      ["It was a rainy day.", "비 오는 날이었다."]] }] },
+
+  "name": { "lv": 1, "p": [
+    { "t": "n", "k": "이름", "e": [
+      ["My name is Seungho.", "내 이름은 승호야."],
+      ["What is your dog's name?", "너희 개 이름이 뭐니?"],
+      ["Write your name on the paper.", "종이에 이름을 쓰세요."]] },
+    { "t": "v", "k": "이름을 지어 주다", "e": [
+      ["They named the puppy Coco.", "그들은 강아지를 코코라고 이름 지었다."],
+      ["We named our cat after a star.", "우리는 별 이름을 따서 고양이 이름을 지었다."],
+      ["She named her doll Anna.", "그녀는 인형을 애나라고 이름 붙였다."]] }] },
+
+  "hand": { "lv": 1, "p": [
+    { "t": "n", "k": "손", "e": [
+      ["Wash your hands before eating.", "먹기 전에 손을 씻어."],
+      ["Raise your hand if you know.", "알면 손을 드세요."],
+      ["He held my hand tightly.", "그는 내 손을 꽉 잡았다."]] },
+    { "t": "v", "k": "건네주다", "e": [
+      ["Hand me the salt, please.", "소금 좀 건네줘."],
+      ["She handed him a note.", "그녀는 그에게 쪽지를 건넸다."],
+      ["Hand in your homework.", "숙제를 제출하세요."]] }] },
+
+  "face": { "lv": 1, "p": [
+    { "t": "n", "k": "얼굴", "e": [
+      ["Wash your face in the morning.", "아침에 세수를 해."],
+      ["Her face turned red.", "그녀의 얼굴이 빨개졌다."],
+      ["He has a kind face.", "그는 인상이 좋다."]] },
+    { "t": "v", "k": "마주하다, 향하다", "e": [
+      ["My room faces the garden.", "내 방은 정원을 향해 있다."],
+      ["We must face the problem.", "우리는 그 문제를 마주해야 한다."],
+      ["Face the front, please.", "앞을 보세요."]] }] },
+
+  "color": { "lv": 1, "p": [
+    { "t": "n", "k": "색, 색깔", "e": [
+      ["What color do you like?", "무슨 색을 좋아하니?"],
+      ["The sky has many colors at sunset.", "해 질 때 하늘은 여러 빛깔이다."],
+      ["Blue is my favorite color.", "파란색이 내가 가장 좋아하는 색이다."]] },
+    { "t": "v", "k": "색칠하다", "e": [
+      ["Color the picture with crayons.", "크레용으로 그림을 색칠해."],
+      ["She colored the sky blue.", "그녀는 하늘을 파랗게 칠했다."],
+      ["Let's color together.", "같이 색칠하자."]] }] },
+
+  "rain": { "lv": 1, "p": [
+    { "t": "n", "k": "비", "e": [
+      ["The rain stopped at noon.", "정오에 비가 그쳤다."],
+      ["We played in the rain.", "우리는 빗속에서 놀았다."],
+      ["Take an umbrella. There will be rain.", "우산 가져가. 비가 올 거야."]] },
+    { "t": "v", "k": "비가 오다", "e": [
+      ["It is raining outside.", "밖에 비가 오고 있다."],
+      ["It rained all night.", "밤새 비가 왔다."],
+      ["Will it rain tomorrow?", "내일 비가 올까?"]] }] },
+
+  "snow": { "lv": 1, "p": [
+    { "t": "n", "k": "눈", "e": [
+      ["The snow is white and soft.", "눈은 하얗고 부드럽다."],
+      ["We made a snowman with the snow.", "우리는 그 눈으로 눈사람을 만들었다."],
+      ["There was a lot of snow last winter.", "지난겨울에 눈이 많이 왔다."]] },
+    { "t": "v", "k": "눈이 오다", "e": [
+      ["It snows a lot in January.", "1월에는 눈이 많이 온다."],
+      ["Look! It's snowing.", "봐! 눈이 와."],
+      ["It snowed all day yesterday.", "어제는 하루 종일 눈이 왔다."]] }] },
+
+  "picture": { "lv": 1, "p": [
+    { "t": "n", "k": "그림, 사진", "e": [
+      ["I drew a picture of my family.", "나는 우리 가족 그림을 그렸다."],
+      ["Let's take a picture together.", "같이 사진 찍자."],
+      ["The picture on the wall is beautiful.", "벽에 걸린 그림이 아름답다."]] }] },
+
+  "letter": { "lv": 1, "p": [
+    { "t": "n", "k": "편지", "e": [
+      ["I wrote a letter to my grandma.", "나는 할머니께 편지를 썼다."],
+      ["She got a letter from her friend.", "그녀는 친구에게서 편지를 받았다."],
+      ["Send the letter tomorrow.", "내일 편지를 부쳐."]] },
+    { "t": "n", "k": "글자", "e": [
+      ["There are 26 letters in English.", "영어에는 글자가 26개 있다."],
+      ["Write the letter A here.", "여기에 알파벳 A를 쓰세요."],
+      ["His name starts with the letter S.", "그의 이름은 S로 시작한다."]] }] },
+
+  "class": { "lv": 1, "p": [
+    { "t": "n", "k": "수업", "e": [
+      ["Math class is my favorite.", "수학 수업이 내가 제일 좋아하는 시간이다."],
+      ["Class starts in five minutes.", "수업이 5분 뒤에 시작한다."],
+      ["I have four classes today.", "나는 오늘 수업이 네 개 있다."]] },
+    { "t": "n", "k": "반, 학급", "e": [
+      ["There are 25 students in my class.", "우리 반에는 학생이 25명 있다."],
+      ["Our class won the game.", "우리 반이 경기에서 이겼다."],
+      ["She is the tallest in her class.", "그녀는 반에서 키가 가장 크다."]] }] },
+
+  "game": { "lv": 1, "p": [
+    { "t": "n", "k": "게임, 경기", "e": [
+      ["Let's play a game.", "게임 하자."],
+      ["Our team won the game.", "우리 팀이 경기에서 이겼다."],
+      ["The soccer game starts at three.", "축구 경기는 3시에 시작한다."]] }] },
+
+  "story": { "lv": 1, "p": [
+    { "t": "n", "k": "이야기", "e": [
+      ["Tell me a story, please.", "이야기 하나만 해 주세요."],
+      ["This story is about a brave dog.", "이 이야기는 용감한 개에 대한 것이다."],
+      ["She read a bedtime story.", "그녀는 잠자리 동화를 읽어 주었다."]] }] },
+
+  "door": { "lv": 1, "p": [
+    { "t": "n", "k": "문", "e": [
+      ["Close the door, please.", "문 좀 닫아 주세요."],
+      ["Someone is at the door.", "누가 문 앞에 있어."],
+      ["The door is too heavy.", "문이 너무 무겁다."]] }] },
+
+  "tree": { "lv": 1, "p": [
+    { "t": "n", "k": "나무", "e": [
+      ["The tree is very tall.", "그 나무는 아주 크다."],
+      ["Birds are singing in the tree.", "새들이 나무에서 노래하고 있다."],
+      ["We planted a tree at school.", "우리는 학교에 나무를 심었다."]] }] },
+
+  "flower": { "lv": 1, "p": [
+    { "t": "n", "k": "꽃", "e": [
+      ["The flowers smell sweet.", "꽃에서 좋은 냄새가 난다."],
+      ["I gave my mom some flowers.", "나는 엄마께 꽃을 드렸다."],
+      ["Flowers bloom in spring.", "봄에는 꽃이 핀다."]] }] },
+
+  "food": { "lv": 1, "p": [
+    { "t": "n", "k": "음식", "e": [
+      ["Korean food is delicious.", "한국 음식은 맛있다."],
+      ["Don't waste food.", "음식을 낭비하지 마."],
+      ["What is your favorite food?", "네가 가장 좋아하는 음식은 뭐니?"]] }] },
+
+  "money": { "lv": 1, "p": [
+    { "t": "n", "k": "돈", "e": [
+      ["I saved my money in a piggy bank.", "나는 돼지 저금통에 돈을 모았다."],
+      ["He spent all his money.", "그는 돈을 다 써 버렸다."],
+      ["Money is not everything.", "돈이 전부는 아니다."]] }] },
+
+  "animal": { "lv": 1, "p": [
+    { "t": "n", "k": "동물", "e": [
+      ["Lions are wild animals.", "사자는 야생 동물이다."],
+      ["I saw many animals at the zoo.", "나는 동물원에서 많은 동물을 보았다."],
+      ["We should protect animals.", "우리는 동물을 보호해야 한다."]] }] }
+}

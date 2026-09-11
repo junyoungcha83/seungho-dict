@@ -3,14 +3,18 @@
 html, body { margin: 0; }
 body { font-family: 'Apple SD Gothic Neo','Noto Sans KR','Malgun Gothic',system-ui,sans-serif;
   background: var(--bg); color: var(--ink); line-height: 1.5; padding-bottom: 40px; }
-.app-header { position: sticky; top: 0; z-index: 5; background: var(--blue); color: #fff;
+/* 헤더+탭을 한 묶음으로 고정한다. 따로 고정하면 헤더 높이(노치 여백 포함)를
+   픽셀로 짐작해야 하는데, 기기마다 달라 어긋난다. */
+.topbar { position: sticky; top: 0; z-index: 20; }
+.app-header { background: var(--blue); color: #fff;
   padding: 14px 16px calc(14px + env(safe-area-inset-top)); display: flex; align-items: baseline; gap: 8px;
   padding-top: max(14px, env(safe-area-inset-top)); }
 .app-header h1 { margin: 0; font-size: 1.2rem; font-weight: 800; }
 .app-header .ver { font-size: .7rem; opacity: .7; }
 
-.search-wrap { position: sticky; top: 52px; z-index: 4; display: flex; gap: 8px; padding: 12px 16px;
-  background: var(--bg); }
+/* 탭이 위로 올라오면서 고정 막대가 둘이 됐다. 검색창까지 붙이면 셋이 쌓여
+   폰에서 볼 자리가 없다. 검색창은 내용과 함께 흐르게 둔다. */
+.search-wrap { display: flex; gap: 8px; padding: 12px 16px; background: var(--bg); }
 /* 단어검색·예문검색 두 탭이 같은 검색창을 쓴다 */
 .search-wrap input { flex: 1; min-width: 0; padding: 13px 14px; font-size: 1.05rem;
   border: 2px solid var(--line); border-radius: 12px; background: #fff; outline: none; }
@@ -147,21 +151,19 @@ body.splash-on { overflow: hidden; }
 .panel { display: block; }
 .panel.hidden { display: none; }
 .hidden { display: none !important; }
-body { padding-bottom: calc(62px + env(safe-area-inset-bottom)); }
+body { padding-bottom: calc(24px + env(safe-area-inset-bottom)); }
 
-.tabbar {
-  position: fixed; left: 0; right: 0; bottom: 0; z-index: 30;
-  display: flex; background: #fff; border-top: 1px solid var(--line);
-  padding-bottom: env(safe-area-inset-bottom);
-  box-shadow: 0 -2px 10px rgba(15,23,42,.06);
-}
+/* 탭 — 제목 바로 아래 가로 줄. 고른 탭에 밑줄이 그어진다. */
+.tabbar { display: flex; background: #fff; border-bottom: 1px solid var(--line);
+  box-shadow: 0 2px 8px rgba(15,23,42,.05); }
 .tab-btn {
   flex: 1 1 0; min-width: 0; border: none; background: transparent; cursor: pointer;
-  display: flex; flex-direction: column; align-items: center; gap: 2px;
-  padding: 8px 2px 9px; font-size: .7rem; font-weight: 700; color: var(--sub);
+  display: flex; align-items: center; justify-content: center; gap: 4px;
+  padding: 11px 2px 9px; font-size: .82rem; font-weight: 700; color: var(--sub);
+  border-bottom: 3px solid transparent; white-space: nowrap;
 }
-.tab-btn span { font-size: 1.2rem; line-height: 1; }
-.tab-btn.active { color: var(--blue); }
+.tab-btn span { font-size: .95rem; line-height: 1; }
+.tab-btn.active { color: var(--blue); border-bottom-color: var(--blue); }
 .tab-btn:active { background: #f1f5f9; }
 
 /* 통계 탭 — 예전엔 화면 아래 1/3 에 고정이었으나 이제 한 탭을 다 쓴다 */
@@ -173,3 +175,92 @@ body { padding-bottom: calc(62px + env(safe-area-inset-bottom)); }
 .stats-chart svg { display: block; }
 .stats-none { margin: 0; padding-top: 18px; text-align: center; font-size: .9rem; color: var(--sub); }
 .stats-cap { margin: 6px 0 0; font-size: .74rem; color: var(--sub); text-align: right; }
+
+/* ══ 낱말 풀이 네 칸 ══════════════════════════════════════════
+   품사별 뜻·예문 / 활용형 / 단어정보 / 퀴즈타임.
+   초등학생이 읽는 화면이라 글씨를 작게 줄이지 않고, 칸마다 확실히 나눠 놓는다. */
+
+/* 초등·중등 필수 딱지 */
+.lvb { font-size: .62rem; font-weight: 800; vertical-align: middle; margin-left: 8px;
+  border-radius: 999px; padding: 3px 8px; white-space: nowrap; }
+.lvb.lv1 { background: #dcfce7; color: #166534; }
+.lvb.lv2 { background: #e0e7ff; color: #3730a3; }
+
+/* ── 칸 1: 품사별 뜻과 예문 ── */
+.senses .sense { padding: 14px 0; border-bottom: 1px solid var(--line); }
+.senses .sense:first-child { padding-top: 2px; }
+.senses .sense:last-child { border-bottom: none; padding-bottom: 2px; }
+.sense-h { display: flex; align-items: baseline; flex-wrap: wrap; gap: 8px; }
+.sense-k { font-size: 1.12rem; font-weight: 700; }
+.pos { flex: none; background: var(--blue); color: #fff; border-radius: 7px;
+  padding: 3px 9px; font-size: .78rem; font-weight: 800; }
+.pos.sm { background: #e0e7ff; color: #3730a3; padding: 2px 7px; font-size: .7rem; }
+.sense-ex { margin-top: 9px; }
+
+/* 예문 — 번호를 매긴다. 몇 개인지 눈에 보여야 '최소 3개' 가 지켜지는지 알 수 있다. */
+ol.exn { margin: 0; padding-left: 1.35em; }
+ol.exn li { padding: 6px 0; }
+ol.exn li::marker { color: var(--blue); font-weight: 800; font-size: .9rem; }
+ol.exn .en { display: flex; align-items: center; gap: 8px; font-size: 1rem; }
+ol.exn .ko { color: var(--sub); font-size: .92rem; margin-top: 2px; }
+
+/* ── 칸 2: 활용형 ── */
+.ftab { margin-bottom: 14px; }
+.ftab-h { font-size: .85rem; font-weight: 800; color: var(--ink); background: #f1f5f9;
+  border-radius: 8px; padding: 6px 10px; margin-bottom: 6px; display: inline-block; }
+.ftab table { width: 100%; border-collapse: collapse; }
+.ftab th, .ftab td { text-align: left; vertical-align: top; padding: 7px 4px;
+  border-bottom: 1px dashed var(--line); }
+.ftab th { font-size: .8rem; font-weight: 600; color: var(--sub); width: 40%; }
+.ftab td.f { font-weight: 700; font-size: 1.02rem; white-space: nowrap; }
+.ftab td.h { font-size: .78rem; color: var(--sub); }
+/* 폰에서는 표가 좁다 — 설명 줄은 아래로 내린다 */
+@media (max-width: 430px) {
+  .ftab table, .ftab tbody, .ftab tr, .ftab th, .ftab td { display: block; width: auto; }
+  .ftab tr { padding: 8px 0; border-bottom: 1px dashed var(--line); }
+  .ftab th, .ftab td { border: none; padding: 1px 0; }
+}
+
+/* 눌러서 그 낱말로 건너뛰는 파란 글씨 */
+.wlink { border: none; background: transparent; color: var(--blue); font: inherit;
+  font-weight: 700; padding: 0; cursor: pointer; text-decoration: underline; text-underline-offset: 3px; }
+.wlink.big { font-size: 1.05rem; }
+.wlink:active { opacity: .6; }
+
+.der .deri { padding: 9px 0; border-bottom: 1px dashed var(--line); }
+.der .deri:last-child { border-bottom: none; }
+.der .deri .ko { font-size: .95rem; margin-top: 2px; }
+.der .deri .hint { font-size: .76rem; color: var(--sub); margin-top: 2px; }
+
+/* ── 칸 3: 단어정보 ── */
+.info-b { margin-bottom: 14px; }
+.info-b > b { display: block; font-size: .85rem; color: var(--ink); margin-bottom: 6px; }
+.pvi { padding: 8px 0; border-bottom: 1px dashed var(--line); }
+.pvi:last-child { border-bottom: none; }
+.pvi .en { font-weight: 700; display: inline-flex; align-items: center; gap: 6px; }
+.pvi .ko { color: var(--ink); font-size: .95rem; margin-left: 8px; }
+.pvi .note, .mixi .note { font-size: .82rem; color: var(--sub); margin-top: 3px; line-height: 1.55; }
+.mixi { padding: 8px 0; border-bottom: 1px dashed var(--line); }
+.mixi:last-child { border-bottom: none; }
+.mixi .t { font-weight: 800; color: #b45309; }
+
+/* ── 칸 4: 퀴즈타임 ── */
+.quiz .qi { background: #f8fafc; border: 1px solid var(--line); border-radius: 12px;
+  padding: 12px; margin-bottom: 10px; }
+.quiz .qq { font-size: .98rem; margin-bottom: 9px; }
+.quiz .qw { font-weight: 800; color: var(--blue); }
+.quiz .qc { display: flex; flex-direction: column; gap: 6px; }
+.quiz .qb { text-align: left; border: 1px solid var(--line); background: #fff; border-radius: 10px;
+  padding: 10px 12px; font-size: .98rem; color: var(--ink); cursor: pointer; line-height: 1.4; }
+.quiz .qb:active { background: #eef2ff; }
+.quiz .qn { font-weight: 800; color: var(--sub); margin-right: 4px; }
+/* 고르고 나면 정답은 초록, 내가 고른 오답은 빨강 */
+.quiz .qb.right { background: #dcfce7; border-color: #86efac; color: #14532d; font-weight: 700; }
+.quiz .qb.wrong { background: #fee2e2; border-color: #fca5a5; color: #7f1d1d; }
+.quiz .qi.done .qb { cursor: default; }
+.quiz .qr { margin-top: 8px; font-size: .9rem; min-height: 1.2em; }
+.quiz .qr .ok { color: #15803d; font-weight: 700; }
+.quiz .qr .no { color: #b91c1c; }
+.qagain { width: 100%; border: none; background: var(--blue); color: #fff; font-weight: 800;
+  font-size: .95rem; padding: 12px; border-radius: 12px; cursor: pointer; }
+.qagain:active { opacity: .85; }

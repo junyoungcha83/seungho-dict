@@ -54,10 +54,11 @@ export default {
         const r = await fetch(`https://tatoeba.org/en/api_v0/search?from=eng&to=kor&query=${encodeURIComponent(q)}&sort=relevance`, { headers: { 'User-Agent': 'seungho-dict' } });
         const j = await r.json();
         const out = [];
+        // 넉넉히 보낸다 — 앱이 쉬운 문장(짧은 것) 위주로 골라 쓰고 3개 이상 채워야 한다
         for (const it of (j.results || [])) {
           const ko = (it.translations || []).flat().find(t => t && t.lang === 'kor');
           if (it.text) out.push({ en: it.text, ko: ko ? ko.text : '' });
-          if (out.length >= 3) break;
+          if (out.length >= 20) break;
         }
         return new Response(JSON.stringify({ examples: out }), {
           headers: { ...c, 'Content-Type':'application/json; charset=utf-8', 'Cache-Control':'public, max-age=604800' } });

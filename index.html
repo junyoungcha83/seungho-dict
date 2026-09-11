@@ -25,6 +25,7 @@
   </div>
 </div>
 
+<div class="topbar">
 <header class="app-header">
   <h1>📖 승호의사전</h1>
   <span class="ver" id="ver"></span>
@@ -33,6 +34,13 @@
     <button data-a="uk">UK</button>
   </div>
 </header>
+<nav class="tabbar" id="tabbar" role="tablist" aria-label="화면 선택">
+  <button class="tab-btn active" data-tab="word"  role="tab" aria-selected="true"><span>🔤</span>단어검색</button>
+  <button class="tab-btn"        data-tab="ex"    role="tab" aria-selected="false"><span>💬</span>예문검색</button>
+  <button class="tab-btn"        data-tab="fav"   role="tab" aria-selected="false"><span>⭐</span>즐겨찾기</button>
+  <button class="tab-btn"        data-tab="stats" role="tab" aria-selected="false"><span>📊</span>통계</button>
+</nav>
+</div>
 
 <!-- ── 탭 1: 단어검색 ── -->
 <section class="panel" id="panelWord" data-tab="word">
@@ -59,8 +67,9 @@
   <main id="exResult" class="result">
     <div class="empty">
       <p>영어 단어를 넣으면 그 단어가 들어간 <b>예문</b>을 보여줍니다.</p>
-      <p class="sub">문장을 누르면 소리로 읽어 줍니다.</p>
+      <p class="sub">쉬운 문장부터 5개 이상 · 🔊를 누르면 소리로 읽어 줍니다.</p>
     </div>
+    <div class="recent" id="exSuggest"></div>
   </main>
 </section>
 
@@ -88,14 +97,10 @@
   </main>
 </section>
 
-<nav class="tabbar" id="tabbar" role="tablist" aria-label="화면 선택">
-  <button class="tab-btn active" data-tab="word"  role="tab" aria-selected="true"><span>🔤</span>단어검색</button>
-  <button class="tab-btn"        data-tab="ex"    role="tab" aria-selected="false"><span>💬</span>예문검색</button>
-  <button class="tab-btn"        data-tab="fav"   role="tab" aria-selected="false"><span>⭐</span>즐겨찾기</button>
-  <button class="tab-btn"        data-tab="stats" role="tab" aria-selected="false"><span>📊</span>통계</button>
-</nav>
+
 
 <script src="assets/stats.js"></script>
+<script src="assets/word.js"></script>
 <script src="assets/app.js"></script>
 <script src="assets/splash.js"></script>
 <script>

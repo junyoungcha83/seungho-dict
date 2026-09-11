@@ -1,0 +1,157 @@
+{
+  "family": { "lv": 1, "p": [
+    { "t": "n", "k": "가족", "e": [
+      ["I have a big family.", "우리 가족은 대식구다."],
+      ["My family goes camping every summer.", "우리 가족은 여름마다 캠핑을 간다."],
+      ["This is a photo of my family.", "이건 우리 가족 사진이다."]] }] },
+
+  "father": { "lv": 1, "p": [
+    { "t": "n", "k": "아버지", "e": [
+      ["My father works at a hospital.", "우리 아버지는 병원에서 일하신다."],
+      ["Her father is very tall.", "그녀의 아버지는 키가 아주 크시다."],
+      ["I helped my father wash the car.", "나는 아버지가 세차하는 것을 도왔다."]] }] },
+
+  "mother": { "lv": 1, "p": [
+    { "t": "n", "k": "어머니", "e": [
+      ["My mother makes great soup.", "우리 어머니는 국을 정말 잘 끓이신다."],
+      ["His mother is a teacher.", "그의 어머니는 선생님이시다."],
+      ["I gave my mother a card.", "나는 어머니께 카드를 드렸다."]] }] },
+
+  "brother": { "lv": 1, "p": [
+    { "t": "n", "k": "형, 오빠, 남동생", "e": [
+      ["My brother is ten years old.", "내 동생은 열 살이다."],
+      ["I play games with my brother.", "나는 형이랑 게임을 한다."],
+      ["Her brother goes to middle school.", "그녀의 오빠는 중학교에 다닌다."]] }] },
+
+  "sister": { "lv": 1, "p": [
+    { "t": "n", "k": "누나, 언니, 여동생", "e": [
+      ["My sister likes to draw.", "내 여동생은 그림 그리기를 좋아한다."],
+      ["I have two sisters.", "나는 언니가 둘 있다."],
+      ["His sister is very kind.", "그의 누나는 아주 친절하다."]] }] },
+
+  "baby": { "lv": 1, "p": [
+    { "t": "n", "k": "아기", "e": [
+      ["The baby is sleeping now.", "아기가 지금 자고 있다."],
+      ["She held the baby carefully.", "그녀는 아기를 조심스럽게 안았다."],
+      ["Babies cry when they are hungry.", "아기들은 배고프면 운다."]] }] },
+
+  "teacher": { "lv": 1, "p": [
+    { "t": "n", "k": "선생님", "e": [
+      ["Our teacher is very funny.", "우리 선생님은 아주 재미있으시다."],
+      ["I want to be a teacher.", "나는 선생님이 되고 싶다."],
+      ["The teacher gave us homework.", "선생님이 우리에게 숙제를 내주셨다."]] }] },
+
+  "student": { "lv": 1, "p": [
+    { "t": "n", "k": "학생", "e": [
+      ["I am a student.", "나는 학생이다."],
+      ["The students are in the classroom.", "학생들이 교실에 있다."],
+      ["She is a good student.", "그녀는 훌륭한 학생이다."]] }] },
+
+  "doctor": { "lv": 1, "p": [
+    { "t": "n", "k": "의사", "e": [
+      ["The doctor helped me get better.", "의사 선생님이 내가 낫도록 도와주셨다."],
+      ["My aunt is a doctor.", "우리 이모는 의사다."],
+      ["You should see a doctor.", "너 병원에 가 봐야겠다."]] }] },
+
+  "boy": { "lv": 1, "p": [
+    { "t": "n", "k": "소년, 남자아이", "e": [
+      ["The boy is riding a bike.", "그 남자아이가 자전거를 타고 있다."],
+      ["Two boys are playing soccer.", "남자아이 둘이 축구를 하고 있다."],
+      ["He was a shy boy.", "그는 수줍은 아이였다."]] }] },
+
+  "girl": { "lv": 1, "p": [
+    { "t": "n", "k": "소녀, 여자아이", "e": [
+      ["The girl is reading a book.", "그 여자아이가 책을 읽고 있다."],
+      ["Three girls are singing.", "여자아이 셋이 노래하고 있다."],
+      ["She is a brave girl.", "그녀는 용감한 아이다."]] }] },
+
+  "man": { "lv": 1, "p": [
+    { "t": "n", "k": "남자, 사람", "e": [
+      ["A man is waiting outside.", "한 남자가 밖에서 기다리고 있다."],
+      ["Two men came to fix the door.", "남자 두 명이 문을 고치러 왔다."],
+      ["That old man is my grandfather.", "저 할아버지가 우리 할아버지다."]] }] },
+
+  "woman": { "lv": 1, "p": [
+    { "t": "n", "k": "여자", "e": [
+      ["A woman is walking her dog.", "한 여자가 개를 산책시키고 있다."],
+      ["The women are talking together.", "여자들이 함께 이야기하고 있다."],
+      ["She is a strong woman.", "그녀는 강한 여자다."]] }] },
+
+  "people": { "lv": 1, "p": [
+    { "t": "n", "k": "사람들", "e": [
+      ["Many people came to the park.", "많은 사람들이 공원에 왔다."],
+      ["People need water to live.", "사람은 살려면 물이 필요하다."],
+      ["The people are waiting in line.", "사람들이 줄을 서서 기다리고 있다."]] }] },
+
+  "child": { "lv": 1, "p": [
+    { "t": "n", "k": "아이, 어린이", "e": [
+      ["The child is drawing a picture.", "그 아이가 그림을 그리고 있다."],
+      ["Children love to play outside.", "아이들은 밖에서 노는 것을 좋아한다."],
+      ["Every child needs love.", "모든 아이에게는 사랑이 필요하다."]] }] },
+
+  "room": { "lv": 1, "p": [
+    { "t": "n", "k": "방", "e": [
+      ["My room is small but warm.", "내 방은 작지만 따뜻하다."],
+      ["Clean your room, please.", "네 방 좀 치워라."],
+      ["There are four rooms in our house.", "우리 집에는 방이 네 개 있다."]] }] },
+
+  "house": { "lv": 1, "p": [
+    { "t": "n", "k": "집", "e": [
+      ["Our house has a small garden.", "우리 집에는 작은 정원이 있다."],
+      ["She lives in a white house.", "그녀는 하얀 집에 산다."],
+      ["Come to my house after school.", "방과 후에 우리 집에 와."]] }] },
+
+  "park": { "lv": 1, "p": [
+    { "t": "n", "k": "공원", "e": [
+      ["Let's meet at the park.", "공원에서 만나자."],
+      ["The park is full of flowers.", "공원에 꽃이 가득하다."],
+      ["We play soccer in the park.", "우리는 공원에서 축구를 한다."]] },
+    { "t": "v", "k": "주차하다", "e": [
+      ["You can't park here.", "여기에 주차하면 안 됩니다."],
+      ["Dad parked the car near the door.", "아빠가 문 근처에 차를 세우셨다."],
+      ["Where did you park?", "어디에 주차했어?"]] }] },
+
+  "city": { "lv": 1, "p": [
+    { "t": "n", "k": "도시", "e": [
+      ["Seoul is a big city.", "서울은 큰 도시다."],
+      ["I live in a small city.", "나는 작은 도시에 산다."],
+      ["Many cities have subways.", "많은 도시에 지하철이 있다."]] }] },
+
+  "street": { "lv": 1, "p": [
+    { "t": "n", "k": "거리, 길", "e": [
+      ["Be careful when you cross the street.", "길을 건널 때 조심해."],
+      ["The street was very quiet.", "거리가 아주 조용했다."],
+      ["There are many shops on this street.", "이 거리에는 가게가 많다."]] }] },
+
+  "bus": { "lv": 1, "p": [
+    { "t": "n", "k": "버스", "e": [
+      ["I take the bus to school.", "나는 버스를 타고 학교에 간다."],
+      ["The bus is late today.", "오늘 버스가 늦는다."],
+      ["Two buses stop here.", "버스 두 대가 여기에 선다."]] }] },
+
+  "train": { "lv": 1, "p": [
+    { "t": "n", "k": "기차", "e": [
+      ["The train leaves at nine.", "기차는 9시에 떠난다."],
+      ["We went to Busan by train.", "우리는 기차로 부산에 갔다."],
+      ["The train was very fast.", "그 기차는 아주 빨랐다."]] },
+    { "t": "v", "k": "훈련하다, 훈련시키다", "e": [
+      ["He trains every morning.", "그는 매일 아침 훈련한다."],
+      ["She trained her dog to sit.", "그녀는 개가 앉도록 훈련시켰다."],
+      ["The team is training hard.", "그 팀은 열심히 훈련하고 있다."]] }] },
+
+  "car": { "lv": 1, "p": [
+    { "t": "n", "k": "자동차", "e": [
+      ["My dad washed the car.", "아빠가 차를 씻으셨다."],
+      ["That red car is fast.", "저 빨간 차는 빠르다."],
+      ["There are many cars on the road.", "길에 차가 많다."]] }] },
+
+  "shop": { "lv": 1, "p": [
+    { "t": "n", "k": "가게", "e": [
+      ["There is a flower shop near my house.", "우리 집 근처에 꽃 가게가 있다."],
+      ["The shop opens at ten.", "그 가게는 10시에 문을 연다."],
+      ["We visited three shops.", "우리는 가게 세 곳을 들렀다."]] },
+    { "t": "v", "k": "장을 보다, 쇼핑하다", "e": [
+      ["We shop at the market on Sunday.", "우리는 일요일에 시장에서 장을 본다."],
+      ["She is shopping for shoes.", "그녀는 신발을 사러 다니고 있다."],
+      ["They shopped all afternoon.", "그들은 오후 내내 쇼핑했다."]] }] }
+}

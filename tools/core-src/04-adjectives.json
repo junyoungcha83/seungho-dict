@@ -1,0 +1,221 @@
+{
+  "happy": { "lv": 1, "p": [
+    { "t": "a", "k": "행복한, 기쁜", "e": [
+      ["I am happy to see you.", "너를 만나서 기뻐."],
+      ["She looks very happy today.", "그녀는 오늘 아주 행복해 보인다."],
+      ["Happy birthday to you!", "생일 축하해!"]] }] },
+
+  "sad": { "lv": 1, "p": [
+    { "t": "a", "k": "슬픈", "e": [
+      ["The story made me sad.", "그 이야기는 나를 슬프게 했다."],
+      ["Don't be sad. I'm here.", "슬퍼하지 마. 내가 있잖아."],
+      ["He had a sad face.", "그는 슬픈 얼굴을 하고 있었다."]] }] },
+
+  "big": { "lv": 1, "p": [
+    { "t": "a", "k": "큰", "e": [
+      ["That is a big dog.", "저건 큰 개다."],
+      ["My room is not very big.", "내 방은 그렇게 크지 않다."],
+      ["She has big brown eyes.", "그녀는 큰 갈색 눈을 가졌다."]] }] },
+
+  "small": { "lv": 1, "p": [
+    { "t": "a", "k": "작은", "e": [
+      ["I live in a small town.", "나는 작은 마을에 산다."],
+      ["This shirt is too small for me.", "이 셔츠는 나에게 너무 작다."],
+      ["A small bird sat on the branch.", "작은 새가 가지에 앉았다."]] }] },
+
+  "long": { "lv": 1, "p": [
+    { "t": "a", "k": "긴", "e": [
+      ["She has long hair.", "그녀는 머리가 길다."],
+      ["It was a long day.", "긴 하루였다."],
+      ["The river is very long.", "그 강은 아주 길다."]] },
+    { "t": "r", "k": "오래", "e": [
+      ["How long did you wait?", "얼마나 오래 기다렸니?"],
+      ["Don't stay out too long.", "너무 오래 밖에 있지 마."],
+      ["I have known him long.", "나는 그를 오래전부터 알았다."]] }] },
+
+  "tall": { "lv": 1, "p": [
+    { "t": "a", "k": "키가 큰, 높은", "e": [
+      ["My brother is very tall.", "우리 형은 키가 아주 크다."],
+      ["That building is tall.", "저 건물은 높다."],
+      ["How tall are you?", "너 키가 몇이니?"]] }] },
+
+  "old": { "lv": 1, "p": [
+    { "t": "a", "k": "나이가 든, 늙은", "e": [
+      ["My grandfather is old but strong.", "할아버지는 연세가 많으시지만 건강하시다."],
+      ["How old are you?", "너 몇 살이니?"],
+      ["The old man smiled at us.", "그 할아버지가 우리를 보고 웃으셨다."]] },
+    { "t": "a", "k": "오래된, 낡은", "e": [
+      ["This is an old book.", "이건 오래된 책이다."],
+      ["I threw away my old shoes.", "나는 낡은 신발을 버렸다."],
+      ["We visited an old temple.", "우리는 오래된 절을 방문했다."]] }] },
+
+  "new": { "lv": 1, "p": [
+    { "t": "a", "k": "새로운", "e": [
+      ["I got a new bike.", "나는 새 자전거를 샀다."],
+      ["She is the new student.", "그녀가 새로 온 학생이다."],
+      ["Happy New Year!", "새해 복 많이 받으세요!"]] }] },
+
+  "good": { "lv": 1, "p": [
+    { "t": "a", "k": "좋은, 훌륭한", "e": [
+      ["That's a good idea.", "좋은 생각이야."],
+      ["He is a good soccer player.", "그는 훌륭한 축구 선수다."],
+      ["Good morning, everyone.", "모두들 좋은 아침."]] },
+    { "t": "a", "k": "잘하는", "e": [
+      ["She is good at math.", "그녀는 수학을 잘한다."],
+      ["I am not good at singing.", "나는 노래를 잘 못한다."],
+      ["He is good at drawing.", "그는 그림을 잘 그린다."]] }] },
+
+  "bad": { "lv": 1, "p": [
+    { "t": "a", "k": "나쁜", "e": [
+      ["Smoking is bad for your health.", "담배는 건강에 나쁘다."],
+      ["The weather was bad yesterday.", "어제는 날씨가 나빴다."],
+      ["That's too bad.", "그것 참 안됐구나."]] }] },
+
+  "fast": { "lv": 1, "p": [
+    { "t": "a", "k": "빠른", "e": [
+      ["He is a fast runner.", "그는 빠른 달리기 선수다."],
+      ["This is a fast car.", "이건 빠른 차다."],
+      ["The train is very fast.", "그 기차는 아주 빠르다."]] },
+    { "t": "r", "k": "빨리", "e": [
+      ["Don't walk so fast.", "그렇게 빨리 걷지 마."],
+      ["She can run fast.", "그녀는 빨리 달릴 수 있다."],
+      ["Time goes by fast.", "시간이 빨리 지나간다."]] }] },
+
+  "slow": { "lv": 1, "p": [
+    { "t": "a", "k": "느린", "e": [
+      ["A turtle is slow.", "거북이는 느리다."],
+      ["The bus was slow today.", "오늘 버스가 느렸다."],
+      ["He is a slow eater.", "그는 밥을 천천히 먹는다."]] }] },
+
+  "hot": { "lv": 1, "p": [
+    { "t": "a", "k": "더운, 뜨거운", "e": [
+      ["It is hot in summer.", "여름에는 덥다."],
+      ["Be careful, the soup is hot.", "조심해, 국이 뜨거워."],
+      ["I want a hot drink.", "따뜻한 음료를 마시고 싶다."]] },
+    { "t": "a", "k": "매운", "e": [
+      ["This soup is too hot for me.", "이 국은 나에게 너무 맵다."],
+      ["Korean food can be hot.", "한국 음식은 매울 수 있다."],
+      ["He likes hot pepper.", "그는 매운 고추를 좋아한다."]] }] },
+
+  "cold": { "lv": 1, "p": [
+    { "t": "a", "k": "추운, 차가운", "e": [
+      ["It is cold outside.", "밖은 춥다."],
+      ["I want some cold water.", "찬물 좀 마시고 싶어."],
+      ["My hands are cold.", "내 손이 차갑다."]] },
+    { "t": "n", "k": "감기", "e": [
+      ["I have a cold.", "나는 감기에 걸렸다."],
+      ["She caught a cold last week.", "그녀는 지난주에 감기에 걸렸다."],
+      ["Stay warm so you don't catch a cold.", "감기 걸리지 않게 따뜻하게 있어."]] }] },
+
+  "hard": { "lv": 1, "p": [
+    { "t": "a", "k": "어려운", "e": [
+      ["This question is hard.", "이 문제는 어렵다."],
+      ["Math is hard for me.", "나는 수학이 어렵다."],
+      ["It was a hard test.", "어려운 시험이었다."]] },
+    { "t": "a", "k": "단단한", "e": [
+      ["The bread is too hard.", "빵이 너무 딱딱하다."],
+      ["The floor is hard.", "바닥이 딱딱하다."],
+      ["Ice is hard and cold.", "얼음은 단단하고 차갑다."]] },
+    { "t": "r", "k": "열심히", "e": [
+      ["She studies hard every day.", "그녀는 매일 열심히 공부한다."],
+      ["Work hard and do your best.", "열심히 일하고 최선을 다해."],
+      ["It is raining hard.", "비가 세차게 내리고 있다."]] }] },
+
+  "easy": { "lv": 1, "p": [
+    { "t": "a", "k": "쉬운", "e": [
+      ["This game is easy.", "이 게임은 쉽다."],
+      ["The test was easier than I thought.", "시험은 생각보다 쉬웠다."],
+      ["It is not easy to wake up early.", "일찍 일어나는 것은 쉽지 않다."]] }] },
+
+  "kind": { "lv": 1, "p": [
+    { "t": "a", "k": "친절한, 착한", "e": [
+      ["She is kind to everyone.", "그녀는 모두에게 친절하다."],
+      ["Thank you. You are so kind.", "고마워요. 정말 친절하시네요."],
+      ["Be kind to your friends.", "친구들에게 친절하게 대해."]] },
+    { "t": "n", "k": "종류", "e": [
+      ["What kind of music do you like?", "어떤 종류의 음악을 좋아하니?"],
+      ["There are many kinds of birds.", "새는 종류가 많다."],
+      ["This kind of shoe is popular.", "이런 종류의 신발이 인기다."]] }] },
+
+  "right": { "lv": 1, "p": [
+    { "t": "a", "k": "옳은, 맞는", "e": [
+      ["Your answer is right.", "네 답이 맞다."],
+      ["That's right!", "맞아!"],
+      ["It is not right to tell a lie.", "거짓말하는 것은 옳지 않다."]] },
+    { "t": "n", "k": "오른쪽", "e": [
+      ["Turn right at the corner.", "모퉁이에서 오른쪽으로 도세요."],
+      ["The school is on your right.", "학교는 오른쪽에 있다."],
+      ["Raise your right hand.", "오른손을 드세요."]] }] },
+
+  "well": { "lv": 1, "p": [
+    { "t": "r", "k": "잘", "e": [
+      ["She sings very well.", "그녀는 노래를 아주 잘한다."],
+      ["Did you sleep well?", "잘 잤니?"],
+      ["He speaks English well.", "그는 영어를 잘한다."]] },
+    { "t": "a", "k": "건강한, 괜찮은", "e": [
+      ["I don't feel well today.", "나는 오늘 몸이 좋지 않다."],
+      ["Get well soon!", "빨리 나아!"],
+      ["Is everything well at home?", "집에 별일 없니?"]] }] },
+
+  "fine": { "lv": 1, "p": [
+    { "t": "a", "k": "좋은, 괜찮은", "e": [
+      ["I'm fine, thank you.", "나는 괜찮아, 고마워."],
+      ["It was a fine day.", "화창한 날이었다."],
+      ["That's fine with me.", "나는 그거 괜찮아."]] },
+    { "t": "n", "k": "벌금", "e": [
+      ["He paid a fine for the ticket.", "그는 딱지를 떼어 벌금을 냈다."],
+      ["There is a fine for late books.", "책을 늦게 반납하면 벌금이 있다."],
+      ["The fine was ten dollars.", "벌금은 10달러였다."]] }] },
+
+  "free": { "lv": 1, "p": [
+    { "t": "a", "k": "무료의, 공짜의", "e": [
+      ["The museum is free for children.", "그 박물관은 어린이는 무료다."],
+      ["I got a free ticket.", "나는 공짜 표를 받았다."],
+      ["Free drinks are over there.", "무료 음료는 저쪽에 있다."]] },
+    { "t": "a", "k": "한가한, 자유로운", "e": [
+      ["Are you free this weekend?", "이번 주말에 시간 있니?"],
+      ["Birds are free in the sky.", "새들은 하늘에서 자유롭다."],
+      ["I have some free time now.", "나는 지금 여유 시간이 좀 있다."]] }] },
+
+  "pretty": { "lv": 1, "p": [
+    { "t": "a", "k": "예쁜", "e": [
+      ["What a pretty flower!", "정말 예쁜 꽃이네!"],
+      ["She wore a pretty dress.", "그녀는 예쁜 원피스를 입었다."],
+      ["Your drawing is pretty.", "네 그림 예쁘다."]] },
+    { "t": "r", "k": "꽤, 아주", "e": [
+      ["The movie was pretty good.", "그 영화는 꽤 괜찮았다."],
+      ["It is pretty cold today.", "오늘 꽤 춥다."],
+      ["He runs pretty fast.", "그는 꽤 빨리 달린다."]] }] },
+
+  "funny": { "lv": 1, "p": [
+    { "t": "a", "k": "웃기는, 재미있는", "e": [
+      ["That joke was so funny.", "그 농담 정말 웃겼어."],
+      ["He is a funny boy.", "그는 재미있는 아이다."],
+      ["We watched a funny movie.", "우리는 웃긴 영화를 봤다."]] }] },
+
+  "quiet": { "lv": 1, "p": [
+    { "t": "a", "k": "조용한", "e": [
+      ["Please be quiet in the library.", "도서관에서는 조용히 해 주세요."],
+      ["It is a quiet town.", "조용한 마을이다."],
+      ["The baby is quiet now.", "아기가 이제 조용하다."]] }] },
+
+  "late": { "lv": 1, "p": [
+    { "t": "a", "k": "늦은", "e": [
+      ["I was late for school.", "나는 학교에 지각했다."],
+      ["It is getting late.", "시간이 늦어지고 있다."],
+      ["Sorry I'm late.", "늦어서 미안해."]] },
+    { "t": "r", "k": "늦게", "e": [
+      ["He came home late.", "그는 집에 늦게 왔다."],
+      ["Don't sleep late.", "늦게 자지 마."],
+      ["She arrived ten minutes late.", "그녀는 10분 늦게 도착했다."]] }] },
+
+  "back": { "lv": 1, "p": [
+    { "t": "r", "k": "뒤로, 다시", "e": [
+      ["Come back soon.", "빨리 돌아와."],
+      ["Give it back to me.", "그거 나한테 돌려줘."],
+      ["Step back, please.", "뒤로 물러서 주세요."]] },
+    { "t": "n", "k": "등, 뒤쪽", "e": [
+      ["My back hurts.", "등이 아프다."],
+      ["He sat at the back of the room.", "그는 교실 뒤쪽에 앉았다."],
+      ["Write your name on the back.", "뒷면에 이름을 쓰세요."]] }] }
+}

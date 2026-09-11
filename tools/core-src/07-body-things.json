@@ -1,0 +1,145 @@
+{
+  "head": { "lv": 1, "p": [
+    { "t": "n", "k": "머리", "e": [
+      ["My head hurts a little.", "머리가 조금 아프다."],
+      ["Put the hat on your head.", "모자를 머리에 써."],
+      ["He shook his head.", "그는 고개를 저었다."]] }] },
+
+  "eye": { "lv": 1, "p": [
+    { "t": "n", "k": "눈", "e": [
+      ["Close your eyes and count to ten.", "눈을 감고 열까지 세."],
+      ["She has big brown eyes.", "그녀는 크고 갈색인 눈을 가졌다."],
+      ["Something is in my eye.", "눈에 뭐가 들어갔어."]] }] },
+
+  "ear": { "lv": 1, "p": [
+    { "t": "n", "k": "귀", "e": [
+      ["Rabbits have long ears.", "토끼는 귀가 길다."],
+      ["My ear hurts.", "귀가 아파."],
+      ["He whispered in my ear.", "그가 내 귀에 속삭였다."]] }] },
+
+  "nose": { "lv": 1, "p": [
+    { "t": "n", "k": "코", "e": [
+      ["My nose is cold.", "코가 시리다."],
+      ["Elephants have long noses.", "코끼리는 코가 길다."],
+      ["Don't touch your nose.", "코를 만지지 마."]] }] },
+
+  "mouth": { "lv": 1, "p": [
+    { "t": "n", "k": "입", "e": [
+      ["Open your mouth, please.", "입을 벌려 주세요."],
+      ["Don't talk with your mouth full.", "입에 음식을 넣고 말하지 마."],
+      ["The baby opened her mouth wide.", "아기가 입을 크게 벌렸다."]] }] },
+
+  "hair": { "lv": 1, "p": [
+    { "t": "n", "k": "머리카락", "e": [
+      ["Her hair is long and black.", "그녀의 머리는 길고 까맣다."],
+      ["I washed my hair this morning.", "나는 오늘 아침에 머리를 감았다."],
+      ["He cut his hair short.", "그는 머리를 짧게 잘랐다."]] }] },
+
+  "foot": { "lv": 1, "p": [
+    { "t": "n", "k": "발", "e": [
+      ["My foot hurts after the walk.", "많이 걸었더니 발이 아프다."],
+      ["Wash your feet before bed.", "자기 전에 발을 씻어."],
+      ["He kicked the ball with his left foot.", "그는 왼발로 공을 찼다."]] }] },
+
+  "arm": { "lv": 1, "p": [
+    { "t": "n", "k": "팔", "e": [
+      ["He broke his arm last week.", "그는 지난주에 팔이 부러졌다."],
+      ["She held the baby in her arms.", "그녀는 아기를 품에 안았다."],
+      ["Raise your arms up high.", "팔을 높이 드세요."]] }] },
+
+  "shoes": { "lv": 1, "p": [
+    { "t": "n", "k": "신발", "e": [
+      ["These shoes are too small.", "이 신발은 너무 작다."],
+      ["Take off your shoes at the door.", "문에서 신발을 벗으세요."],
+      ["I bought new shoes yesterday.", "나는 어제 새 신발을 샀다."]] }] },
+
+  "hat": { "lv": 1, "p": [
+    { "t": "n", "k": "모자", "e": [
+      ["Wear a hat. It is sunny.", "모자를 써. 햇볕이 강해."],
+      ["His hat blew away in the wind.", "그의 모자가 바람에 날아갔다."],
+      ["I like your red hat.", "네 빨간 모자 마음에 들어."]] }] },
+
+  "pencil": { "lv": 1, "p": [
+    { "t": "n", "k": "연필", "e": [
+      ["May I borrow a pencil?", "연필 좀 빌려도 될까?"],
+      ["My pencil is too short.", "내 연필이 너무 짧다."],
+      ["She has five pencils in her case.", "그녀는 필통에 연필이 다섯 자루 있다."]] }] },
+
+  "bag": { "lv": 1, "p": [
+    { "t": "n", "k": "가방", "e": [
+      ["My bag is very heavy.", "내 가방은 아주 무겁다."],
+      ["Put your books in your bag.", "책을 가방에 넣어."],
+      ["She left her bag on the bus.", "그녀는 버스에 가방을 두고 내렸다."]] }] },
+
+  "desk": { "lv": 1, "p": [
+    { "t": "n", "k": "책상", "e": [
+      ["My desk is next to the window.", "내 책상은 창문 옆에 있다."],
+      ["Clean your desk before you go.", "가기 전에 책상을 치워."],
+      ["There are thirty desks in the classroom.", "교실에 책상이 서른 개 있다."]] }] },
+
+  "chair": { "lv": 1, "p": [
+    { "t": "n", "k": "의자", "e": [
+      ["Sit on this chair, please.", "이 의자에 앉으세요."],
+      ["The chair is too high for me.", "그 의자는 나에게 너무 높다."],
+      ["He pulled out a chair for her.", "그는 그녀에게 의자를 빼 주었다."]] }] },
+
+  "window": { "lv": 1, "p": [
+    { "t": "n", "k": "창문", "e": [
+      ["Open the window, please.", "창문을 열어 주세요."],
+      ["I looked out the window.", "나는 창밖을 내다보았다."],
+      ["The windows are very clean.", "창문들이 아주 깨끗하다."]] }] },
+
+  "clock": { "lv": 1, "p": [
+    { "t": "n", "k": "시계", "e": [
+      ["The clock on the wall is old.", "벽에 걸린 시계는 오래됐다."],
+      ["Look at the clock. It's five.", "시계를 봐. 5시야."],
+      ["The clock stopped last night.", "그 시계가 어젯밤에 멈췄다."]] }] },
+
+  "birthday": { "lv": 1, "p": [
+    { "t": "n", "k": "생일", "e": [
+      ["My birthday is in May.", "내 생일은 5월이다."],
+      ["Happy birthday, Seungho!", "승호야, 생일 축하해!"],
+      ["We had a birthday party yesterday.", "우리는 어제 생일 파티를 했다."]] }] },
+
+  "morning": { "lv": 1, "p": [
+    { "t": "n", "k": "아침", "e": [
+      ["I get up early in the morning.", "나는 아침에 일찍 일어난다."],
+      ["Good morning, everyone!", "모두 좋은 아침!"],
+      ["It rained this morning.", "오늘 아침에 비가 왔다."]] }] },
+
+  "night": { "lv": 1, "p": [
+    { "t": "n", "k": "밤", "e": [
+      ["I read a book at night.", "나는 밤에 책을 읽는다."],
+      ["Good night. Sleep well.", "잘 자. 푹 자렴."],
+      ["It was a very cold night.", "아주 추운 밤이었다."]] }] },
+
+  "week": { "lv": 1, "p": [
+    { "t": "n", "k": "주, 일주일", "e": [
+      ["There are seven days in a week.", "일주일은 7일이다."],
+      ["I see my grandma every week.", "나는 매주 할머니를 뵌다."],
+      ["We will go there next week.", "우리는 다음 주에 거기에 갈 거야."]] }] },
+
+  "year": { "lv": 1, "p": [
+    { "t": "n", "k": "해, 년", "e": [
+      ["I am eleven years old.", "나는 열한 살이다."],
+      ["Last year we moved to Seoul.", "작년에 우리는 서울로 이사했다."],
+      ["A year has twelve months.", "1년은 열두 달이다."]] }] },
+
+  "music": { "lv": 1, "p": [
+    { "t": "n", "k": "음악", "e": [
+      ["I listen to music every day.", "나는 매일 음악을 듣는다."],
+      ["This music makes me happy.", "이 음악은 나를 행복하게 한다."],
+      ["She studies music at school.", "그녀는 학교에서 음악을 배운다."]] }] },
+
+  "movie": { "lv": 1, "p": [
+    { "t": "n", "k": "영화", "e": [
+      ["Let's watch a movie tonight.", "오늘 밤 영화 보자."],
+      ["That movie was really funny.", "그 영화 정말 웃겼어."],
+      ["We saw two movies last weekend.", "우리는 지난 주말에 영화를 두 편 봤다."]] }] },
+
+  "ball": { "lv": 1, "p": [
+    { "t": "n", "k": "공", "e": [
+      ["Throw the ball to me!", "나에게 공을 던져!"],
+      ["The ball went over the fence.", "공이 담장을 넘어갔다."],
+      ["We need two balls for the game.", "경기하려면 공 두 개가 필요하다."]] }] }
+}
