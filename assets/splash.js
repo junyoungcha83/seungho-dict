@@ -8,6 +8,15 @@
   // ?q= 딥링크로 들어왔으면 결과를 바로 보여줘야 하므로 첫 화면을 건너뛴다
   if (new URLSearchParams(location.search).get('q')) { el.remove(); return; }
 
+  // 새로고침·뒤로가기로 들어온 경우에도 건너뛴다. 앱을 '처음 켤 때' 보는 화면이지
+  // 쓰는 중에 5초씩 가로막으라고 만든 게 아니다. 새 버전이 반영될 때 자동 새로고침이
+  // 걸리는데, 그때마다 사진이 다시 뜨면 성가시다.
+  try {
+    const nav = (performance.getEntriesByType('navigation') || [])[0];
+    const how = nav ? nav.type : '';
+    if (how === 'reload' || how === 'back_forward') { el.remove(); return; }
+  } catch (e) {}
+
   document.body.classList.add('splash-on');
 
   let done = false;

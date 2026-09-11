@@ -99,10 +99,23 @@
 <script src="assets/app.js"></script>
 <script src="assets/splash.js"></script>
 <script>
+  // 새 버전이 올라와도 이미 떠 있는 앱은 옛 코드를 계속 쓴다. 그래서
+  //  ① 새 워커가 제어권을 잡으면 한 번 새로고침해 새 코드로 갈아탄다
+  //  ② 화면으로 돌아올 때마다 새 버전이 있는지 확인한다
+  //     — 폰에서 앱을 백그라운드에 두면 새로 여는 일이 없어 영영 갱신되지 않았다
+  //       (화면의 버전이 v7 에 머물러 있던 원인)
   if ('serviceWorker' in navigator && location.protocol.startsWith('http')) {
     let reloaded = false;
-    navigator.serviceWorker.addEventListener('controllerchange', () => { if (reloaded) return; reloaded = true; location.reload(); });
-    addEventListener('load', () => navigator.serviceWorker.register('sw.js').catch(() => {}));
+    navigator.serviceWorker.addEventListener('controllerchange', () => {
+      if (reloaded) return; reloaded = true; location.reload();
+    });
+    addEventListener('load', () => {
+      navigator.serviceWorker.register('sw.js').then(reg => {
+        document.addEventListener('visibilitychange', () => {
+          if (document.visibilityState === 'visible') reg.update().catch(() => {});
+        });
+      }).catch(() => {});
+    });
   }
 </script>
 </body>
